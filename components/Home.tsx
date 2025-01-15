@@ -1,16 +1,11 @@
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { useEffect } from "react";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import ScrollButton from "./ScrollButton";
 
 const App = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <>
       <div className="svg-bg absolute inset-0 left-0 top-0 z-[-1] h-screen w-full"></div>
@@ -29,24 +24,15 @@ const App = () => {
                 <p className="text-xl text-white">
                   Muuda koolipäevad lihtsaks ja turvaliseks!
                 </p>
-                <button
-                  id="scroll-btn"
-                  onClick={() => {
-                    const nick = document.getElementById(
-                      "scroll-to-div",
-                    ) as HTMLDivElement;
-                    nick.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="rounded-xl bg-newgreen px-8 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50 md:max-w-md"
-                >
-                  Uuri lähemalt
-                </button>
+                <ScrollButton />
               </div>
               <div className="mt-12 md:ml-4 md:mt-0">
                 <Image
+                  width={1000}
+                  height={1000}
                   alt="Koolikell"
                   data-aos="fade-left"
-                  className="object-contain md:absolute md:h-[400px]"
+                  className="object-contain md:absolute md:h-[1000px]"
                   src="/main-ekell.png"
                 />
               </div>
@@ -91,7 +77,13 @@ const App = () => {
                 data-aos="fade-right"
                 className="md:flex md:h-[560px] md:w-1/2 md:items-center md:justify-start"
               >
-                <img className="object-contain" src="/2.png" alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  className="object-contain"
+                  src="/2.png"
+                  alt=""
+                />
               </div>
               <div
                 data-aos="fade-left"
@@ -135,7 +127,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-1"
-                className="rounded-lg bg-newblue px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
               >
                 Telli nüüd
               </a>
@@ -178,7 +170,13 @@ const App = () => {
                 data-aos="fade-left"
                 className="order-1 md:order-2 md:flex md:h-[560px] md:w-1/2 md:items-center"
               >
-                <img className="object-contain" src="/main-ekell.png" alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  className="object-contain"
+                  src="/main-ekell.png"
+                  alt=""
+                />
               </div>
             </div>
             <div
@@ -189,7 +187,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-2"
-                className="rounded-lg bg-newblue px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
               >
                 Vajame seda
               </a>
@@ -202,7 +200,13 @@ const App = () => {
                 data-aos="fade-right"
                 className="md:flex md:h-[560px] md:w-1/2 md:items-center"
               >
-                <img className="object-contain" src="/2.png" alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  className="object-contain"
+                  src="/2.png"
+                  alt=""
+                />
               </div>
               <div
                 data-aos="fade-left"
@@ -243,7 +247,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-3"
-                className="rounded-lg bg-newblue px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
               >
                 Kirjuta meile
               </a>
@@ -396,7 +400,7 @@ const App = () => {
               </p>
               <a
                 href="/contact"
-                className="rounded-lg bg-newblue px-8 py-4 font-semibold text-white duration-200 hover:bg-newblue/50"
+                className="rounded-lg bg-blue-500 px-8 py-4 font-semibold text-white duration-200 hover:bg-blue-500/50"
               >
                 Kirjuta meile
               </a>

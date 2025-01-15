@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HeaderPrimary = () => {
@@ -15,7 +18,7 @@ const HeaderPrimary = () => {
     >
       <div className="mx-auto flex max-w-screen-xl flex-row items-center justify-between px-6 py-4 sm:px-8">
         <div className="flex flex-row items-center justify-start">
-          <a
+          <Link
             href="/"
             className={`text-xl font-black uppercase ${scroll > 0 ? "text-slate-900" : "text-white"}`}
           >
@@ -25,7 +28,7 @@ const HeaderPrimary = () => {
             >
               tech
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-row items-center justify-start">
@@ -38,7 +41,7 @@ const HeaderPrimary = () => {
 
           <a
             href="https://dashboard.koolitech.ee"
-            className={`rounded-lg px-4 py-2 text-base font-semibold transition duration-100 hover:bg-opacity-50 ${scroll > 0 ? "bg-newblue text-white" : "bg-white text-blueblue"}`}
+            className={`rounded-lg px-4 py-2 text-base font-semibold transition duration-100 hover:bg-opacity-50 ${scroll > 0 ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
           >
             E-Kell Web
           </a>

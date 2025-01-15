@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Policies from "./Policies";
 
 const Terms = () => {
@@ -126,7 +127,7 @@ const Terms = () => {
       <h2>Teie privaatsus</h2>
       <p>
         Teie privaatsusega seonduvate sätetega tutvumiseks, palun vaadake meie
-        <a href="https://koolitech.ee/privacy">privaatsuspoliitikat</a>.
+        <Link href="https://koolitech.ee/privacy">privaatsuspoliitikat</Link>.
       </p>
       <h2>Kohaldatav seadus</h2>
       <p>
@@ -136,7 +137,7 @@ const Terms = () => {
       <h2>Kontakt</h2>
       <p>
         Küsimuste puhul, palun võtke meiega ühendust e-posti teel:
-        <a href="mailto:info@koolitech.ee">info@koolitech.ee</a>.
+        <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>.
       </p>
       <p>
         KooliTech OÜ säilitab õiguse teha vastavalt vajadusele muudatusi

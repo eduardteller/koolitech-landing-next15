@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Policies from "./Policies";
 
 const PrivacyPolicy = () => {
@@ -8,7 +9,7 @@ const PrivacyPolicy = () => {
         KooliTech OÜ jaoks on oluline Teie privaatsus ja järgida kõiki kehtivaid
         seadusi ja määrusi mis tahes isikuandmete kohta, mida võime Teie kohta
         koguda, kui külastate meie veebilehte{" "}
-        <a href="https://koolitech.ee">koolitech.ee</a>. Meie veebisaiti
+        <Link href="https://koolitech.ee">koolitech.ee</Link>. Meie veebisaiti
         kasutades nõustute, et kogume ja kasutame Teie andmeid vastavalt
         käesolevale privaatsuspoliitikale.
       </p>
@@ -21,7 +22,7 @@ const PrivacyPolicy = () => {
       </p>
       <p>Teie andmete töötleja on KooliTech OÜ</p>
       <p>
-        e-post: <a href="mailto:info@koolitech.ee">info@koolitech.ee</a>
+        e-post: <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>
       </p>
       <p>
         Kogume ja töötleme teavet kooskõlas Euroopa Liidu üldise andmekaitse
@@ -46,7 +47,8 @@ const PrivacyPolicy = () => {
           Kui kontakteerute meiega telefoni, e-posti või online vestluse kaudu
         </li>
         <li>
-          Kui sirvite veebilehte <a href="https://koolitech.ee">koolitech.ee</a>
+          Kui sirvite veebilehte{" "}
+          <Link href="https://koolitech.ee">koolitech.ee</Link>
         </li>
         <li>
           Kui Te kommenteerite, laigite või jagate mõnda postitust meie
@@ -71,8 +73,9 @@ const PrivacyPolicy = () => {
       </ul>
       <h3>Logifailid</h3>
       <p>
-        Meie veebileht <a href="https://koolitech.ee">koolitech.ee</a> salvestab
-        oma külastajate kohta logifaile. Kogutava teabe hulka võib kuuluda:
+        Meie veebileht <Link href="https://koolitech.ee">koolitech.ee</Link>{" "}
+        salvestab oma külastajate kohta logifaile. Kogutava teabe hulka võib
+        kuuluda:
       </p>
       <ul>
         <li>Kasutatava seadme tüüp</li>
@@ -91,10 +94,11 @@ const PrivacyPolicy = () => {
       <h3>Küpsised</h3>
       <p>
         Nagu enamus veebilehti, kasutab ka{" "}
-        <a href="https://koolitech.ee">koolitech.ee</a> "küpsiseid". Küpsis on
-        sisuliselt tekstifail, mis salvestatakse veebisaidi külastamisel
-        kasutaja seadmesse. Küpsiste abil määratakse ja salvestatakse
-        eelistused, regionaalsed sätted, teenuste kasutamise valikud jpm.
+        <Link href="https://koolitech.ee">koolitech.ee</Link>{" "}
+        &quot;küpsiseid&quot;. Küpsis on sisuliselt tekstifail, mis
+        salvestatakse veebisaidi külastamisel kasutaja seadmesse. Küpsiste abil
+        määratakse ja salvestatakse eelistused, regionaalsed sätted, teenuste
+        kasutamise valikud jpm.
       </p>
       <p>
         Soovi korral võite brauseri seadistuses ära keelata küpsiste kasutamise,
@@ -247,9 +251,9 @@ const PrivacyPolicy = () => {
         Teie kohta teavet Teie isiku kinnitamiseks. Kui leiate, et andmed, mida
         Teie kohta kogunud oleme, on ebatäpsed, aegunud, puudulikud, ebaolulised
         või eksitavad, palun võtke meiega ühendust e-posti teel:
-        <a href="mailto:info@koolitech.ee">info@koolitech.ee</a>. Teeme kõik
-        meist oleneva, et parandada ebatäpset, puudulikku, eksitavat või aegunud
-        teavet.
+        <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>. Teeme
+        kõik meist oleneva, et parandada ebatäpset, puudulikku, eksitavat või
+        aegunud teavet.
       </p>
       <p>
         Kui arvate, et oleme rikkunud asjakohast andmekaitseseadust ja soovite

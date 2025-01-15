@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import Footer from "./Footer";
 import HeaderSecondary from "./HeaderSecondary";
@@ -175,7 +176,7 @@ const Contact = () => {
             <button
               disabled={loader}
               onClick={sendToEmail}
-              className="mt-4 flex min-w-48 flex-row items-center justify-center rounded-lg bg-newblue px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+              className="mt-4 flex min-w-48 flex-row items-center justify-center rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
             >
               {loader ? <Loader></Loader> : "Saada"}
               <span className="loading loading-spinner loading-xs ml-2 hidden"></span>
