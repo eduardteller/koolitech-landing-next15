@@ -8,11 +8,13 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      screens: {
+        xsm: "384px",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require("@tailwindcss/typography"),
+    // ...
+  ],
 } satisfies Config;
