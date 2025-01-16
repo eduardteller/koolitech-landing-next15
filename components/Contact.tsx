@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import HeaderSecondary from "./HeaderSecondary";
 import Loader from "./Loader";
 
+import { sendContact } from "@/actions/action";
 import toast, { Toaster } from "react-hot-toast";
 import { z } from "zod";
 
@@ -69,39 +70,60 @@ const Contact = () => {
       }
     }
     setLoader(true);
-    fetch("/api/email-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...formData }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          toast.error("Vabandame, midagi läks valesti! 😔");
-        } else {
-          toast.success("Teie sõnum on saadetud! Aitäh! 🚀");
-        }
-      })
-      .catch((error) => {
-        console.error("There was an error submitting the form!", error);
-      })
-      .finally(() => {
-        setError({
-          name: false,
-          school: false,
-          email: false,
-          text: false,
-        });
-        setFormData({
-          name: "",
-          school: "",
-          email: "",
-          phone: "",
-          text: "",
-        });
-        setLoader(false);
-      });
+    // fetch("/api/email-form", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ ...formData }),
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       toast.error("Vabandame, midagi läks valesti! 😔");
+    //     } else {
+    //       toast.success("Teie sõnum on saadetud! Aitäh! 🚀");
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error("There was an error submitting the form!", error);
+    //   })
+    //   .finally(() => {
+    //     setError({
+    //       name: false,
+    //       school: false,
+    //       email: false,
+    //       text: false,
+    //     });
+    //     setFormData({
+    //       name: "",
+    //       school: "",
+    //       email: "",
+    //       phone: "",
+    //       text: "",
+    //     });
+    //     setLoader(false);
+    //   });
+
+    const resp = await sendContact(formData);
+    if (resp.status) {
+      toast.success("Teie sõnum on saadetud! Aitäh! 🚀");
+    } else {
+      toast.error("Vabandame, midagi läks valesti! 😔");
+    }
+    setError({
+      name: false,
+      school: false,
+      email: false,
+      text: false,
+    });
+    setFormData({
+      name: "",
+      school: "",
+      email: "",
+      phone: "",
+      text: "",
+    });
+    setLoader(false);
   };
   return (
     <>
