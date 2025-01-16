@@ -10,15 +10,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "KooliTech",
   description:
-    "KooliTech on Eesti IT-ettevõte, mis pakub veebiarendusteenuseid.",
+    "KooliTech on Eesti IT-ettevõte, mis pakub tarkvara tooteid koolidele.",
   keywords: [
-    "koolitech",
-    "kool",
-    "tech",
-    "eesti it-ettevõte",
-    "tarkvara",
-    "arendus",
-    "kell",
+    "KooliTech",
+    "Eesti IT-ettevõte",
+    "koolitarkvara",
+    "tarkvaralahendused koolidele",
+    "haridustehnoloogia",
+    "õppetarkvara",
+    "IT-lahendused koolidele",
+    "e-õppe platvormid",
+    "digitaalne haridus",
+    "koolijuhtimise tarkvara",
   ],
 };
 

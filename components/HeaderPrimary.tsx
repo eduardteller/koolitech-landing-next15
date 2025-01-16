@@ -20,11 +20,11 @@ const HeaderPrimary = () => {
         <div className="flex flex-row items-center justify-start">
           <Link
             href="/"
-            className={`text-xl font-black uppercase ${scroll > 0 ? "text-slate-900" : "text-white"}`}
+            className={`group text-xl font-black uppercase ${scroll > 0 ? "text-slate-800" : "text-slate-100"}`}
           >
             kooli
             <span
-              className={`duration-200 ${scroll > 0 ? "text-slate-800/80 hover:text-slate-800" : "text-white/80 hover:text-white"}`}
+              className={`duration-200 ${scroll > 0 ? "text-slate-800/70 group-hover:text-slate-800" : "text-slate-100/70 group-hover:text-slate-100"}`}
             >
               tech
             </span>
@@ -34,14 +34,14 @@ const HeaderPrimary = () => {
         <div className="flex flex-row items-center justify-start">
           <a
             href="/contact"
-            className={`mr-8 hidden font-semibold transition duration-100 hover:text-opacity-50 md:block ${scroll > 0 ? "text-slate-800" : "text-white"}`}
+            className={`mr-8 hidden font-semibold transition duration-100 hover:text-opacity-50 md:block ${scroll > 0 ? "text-slate-800" : "text-slate-100"}`}
           >
             Kontakt
           </a>
 
           <a
             href="https://dashboard.koolitech.ee"
-            className={`rounded-lg px-4 py-2 text-base font-semibold transition duration-100 hover:bg-opacity-50 ${scroll > 0 ? "bg-blue-500 text-white" : "bg-white text-blue-500"}`}
+            className={`rounded-lg px-4 py-2 text-base font-semibold transition duration-100 hover:bg-opacity-50 ${scroll > 0 ? "bg-blue-500 text-white" : "bg-slate-100 text-blue-500"}`}
           >
             E-Kell Web
           </a>

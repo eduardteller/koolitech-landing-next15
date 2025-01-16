@@ -11,10 +11,10 @@ const HeaderSecondary = () => {
           <Link
             href="/"
             id="header-lbl"
-            className="text-xl font-black uppercase text-slate-900"
+            className="text-xl font-black uppercase text-slate-800"
           >
             kooli
-            <span className="text-slate-900/60 duration-200 hover:text-slate-900">
+            <span className="text-slate-800/70 duration-200 hover:text-slate-800">
               tech
             </span>
           </Link>
@@ -24,7 +24,7 @@ const HeaderSecondary = () => {
           <a
             href="/contact"
             id="btn-contact"
-            className="mr-8 hidden font-semibold text-slate-900 transition duration-200 hover:text-opacity-50 md:block"
+            className="mr-8 hidden font-semibold text-slate-800 transition duration-200 hover:text-opacity-50 md:block"
           >
             Kontakt
           </a>

@@ -18,21 +18,21 @@ const App = () => {
                 className="flex flex-col gap-8 md:w-1/2"
                 data-aos="fade-right"
               >
-                <h1 className="items-center justify-center text-6xl font-bold leading-tight tracking-tight text-white md:w-1/2">
+                <h1 className="items-center justify-center text-6xl font-bold leading-tight tracking-tight text-slate-100 md:w-1/2">
                   Kõikvõimas koolikell
                 </h1>
-                <p className="text-xl text-white">
+                <p className="text-xl text-slate-100">
                   Muuda koolipäevad lihtsaks ja turvaliseks!
                 </p>
                 <ScrollButton />
               </div>
-              <div className="mt-12 md:ml-4 md:mt-0">
+              <div className="mt-12 w-full overflow-visible md:ml-4 md:mt-0">
                 <Image
                   width={1000}
-                  height={1000}
+                  height={400}
                   alt="Koolikell"
                   data-aos="fade-left"
-                  className="object-contain md:absolute md:h-[1000px]"
+                  className="object-contain md:absolute md:h-[400px]"
                   src="/main-ekell.png"
                 />
               </div>
@@ -52,13 +52,13 @@ const App = () => {
           </div>
           <div className="bg-white pb-32">
             <div
-              className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center px-8 pt-24 md:px-0 md:pt-0"
+              className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center space-y-8 px-8 pt-24 md:px-0 md:pt-0"
               data-aos="fade-up"
             >
-              <h1 className="text-center text-3xl font-bold text-slate-900 md:w-2/3">
+              <h1 className="whitespace-nowrap text-center text-3xl font-bold text-slate-800 md:w-2/3">
                 E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus!
               </h1>
-              <p className="prose prose-base mx-auto mt-4 max-w-none text-center text-zinc-900/80 md:w-2/3">
+              <p className="prose prose-lg mx-auto max-w-none text-center text-slate-800/80 md:w-2/3">
                 KooliTech E-Kell tarkvara automatiseerib ajamahukad ülesanded,
                 pakkudes tõhusa lahenduse tunniplaanide ja koolikellade
                 juhtimiseks. See kaugjuhitav ja paindlik süsteem lihtsustab
@@ -87,13 +87,13 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
-                className="mt-16 flex flex-col text-slate-900 md:mt-0 md:w-1/2"
+                className="mt-16 flex flex-col text-slate-800 md:mt-0 md:w-1/2"
               >
                 <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
                   E-Kell tarkvara peamised võimalused:
                 </h3>
 
-                <ul className="prose prose-base mt-8 md:w-2/3 md:self-center">
+                <ul className="prose prose-base mt-8 text-slate-800/80 md:w-2/3 md:self-center">
                   <li className="pl-0">
                     <Check className="inline text-green-500" /> Tunniplaanid:
                     Mugav ja kiire koolikellade haldamine, võimaldab täpselt
@@ -127,7 +127,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-1"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
               >
                 Telli nüüd
               </a>
@@ -138,12 +138,13 @@ const App = () => {
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
-                className="order-2 mt-16 flex flex-col text-slate-900 md:order-1 md:mt-0 md:w-1/2"
+                className="order-2 mt-16 flex flex-col text-slate-800 md:order-1 md:mt-0 md:w-1/2"
               >
                 <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
                   E-Kell veebiliides
                 </h3>
-                <ul className="prose prose-base mt-8 list-none md:w-2/3 md:self-center">
+
+                <ul className="prose prose-base mt-8 list-none text-slate-800/80 md:w-2/3 md:self-center">
                   <li className="pl-0">
                     <Check className="inline text-green-500" /> Lihtne
                     juurdepääs: Saate tarkvara juhtida kõikjalt, kus on
@@ -187,7 +188,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-2"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
               >
                 Vajame seda
               </a>
@@ -210,13 +211,13 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
-                className="mt-16 flex flex-col text-slate-900 md:mt-0 md:w-1/2"
+                className="mt-16 flex flex-col text-slate-800 md:mt-0 md:w-1/2"
               >
                 <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
                   E-Kell häiresüsteem
                 </h3>
 
-                <ul className="prose prose-base mt-8 list-none md:w-2/3 md:self-center">
+                <ul className="prose prose-base mt-8 list-none text-slate-800/80 md:w-2/3 md:self-center">
                   <li className="pl-0">
                     <Check className="inline text-green-500" /> Erinevad
                     ohuliigid: Erinevate nuppude abil saab kiiresti edastada
@@ -247,7 +248,7 @@ const App = () => {
               <a
                 href="/contact"
                 id="btn-buy-3"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50"
+                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
               >
                 Kirjuta meile
               </a>
@@ -255,7 +256,7 @@ const App = () => {
           </div>
 
           <div className="bg-white px-8 py-24">
-            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center text-zinc-900">
+            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center text-slate-800">
               <h3 className="mb-8 text-center text-4xl font-bold tracking-tight">
                 E-Kell tarkvara sisaldab
               </h3>
@@ -269,7 +270,7 @@ const App = () => {
                   <h4 className="text-2xl font-bold">
                     Automaatne tunniplaanide haldus
                   </h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Lihtne ja kiire ajakava koostamine.
                   </p>
                 </div>
@@ -280,7 +281,7 @@ const App = () => {
                 >
                   <div className="text-7xl">🌍</div>
                   <h4 className="text-2xl font-bold">Kaugjuhtimine</h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Võimalus juhtida kõiki funktsioone veebiliidese kaudu.
                   </p>
                 </div>
@@ -291,7 +292,7 @@ const App = () => {
                 >
                   <div className="text-7xl">🚨</div>
                   <h4 className="text-2xl font-bold">Häiresüsteem</h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Erinevate ohuliikide häirete käivitamine.
                   </p>
                 </div>
@@ -305,7 +306,7 @@ const App = () => {
                   <h4 className="text-2xl font-bold">
                     Paindlik kella seadistus
                   </h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Kohandatavad heliajad ja kestused.
                   </p>
                 </div>
@@ -318,7 +319,7 @@ const App = () => {
                   <h4 className="text-2xl font-bold">
                     Kasutajasõbralik liides
                   </h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Intuitiivne ja hõlpsasti kasutatav.
                   </p>
                 </div>
@@ -329,7 +330,7 @@ const App = () => {
                 >
                   <div className="mb-4 text-7xl">📩</div>
                   <h4 className="text-2xl font-bold">Klienditugi</h4>
-                  <p className="prose prose-base">
+                  <p className="prose prose-base text-slate-800/80">
                     Meie tiim on alati valmis abistama ja lahendama kõiki Teie
                     küsimusi ning probleeme.
                   </p>
@@ -341,7 +342,7 @@ const App = () => {
           <div className="bg-slate-100 px-8 py-24">
             <div className="mx-auto max-w-3xl">
               {/* <p className="mb-8 text-center font-medium text-green-500">FAQ</p> */}
-              <h1 className="mb-24 text-center text-4xl font-bold text-slate-900">
+              <h1 className="mb-24 text-center text-4xl font-bold text-slate-800">
                 Korduma kippuvad küsimused
               </h1>
               <Accordion
@@ -400,7 +401,7 @@ const App = () => {
               </p>
               <a
                 href="/contact"
-                className="rounded-lg bg-blue-500 px-8 py-4 font-semibold text-white duration-200 hover:bg-blue-500/50"
+                className="rounded-lg bg-blue-500 px-8 py-4 font-semibold text-slate-100 duration-200 hover:bg-blue-500/50"
               >
                 Kirjuta meile
               </a>
