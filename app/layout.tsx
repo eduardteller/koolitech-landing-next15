@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "digitaalne haridus",
     "koolijuhtimise tarkvara",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

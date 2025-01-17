@@ -29,11 +29,11 @@ const App = () => {
               <div className="mt-12 w-full overflow-visible md:ml-4 md:mt-0">
                 <Image
                   width={1000}
-                  height={400}
+                  height={600}
                   alt="Koolikell"
                   data-aos="fade-left"
-                  className="object-contain md:absolute md:h-[400px]"
-                  src="/main-ekell.png"
+                  className="object-contain md:absolute md:h-[424px]"
+                  src="/heading2.png"
                 />
               </div>
             </div>
@@ -81,7 +81,7 @@ const App = () => {
                   width={1000}
                   height={1000}
                   className="object-contain"
-                  src="/2.png"
+                  src="/desktop.png"
                   alt=""
                 />
               </div>
@@ -173,9 +173,9 @@ const App = () => {
               >
                 <Image
                   width={1000}
-                  height={1000}
+                  height={800}
                   className="object-contain"
-                  src="/main-ekell.png"
+                  src="/web.png"
                   alt=""
                 />
               </div>
@@ -203,9 +203,9 @@ const App = () => {
               >
                 <Image
                   width={1000}
-                  height={1000}
+                  height={800}
                   className="object-contain"
-                  src="/2.png"
+                  src="/alarm.png"
                   alt=""
                 />
               </div>
