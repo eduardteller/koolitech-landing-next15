@@ -29,7 +29,7 @@ const App = () => {
               <div className="mt-12 w-full overflow-visible md:ml-4 md:mt-0">
                 <Image
                   width={1000}
-                  height={600}
+                  height={800}
                   alt="Koolikell"
                   data-aos="fade-left"
                   className="object-contain md:absolute md:h-[424px]"
@@ -78,8 +78,8 @@ const App = () => {
                 className="md:flex md:h-[560px] md:w-1/2 md:items-center md:justify-start"
               >
                 <Image
-                  width={1000}
-                  height={1000}
+                  width={1280}
+                  height={800}
                   className="object-contain"
                   src="/desktop.png"
                   alt=""
@@ -172,7 +172,7 @@ const App = () => {
                 className="order-1 md:order-2 md:flex md:h-[560px] md:w-1/2 md:items-center"
               >
                 <Image
-                  width={1000}
+                  width={1280}
                   height={800}
                   className="object-contain"
                   src="/web.png"
@@ -202,7 +202,7 @@ const App = () => {
                 className="md:flex md:h-[560px] md:w-1/2 md:items-center"
               >
                 <Image
-                  width={1000}
+                  width={1280}
                   height={800}
                   className="object-contain"
                   src="/alarm.png"
