@@ -1,8 +1,8 @@
-import { Check } from "lucide-react";
 import Image from "next/image";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
 
 const App = () => {
@@ -93,29 +93,14 @@ const App = () => {
                   E-Kell tarkvara peamised võimalused:
                 </h3>
 
-                <ul className="prose prose-base mt-8 text-slate-800/80 md:w-2/3 md:self-center">
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Tunniplaanid:
-                    Mugav ja kiire koolikellade haldamine, võimaldab täpselt
-                    ajastada tunnialguseid ja -lõppe.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Kaugelt
-                    haldamine: Tarkvara saab hallata kõikjalt, näiteks
-                    puhkuselt. Kaugjuhtimine hõlmab endas tunniplaanide muutmist
-                    ja häire käivitamist
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Häiresüsteem:
-                    Võimaldab koolis häireid ja hädaolukorra signaale kaugelt
-                    juhtida.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Kohandatud
-                    helid: Võimalus lisada ja kasutada oma helifaile vastavalt
-                    vajadusele.
-                  </li>
-                </ul>
+                <PointsList
+                  text={[
+                    "Tunniplaanid: Mugav ja kiire koolikellade haldamine, võimaldab täpselt ajastada tunnialguseid ja -lõppe.",
+                    "Kaugelt haldamine: Tarkvara saab hallata kõikjalt, näiteks puhkuselt. Kaugjuhtimine hõlmab endas tunniplaanide muutmist ja häire käivitamist",
+                    "Häiresüsteem: Võimaldab koolis häireid ja hädaolukorra signaale kaugelt juhtida.",
+                    "Kohandatud helid: Võimalus lisada ja kasutada oma helifaile vastavalt vajadusele.",
+                  ]}
+                />
               </div>
             </div>
 
@@ -144,28 +129,14 @@ const App = () => {
                   E-Kell veebiliides
                 </h3>
 
-                <ul className="prose prose-base mt-8 list-none text-slate-800/80 md:w-2/3 md:self-center">
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Lihtne
-                    juurdepääs: Saate tarkvara juhtida kõikjalt, kus on
-                    internetiühendus.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Reaalajas
-                    haldamine: Muudatused rakenduvad koheselt, tagades sujuva ja
-                    kiire töökorralduse.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Kasutajasõbralik
-                    liides: Intuitiivne ja hõlpsasti kasutatav, sobib igas
-                    vanuses kasutajatele.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Mitme seadme
-                    tugi: Töötab nii arvutis, tahvelarvutis kui ka
-                    nutitelefonis, pakkudes maksimaalset paindlikkust.
-                  </li>
-                </ul>
+                <PointsList
+                  text={[
+                    "Lihtne juurdepääs: Saate tarkvara juhtida kõikjalt, kus on internetiühendus.",
+                    "Reaalajas haldamine: Muudatused rakenduvad koheselt, tagades sujuva ja kiire töökorralduse.",
+                    "Kasutajasõbralik liides: Intuitiivne ja hõlpsasti kasutatav, sobib igas vanuses kasutajatele.",
+                    "Mitme seadme tugi: Töötab nii arvutis, tahvelarvutis kui ka nutitelefonis, pakkudes maksimaalset paindlikkust.",
+                  ]}
+                />
               </div>
               <div
                 data-aos="fade-left"
@@ -217,27 +188,14 @@ const App = () => {
                   E-Kell häiresüsteem
                 </h3>
 
-                <ul className="prose prose-base mt-8 list-none text-slate-800/80 md:w-2/3 md:self-center">
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Erinevad
-                    ohuliigid: Erinevate nuppude abil saab kiiresti edastada
-                    täpse ohuteate.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Lihtne
-                    kasutamine: Nupu vajutamisega saab koheselt käivitada häire.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Kaugjuhtimine:
-                    Häiret saab käivitada veebiliidese kaudu, võimaldades kiiret
-                    reageerimist ka eemalt.
-                  </li>
-                  <li className="pl-0">
-                    <Check className="inline text-green-500" /> Kohandatavus:
-                    Võimalus luua ja hallata eri tüüpi häireid vastavalt
-                    vajadusele.
-                  </li>
-                </ul>
+                <PointsList
+                  text={[
+                    "Erinevad ohuliigid: Erinevate nuppude abil saab kiiresti edastada täpse ohuteate.",
+                    "Lihtne kasutamine: Nupu vajutamisega saab koheselt käivitada häire.",
+                    "Kaugjuhtimine: Häiret saab käivitada veebiliidese kaudu, võimaldades kiiret reageerimist ka eemalt.",
+                    "Kohandatavus: Võimalus luua ja hallata eri tüüpi häireid vastavalt vajadusele.",
+                  ]}
+                />
               </div>
             </div>
             <div
@@ -341,7 +299,9 @@ const App = () => {
 
           <div className="bg-slate-100 px-8 py-24">
             <div className="mx-auto max-w-3xl">
-              {/* <p className="mb-8 text-center font-medium text-green-500">FAQ</p> */}
+              <p className="mb-8 text-center font-semibold uppercase text-blue-500">
+                FAQ
+              </p>
               <h1 className="mb-24 text-center text-4xl font-bold text-slate-800">
                 Korduma kippuvad küsimused
               </h1>
