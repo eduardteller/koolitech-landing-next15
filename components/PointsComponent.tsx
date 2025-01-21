@@ -7,7 +7,12 @@ const PointsComponent = () => {
   return (
     <div className="flex w-full flex-col gap-8">
       <div className="flex w-full flex-col gap-8 max-md:px-8 md:flex-row">
-        <div data-aos="fade-up" data-aos-delay="150" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="150"
+          className={baseCss}
+        >
           {/* <div className="text-7xl">🌍</div> */}
           <Laptop size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">Kasutajasõbralik liides</h4>
@@ -15,7 +20,12 @@ const PointsComponent = () => {
             Intuitiivne ja hõlpsasti kasutatav.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="250" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="250"
+          className={baseCss}
+        >
           <BellRing size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">
             Paindlik tunniplaan ja kellad
@@ -25,7 +35,12 @@ const PointsComponent = () => {
             pühadenädal).
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="350" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="350"
+          className={baseCss}
+        >
           <Earth size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">
             Veebiklient – juhtimine igalt poolt
@@ -38,7 +53,12 @@ const PointsComponent = () => {
       </div>
 
       <div className="flex w-full flex-col gap-8 max-md:px-8 md:flex-row">
-        <div data-aos="fade-up" data-aos-delay="450" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="450"
+          className={baseCss}
+        >
           <Siren size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">
             Alarmsüsteem kriitilisteks olukordadeks
@@ -47,7 +67,12 @@ const PointsComponent = () => {
             Käivita kiiresti tulekahju-, evakuatsiooni- või muud häiresignaalid.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="550" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="550"
+          className={baseCss}
+        >
           <Mic size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">
             Helisalvestus ja teadaannete esitamine
@@ -57,7 +82,12 @@ const PointsComponent = () => {
             sõnumeid.
           </p>
         </div>
-        <div data-aos="fade-up" data-aos-delay="650" className={baseCss}>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="650"
+          className={baseCss}
+        >
           <Music size={96} className={logoCss} />
           <h4 className="text-xl font-semibold">
             Kohandatavad koolikella helid

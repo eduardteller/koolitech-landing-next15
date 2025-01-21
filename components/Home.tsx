@@ -55,6 +55,7 @@ const App = () => {
             <div
               className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center space-y-8 px-4 pt-24 md:px-0 md:pt-0 lg:px-8"
               data-aos="fade-up"
+              data-aos-offset="200"
             >
               <h1 className="text-center text-2xl font-bold text-slate-800 md:w-2/3 lg:whitespace-nowrap lg:text-3xl">
                 E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus!
@@ -73,6 +74,7 @@ const App = () => {
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
+                data-aos-offset="200"
                 className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
@@ -85,6 +87,7 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-offset="200"
                 className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
               >
                 <p className="mb-8 text-sm font-bold uppercase text-blue-500">
@@ -109,7 +112,8 @@ const App = () => {
           <div className="bg-white px-8 py-24">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
-                data-aos="fade-left"
+                data-aos="fade-right"
+                data-aos-offset="200"
                 className="order-2 flex flex-col text-slate-800 md:order-1 md:mt-0 md:basis-1/2 md:px-24"
               >
                 <p className="mb-8 text-sm font-bold uppercase text-blue-500">
@@ -130,7 +134,8 @@ const App = () => {
               </div>
 
               <div
-                data-aos="fade-right"
+                data-aos="fade-left"
+                data-aos-offset="200"
                 className="order-1 max-md:mb-8 md:order-2 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
@@ -148,6 +153,7 @@ const App = () => {
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
+                data-aos-offset="200"
                 className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
@@ -160,6 +166,7 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-offset="200"
                 className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
               >
                 <p className="mb-8 text-sm font-bold uppercase text-blue-500">
