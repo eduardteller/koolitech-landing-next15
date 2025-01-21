@@ -2,6 +2,7 @@ import Image from "next/image";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
 
@@ -18,7 +19,7 @@ const App = () => {
                 className="flex flex-col gap-8 md:w-1/2"
                 data-aos="fade-right"
               >
-                <h1 className="items-center justify-center text-6xl font-bold leading-tight tracking-tight text-slate-100 md:w-1/2">
+                <h1 className="items-center justify-center text-5xl font-bold leading-tight tracking-tight text-slate-100 md:w-1/2 lg:text-6xl">
                   Kõikvõimas koolikell
                 </h1>
                 <p className="text-xl text-slate-100">
@@ -52,10 +53,10 @@ const App = () => {
           </div>
           <div className="bg-white pb-32">
             <div
-              className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center space-y-8 px-8 pt-24 md:px-0 md:pt-0"
+              className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center space-y-8 px-4 pt-24 md:px-0 md:pt-0 lg:px-8"
               data-aos="fade-up"
             >
-              <h1 className="whitespace-nowrap text-center text-3xl font-bold text-slate-800 md:w-2/3">
+              <h1 className="text-center text-2xl font-bold text-slate-800 md:w-2/3 lg:whitespace-nowrap lg:text-3xl">
                 E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus!
               </h1>
               <p className="prose prose-lg mx-auto max-w-none text-center text-slate-800/80 md:w-2/3">
@@ -69,13 +70,10 @@ const App = () => {
           </div>
 
           <div className="bg-slate-100 px-8 py-24">
-            <div
-              className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row"
-              id="scroll-to-div"
-            >
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
-                className="md:flex md:h-[560px] md:w-1/2 md:items-center md:justify-start"
+                className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
                   width={1280}
@@ -87,60 +85,53 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
-                className="mt-16 flex flex-col text-slate-800 md:mt-0 md:w-1/2"
+                className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
               >
-                <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
-                  E-Kell tarkvara peamised võimalused:
+                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
+                  Lihtne, Nutikas ja Võimas
+                </p>
+                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                  Uus tase koolikellade haldamises
                 </h3>
 
                 <PointsList
                   text={[
-                    "Tunniplaanid: Mugav ja kiire koolikellade haldamine, võimaldab täpselt ajastada tunnialguseid ja -lõppe.",
-                    "Kaugelt haldamine: Tarkvara saab hallata kõikjalt, näiteks puhkuselt. Kaugjuhtimine hõlmab endas tunniplaanide muutmist ja häire käivitamist",
-                    "Häiresüsteem: Võimaldab koolis häireid ja hädaolukorra signaale kaugelt juhtida.",
-                    "Kohandatud helid: Võimalus lisada ja kasutada oma helifaile vastavalt vajadusele.",
+                    "Mugav ajastamine: Loo erinevaid ajakavasid (tavaline nädal, pühadenädal, eriüritused) ja lülita neid kiiresti.",
+                    "Lihtne ja arusaadav: Moodsalt kujundatud kasutajaliides, mida saab kasutada igaüks, ilma tehniliste teadmisteta.",
+                    "Tark automatiseerimine: Süsteem haldab koolikelli iseseisvalt, et saaksid keskenduda olulisemale.",
+                    "Ühendatud ja paindlik: Veebiklient võimaldab ajakavasid hallata kaugelt ja igast seadmest.",
                   ]}
                 />
               </div>
-            </div>
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="container mx-auto mt-16 flex items-center justify-center md:mt-0"
-            >
-              <a
-                href="/contact"
-                id="btn-buy-1"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
-              >
-                Telli nüüd
-              </a>
             </div>
           </div>
 
           <div className="bg-white px-8 py-24">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
-                data-aos="fade-right"
-                className="order-2 mt-16 flex flex-col text-slate-800 md:order-1 md:mt-0 md:w-1/2"
+                data-aos="fade-left"
+                className="order-2 flex flex-col text-slate-800 md:order-1 md:mt-0 md:basis-1/2 md:px-24"
               >
-                <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
-                  E-Kell veebiliides
+                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
+                  veebiliides
+                </p>
+                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                  Halda koolikellasid igal ajal ja igalt poolt
                 </h3>
 
                 <PointsList
                   text={[
-                    "Lihtne juurdepääs: Saate tarkvara juhtida kõikjalt, kus on internetiühendus.",
-                    "Reaalajas haldamine: Muudatused rakenduvad koheselt, tagades sujuva ja kiire töökorralduse.",
-                    "Kasutajasõbralik liides: Intuitiivne ja hõlpsasti kasutatav, sobib igas vanuses kasutajatele.",
-                    "Mitme seadme tugi: Töötab nii arvutis, tahvelarvutis kui ka nutitelefonis, pakkudes maksimaalset paindlikkust.",
+                    "Täielik kontroll kõikjal: Kohanda kavasid, seadista alarme ja juhi ajakavasid mis tahes veebibrauserist, arvutist või nutitelefonist.",
+                    "Reaalajas sünkroonimine: Sinu tehtud muudatused saadetakse koheselt töölauarakendusse ja rakenduvad hetkega.",
+                    "Mitme kasutaja tugi: Koolitöötajad saavad ajakavasid mugavalt koos hallata.",
+                    "Turvaline ja kaitstud: Krüpteeritud andmeedastus hoiab sinu ajakavad kindlalt kaitstud.",
                   ]}
                 />
               </div>
+
               <div
-                data-aos="fade-left"
-                className="order-1 md:order-2 md:flex md:h-[560px] md:w-1/2 md:items-center"
+                data-aos="fade-right"
+                className="order-1 max-md:mb-8 md:order-2 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
                   width={1280}
@@ -151,26 +142,13 @@ const App = () => {
                 />
               </div>
             </div>
-            <div
-              data-aos-delay="100"
-              data-aos="fade-up"
-              className="container mx-auto mt-16 flex items-center justify-center md:mt-0"
-            >
-              <a
-                href="/contact"
-                id="btn-buy-2"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
-              >
-                Vajame seda
-              </a>
-            </div>
           </div>
 
           <div className="bg-slate-100 px-8 py-24">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
-                className="md:flex md:h-[560px] md:w-1/2 md:items-center"
+                className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
               >
                 <Image
                   width={1280}
@@ -182,118 +160,36 @@ const App = () => {
               </div>
               <div
                 data-aos="fade-left"
-                className="mt-16 flex flex-col text-slate-800 md:mt-0 md:w-1/2"
+                className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
               >
-                <h3 className="text-3xl font-bold md:w-2/3 md:self-center">
-                  E-Kell häiresüsteem
+                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
+                  Nutikad funktsioonid koolidele
+                </p>
+                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                  Rohkem kui lihtsalt koolikellade planeerija
                 </h3>
 
                 <PointsList
                   text={[
-                    "Erinevad ohuliigid: Erinevate nuppude abil saab kiiresti edastada täpse ohuteate.",
-                    "Lihtne kasutamine: Nupu vajutamisega saab koheselt käivitada häire.",
-                    "Kaugjuhtimine: Häiret saab käivitada veebiliidese kaudu, võimaldades kiiret reageerimist ka eemalt.",
-                    "Kohandatavus: Võimalus luua ja hallata eri tüüpi häireid vastavalt vajadusele.",
+                    "Häiresüsteem: Võimaldab operatiivselt aktiveerida tulekahju-, evakuatsiooni- või muid häiresignaale otse tarkvarast, tagades kiire reageerimise eriolukordades.",
+                    "Häälsalvestus ja taasesitus: Salvesta olulised teadaanded otse tarkvaras ning esita need automaatselt või käsitsi.",
+                    "Automaatne uuendamine: Tarkvara püsib alati ajakohane – saad alati uusimad funktsioonid ja parimad turvauuendused.",
+                    "Kohandatavad koolikella helid: Kasuta enda helifaile koolikelladena! Vali muusikapalad või muud helid, et muuta koolikella süsteem ainulaadseks ja õpilastele meeldivamaks.",
                   ]}
                 />
               </div>
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              className="container mx-auto mt-16 flex items-center justify-center md:mt-0"
-            >
-              <a
-                href="/contact"
-                id="btn-buy-3"
-                className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
-              >
-                Kirjuta meile
-              </a>
-            </div>
           </div>
 
           <div className="bg-white px-8 py-24">
-            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center text-slate-800">
-              <h3 className="mb-8 text-center text-4xl font-bold tracking-tight">
+            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center gap-8 text-slate-800">
+              <p className="text-sm font-bold uppercase text-blue-500 md:text-center">
+                võimalused
+              </p>
+              <h3 className="text-center text-4xl font-bold tracking-tight">
                 E-Kell tarkvara sisaldab
               </h3>
-              <div className="flex w-full flex-wrap items-center justify-start">
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="150"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="text-7xl">📅</div>
-                  <h4 className="text-2xl font-bold">
-                    Automaatne tunniplaanide haldus
-                  </h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Lihtne ja kiire ajakava koostamine.
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="250"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="text-7xl">🌍</div>
-                  <h4 className="text-2xl font-bold">Kaugjuhtimine</h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Võimalus juhtida kõiki funktsioone veebiliidese kaudu.
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="350"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="text-7xl">🚨</div>
-                  <h4 className="text-2xl font-bold">Häiresüsteem</h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Erinevate ohuliikide häirete käivitamine.
-                  </p>
-                </div>
-
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="450"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="mb-4 text-7xl">⚙️</div>
-                  <h4 className="text-2xl font-bold">
-                    Paindlik kella seadistus
-                  </h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Kohandatavad heliajad ja kestused.
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="550"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="mb-4 text-7xl">👌</div>
-                  <h4 className="text-2xl font-bold">
-                    Kasutajasõbralik liides
-                  </h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Intuitiivne ja hõlpsasti kasutatav.
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="650"
-                  className="mt-16 flex w-full flex-col items-center gap-4 px-16 text-center md:w-1/3"
-                >
-                  <div className="mb-4 text-7xl">📩</div>
-                  <h4 className="text-2xl font-bold">Klienditugi</h4>
-                  <p className="prose prose-base text-slate-800/80">
-                    Meie tiim on alati valmis abistama ja lahendama kõiki Teie
-                    küsimusi ning probleeme.
-                  </p>
-                </div>
-              </div>
+              <PointsComponent />
             </div>
           </div>
 

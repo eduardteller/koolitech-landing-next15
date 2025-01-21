@@ -6,7 +6,7 @@ interface Props {
 
 const PointsList = ({ text }: Props) => {
   return (
-    <ul className="mt-8 flex w-2/3 flex-col gap-4 md:self-center">
+    <ul className="mt-8 flex w-full flex-col gap-4 md:self-center">
       {text.map((point, i) => (
         <li
           key={i + point.slice(0, 2)}
