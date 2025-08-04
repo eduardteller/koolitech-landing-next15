@@ -70,7 +70,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-slate-100 px-8 py-24">
+          <div id="scroll-to-div" className="bg-slate-100 px-8 py-24">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
               <div
                 data-aos="fade-right"
