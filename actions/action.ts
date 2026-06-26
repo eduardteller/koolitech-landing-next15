@@ -24,7 +24,7 @@ export async function sendContact(data: {
 
     // Construct the email options
     const mailOptions = {
-      to: "info@koolitech.ee",
+      to: "koolitech.oy@gmail.com",
       subject: "NEW MESSAGE FROM CONTACT FORM",
       text: `
         Name: ${data.name || "No name"}

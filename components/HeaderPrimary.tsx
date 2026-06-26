@@ -4,48 +4,51 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HeaderPrimary = () => {
-  const [scroll, setScroll] = useState(0);
-  useEffect(() => {
-    window.addEventListener("scroll", () => setScroll(window.scrollY));
+  const [scrolled, setScrolled] = useState(false);
 
-    return () => {
-      window.removeEventListener("scroll", () => setScroll(window.scrollY));
-    };
-  });
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header
-      className={`sticky top-0 z-[50] transition duration-200 ${scroll > 0 ? "border-b bg-white" : "bg-none"}`}
+      className={`sticky top-0 z-50 transition-colors duration-200 ${
+        scrolled
+          ? "border-b border-ink/10 bg-chalk/85 backdrop-blur-sm"
+          : "bg-transparent"
+      }`}
     >
-      <div className="mx-auto flex max-w-screen-xl flex-row items-center justify-between px-6 py-4 sm:px-8">
-        <div className="flex flex-row items-center justify-start">
-          <Link
-            href="/"
-            className={`group text-xl font-black uppercase ${scroll > 0 ? "text-slate-800" : "text-slate-100"}`}
-          >
-            kooli
-            <span
-              className={`duration-200 ${scroll > 0 ? "text-slate-800/70 group-hover:text-slate-800" : "text-slate-100/70 group-hover:text-slate-100"}`}
-            >
-              tech
-            </span>
-          </Link>
-        </div>
+      <div className="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-4 sm:px-8">
+        <Link
+          href="/"
+          className="font-display text-xl font-black uppercase tracking-tight text-ink"
+        >
+          kooli<span className="text-brass">tech</span>
+        </Link>
 
-        <div className="flex flex-row items-center justify-start">
+        <nav className="flex items-center gap-6">
+          <Link
+            href="/ekell"
+            className="hidden font-medium text-ink/70 transition hover:text-ink md:block"
+          >
+            E-Kell
+          </Link>
           <a
             href="/contact"
-            className={`mr-8 hidden font-semibold transition duration-100 hover:text-opacity-50 md:block ${scroll > 0 ? "text-slate-800" : "text-slate-100"}`}
+            className="hidden font-medium text-ink/70 transition hover:text-ink md:block"
           >
             Kontakt
           </a>
-
           <a
             href="https://dashboard.koolitech.ee"
-            className={`rounded-lg px-4 py-2 text-base font-semibold transition duration-100 hover:bg-opacity-50 ${scroll > 0 ? "bg-blue-500 text-white" : "bg-slate-100 text-blue-500"}`}
+            className="rounded-lg bg-brass px-4 py-2 text-sm font-semibold text-ink transition hover:bg-brass/85"
           >
             E-Kell Web
           </a>
-        </div>
+        </nav>
       </div>
     </header>
   );

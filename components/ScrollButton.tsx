@@ -5,10 +5,12 @@ const ScrollButton = () => {
     <button
       id="scroll-btn"
       onClick={() => {
-        const nick = document.getElementById("scroll-to-div") as HTMLDivElement;
-        nick.scrollIntoView({ behavior: "smooth" });
+        const target = document.getElementById(
+          "scroll-to-div",
+        ) as HTMLDivElement | null;
+        target?.scrollIntoView({ behavior: "smooth" });
       }}
-      className="rounded-xl bg-emerald-400 px-8 py-3 font-semibold text-white transition duration-100 hover:bg-opacity-50 md:max-w-md"
+      className="rounded-xl bg-ink px-7 py-3.5 font-medium text-chalk shadow-xs transition duration-150 hover:bg-ink/85"
     >
       Uuri lähemalt
     </button>

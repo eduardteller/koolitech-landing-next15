@@ -3,7 +3,7 @@ import Policies from "./Policies";
 const Cookies = () => {
   return (
     <>
-      <Policies>
+      <Policies eyebrow="Küpsised">
         <h1>Küpsiste kasutamine</h1>
         <h3>MIS ON KÜPSISED?</h3>
         <p>
@@ -38,9 +38,7 @@ const Cookies = () => {
         <ul>
           <li>
             Google Chrome (
-            <a
-              className="text-blue-500"
-              href="https://support.google.com/accounts/answer/61416?hl=en"
+            <a              href="https://support.google.com/accounts/answer/61416?hl=en"
             >
               https://support.google.com/accounts/answer/61416?hl=en
             </a>
@@ -48,9 +46,7 @@ const Cookies = () => {
           </li>
           <li>
             Mozilla Firefox (
-            <a
-              className="text-blue-500"
-              href="https://support.mozilla.org/et/kb/enable-and-disable-cookies-website-preferences"
+            <a              href="https://support.mozilla.org/et/kb/enable-and-disable-cookies-website-preferences"
             >
               https://support.mozilla.org/et/kb/enable-and-disable-cookies-website-preferences
             </a>
@@ -58,9 +54,7 @@ const Cookies = () => {
           </li>
           <li>
             Internet Explorer (
-            <a
-              className="text-blue-500"
-              href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
+            <a              href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
             >
               https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies
             </a>
@@ -68,9 +62,7 @@ const Cookies = () => {
           </li>
           <li>
             Safari (
-            <a
-              className="text-blue-500"
-              href="https://support.apple.com/kb/ph21411?locale=et_EE"
+            <a              href="https://support.apple.com/kb/ph21411?locale=et_EE"
             >
               https://support.apple.com/kb/ph21411?locale=et_EE
             </a>

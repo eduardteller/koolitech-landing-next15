@@ -5,62 +5,97 @@ import HeaderPrimary from "./HeaderPrimary";
 import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
+import TimeRail from "./TimeRail";
 
 const App = () => {
   return (
     <>
-      <div className="svg-bg absolute inset-0 left-0 top-0 z-[-1] h-screen w-full"></div>
       <HeaderPrimary />
       <div className="relative overflow-x-hidden">
         <main className="z-50">
-          <div className="bg-transparent">
-            <div className="container mx-auto flex max-w-screen-xl flex-col justify-center p-8 md:flex-row md:justify-start">
-              <div
-                className="flex flex-col gap-8 md:w-1/2"
-                data-aos="fade-right"
-              >
-                <h1 className="items-center justify-center text-5xl font-bold leading-tight tracking-tight text-slate-100 md:w-1/2 lg:text-6xl">
-                  Kõikvõimas koolikell
-                </h1>
-                <p className="text-xl text-slate-100">
-                  Muuda koolipäevad lihtsaks ja turvaliseks!
-                </p>
-                <ScrollButton />
-              </div>
-              <div className="mt-12 w-full overflow-visible md:ml-4 md:mt-0">
-                <Image
-                  width={1000}
-                  height={800}
-                  alt="Koolikell"
-                  data-aos="fade-left"
-                  className="object-contain md:absolute md:h-[424px]"
-                  src="/heading2.png"
-                />
+          <section className="relative overflow-hidden bg-chalk">
+            {/* faint ruled-paper texture — the schedule grid */}
+            <div
+              className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_bottom,rgba(15,23,42,0.035)_1px,transparent_1px)] [background-size:100%_2.5rem]"
+              aria-hidden="true"
+            />
+            <div className="relative mx-auto max-w-screen-xl px-6 pb-24 pt-12 sm:px-8 md:pt-20">
+              <div className="grid items-center gap-12 md:grid-cols-[1.05fr_0.95fr]">
+                <div>
+                  <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-ink/65">
+                    E-Kell · koolikellade süsteem
+                  </p>
+                  <h1 className="font-display text-5xl font-bold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+                    Kõikvõimas
+                    <br />
+                    <span className="text-brass">koolikell</span>
+                  </h1>
+                  <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
+                    Muuda koolipäevad lihtsaks ja turvaliseks. Halda kellasid,
+                    tunniplaane ja häireid — ühest kohast, igast seadmest.
+                  </p>
+                  <div className="mt-8 flex flex-wrap items-center gap-5">
+                    <ScrollButton />
+                    <a
+                      href="https://dashboard.koolitech.ee"
+                      className="font-mono text-sm font-medium text-ink/70 underline-offset-4 hover:text-ink hover:underline"
+                    >
+                      E-Kell Web →
+                    </a>
+                    <a
+                      href="/ekell/docs"
+                      className="font-mono text-sm font-medium text-ink/70 underline-offset-4 hover:text-ink hover:underline"
+                    >
+                      Dokumentatsioon →
+                    </a>
+                  </div>
+                  <div className="mt-14">
+                    <TimeRail />
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_30px_60px_-25px_rgba(15,23,42,0.35)] ring-1 ring-ink/10">
+                    <div className="flex items-center gap-1.5 border-b border-ink/5 px-4 py-3">
+                      <span className="h-2.5 w-2.5 rounded-full bg-ink/10" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-ink/10" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-brass/60" />
+                      <span className="ml-3 font-mono text-[11px] text-ink/40">
+                        e-kell · töölaud
+                      </span>
+                    </div>
+                    <Image
+                      width={1000}
+                      height={800}
+                      alt="E-Kell töölauarakendus"
+                      className="h-auto w-full object-cover"
+                      src="/heading2.png"
+                      priority
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-3 flex items-center gap-2 rounded-full bg-ink px-4 py-2 shadow-lg">
+                    <span className="h-2 w-2 animate-pulse rounded-full bg-brass" />
+                    <span className="font-mono text-xs text-chalk">
+                      kell heliseb 09:50
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-              className="z-50 -mt-20 md:pt-20"
-            >
-              <path
-                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                fill="#ffffff"
-              ></path>
-            </svg>
-          </div>
-          <div className="bg-white pb-32">
+          </section>
+          <div className="bg-white px-6 py-24 sm:px-8">
             <div
-              className="container z-50 mx-auto -mt-1 flex max-w-screen-xl flex-col items-center justify-center space-y-8 px-4 pt-24 md:px-0 md:pt-0 lg:px-8"
+              className="container mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-6 text-center"
               data-aos="fade-up"
               data-aos-offset="200"
             >
-              <h1 className="text-center text-2xl font-bold text-slate-800 md:w-2/3 lg:whitespace-nowrap lg:text-3xl">
-                E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus!
-              </h1>
-              <p className="prose prose-lg mx-auto max-w-none text-center text-slate-800/80 md:w-2/3">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                Tarkvara koolidele
+              </p>
+              <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink md:w-3/4 md:text-4xl">
+                E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus
+              </h2>
+              <p className="max-w-2xl text-lg leading-relaxed text-ink/70">
                 KooliTech E-Kell tarkvara automatiseerib ajamahukad ülesanded,
                 pakkudes tõhusa lahenduse tunniplaanide ja koolikellade
                 juhtimiseks. See kaugjuhitav ja paindlik süsteem lihtsustab
@@ -70,30 +105,32 @@ const App = () => {
             </div>
           </div>
 
-          <div id="scroll-to-div" className="bg-slate-100 px-8 py-24">
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
+          <div id="scroll-to-div" className="bg-chalk px-6 py-24 sm:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
                 data-aos="fade-right"
                 data-aos-offset="200"
-                className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
+                className="md:flex md:basis-1/2 md:items-center md:justify-center"
               >
-                <Image
-                  width={1280}
-                  height={800}
-                  className="object-contain"
-                  src="/desktop.png"
-                  alt=""
-                />
+                <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10">
+                  <Image
+                    width={1280}
+                    height={800}
+                    className="h-auto w-full object-contain"
+                    src="/desktop.png"
+                    alt="E-Kell töölauarakenduse tunniplaani vaade"
+                  />
+                </div>
               </div>
               <div
                 data-aos="fade-left"
                 data-aos-offset="200"
-                className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
+                className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
               >
-                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
-                  Lihtne, Nutikas ja Võimas
+                <p className="mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Lihtne, nutikas ja võimas
                 </p>
-                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-ink md:text-3xl">
                   Uus tase koolikellade haldamises
                 </h3>
 
@@ -109,17 +146,17 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-white px-8 py-24">
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
+          <div className="bg-white px-6 py-24 sm:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
                 data-aos="fade-right"
                 data-aos-offset="200"
-                className="order-2 flex flex-col text-slate-800 md:order-1 md:mt-0 md:basis-1/2 md:px-24"
+                className="order-2 flex flex-col md:order-1 md:mt-0 md:basis-1/2 md:px-16"
               >
-                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
-                  veebiliides
+                <p className="mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Veebiliides
                 </p>
-                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-ink md:text-3xl">
                   Halda koolikellasid igal ajal ja igalt poolt
                 </h3>
 
@@ -136,47 +173,53 @@ const App = () => {
               <div
                 data-aos="fade-left"
                 data-aos-offset="200"
-                className="order-1 max-md:mb-8 md:order-2 md:flex md:basis-1/2 md:items-center"
+                className="order-1 md:order-2 md:flex md:basis-1/2 md:items-center md:justify-center"
               >
-                <Image
-                  width={1280}
-                  height={800}
-                  className="object-contain"
-                  src="/web.png"
-                  alt=""
-                />
+                <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10">
+                  <Image
+                    width={1280}
+                    height={800}
+                    className="h-auto w-full object-contain"
+                    src="/web.png"
+                    alt="E-Kell veebiliides brauseris"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-slate-100 px-8 py-24">
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center md:flex-row">
+          <div className="bg-ink px-6 py-24 sm:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
                 data-aos="fade-right"
                 data-aos-offset="200"
-                className="max-md:mb-8 md:flex md:basis-1/2 md:items-center"
+                className="md:flex md:basis-1/2 md:items-center md:justify-center"
               >
-                <Image
-                  width={1280}
-                  height={800}
-                  className="object-contain"
-                  src="/alarm.png"
-                  alt=""
-                />
+                <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_-25px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
+                  <Image
+                    width={1280}
+                    height={800}
+                    className="h-auto w-full object-contain"
+                    src="/alarm.png"
+                    alt="E-Kell häiresüsteemi juhtpaneel"
+                  />
+                </div>
               </div>
               <div
                 data-aos="fade-left"
                 data-aos-offset="200"
-                className="flex flex-col text-slate-800 md:mt-0 md:basis-1/2 md:px-24"
+                className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
               >
-                <p className="mb-8 text-sm font-bold uppercase text-blue-500">
-                  Nutikad funktsioonid koolidele
+                <p className="mb-5 flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-signal">
+                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-signal" />
+                  Häiresüsteem
                 </p>
-                <h3 className="w-full text-2xl font-bold md:text-3xl">
+                <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-chalk md:text-3xl">
                   Rohkem kui lihtsalt koolikellade planeerija
                 </h3>
 
                 <PointsList
+                  tone="dark"
                   text={[
                     "Häiresüsteem: Võimaldab operatiivselt aktiveerida tulekahju-, evakuatsiooni- või muid häiresignaale otse tarkvarast, tagades kiire reageerimise eriolukordades.",
                     "Häälsalvestus ja taasesitus: Salvesta olulised teadaanded otse tarkvaras ning esita need automaatselt või käsitsi.",
@@ -188,26 +231,28 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-white px-8 py-24">
-            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center gap-8 text-slate-800">
-              <p className="text-sm font-bold uppercase text-blue-500 md:text-center">
-                võimalused
+          <div className="bg-white px-6 py-24 sm:px-8">
+            <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center gap-5">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                Võimalused
               </p>
-              <h3 className="text-center text-4xl font-bold tracking-tight">
+              <h3 className="text-center font-display text-3xl font-bold leading-tight tracking-tight text-ink md:text-4xl">
                 E-Kell tarkvara sisaldab
               </h3>
-              <PointsComponent />
+              <div className="mt-8 w-full">
+                <PointsComponent />
+              </div>
             </div>
           </div>
 
-          <div className="bg-slate-100 px-8 py-24">
+          <div className="bg-chalk px-6 py-24 sm:px-8">
             <div className="mx-auto max-w-3xl">
-              <p className="mb-8 text-center font-semibold uppercase text-blue-500">
-                FAQ
+              <p className="mb-4 text-center font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                KKK
               </p>
-              <h1 className="mb-24 text-center text-4xl font-bold text-slate-800">
+              <h2 className="mb-16 text-center font-display text-3xl font-bold leading-tight tracking-tight text-ink md:text-4xl">
                 Korduma kippuvad küsimused
-              </h1>
+              </h2>
               <Accordion
                 items={[
                   {
@@ -256,15 +301,20 @@ const App = () => {
               ></Accordion>
             </div>
           </div>
-          <div className="bg-white px-8 py-32">
-            <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-10 text-center">
-              <h2 className="text-5xl font-extrabold">Kõikvõimas koolikell</h2>
-              <p className="prose prose-base">
-                Muuda koolipäevad lihtsaks ja turvaliseks!
+          <div className="bg-ink px-6 py-28 text-center sm:px-8">
+            <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-6">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                Alusta täna
+              </p>
+              <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-chalk md:text-5xl">
+                Kõikvõimas koolikell
+              </h2>
+              <p className="max-w-md text-lg leading-relaxed text-chalk/70">
+                Muuda koolipäevad lihtsaks ja turvaliseks.
               </p>
               <a
                 href="/contact"
-                className="rounded-lg bg-blue-500 px-8 py-4 font-semibold text-slate-100 duration-200 hover:bg-blue-500/50"
+                className="mt-2 rounded-xl bg-brass px-8 py-4 font-semibold text-ink transition duration-150 hover:bg-brass/85"
               >
                 Kirjuta meile
               </a>

@@ -1,102 +1,73 @@
 import { BellRing, Earth, Laptop, Mic, Music, Siren } from "lucide-react";
 
-const PointsComponent = () => {
-  const baseCss =
-    "flex w-full basis-1/3 flex-col items-center gap-8 text-center";
-  const logoCss = "text-slate-800";
-  return (
-    <div className="flex w-full flex-col gap-8">
-      <div className="flex w-full flex-col gap-8 max-md:px-8 md:flex-row">
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="150"
-          className={baseCss}
-        >
-          {/* <div className="text-7xl">🌍</div> */}
-          <Laptop size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">Kasutajasõbralik liides</h4>
-          <p className="prose prose-base text-slate-800/80">
-            Intuitiivne ja hõlpsasti kasutatav.
-          </p>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="250"
-          className={baseCss}
-        >
-          <BellRing size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">
-            Paindlik tunniplaan ja kellad
-          </h4>
-          <p className="prose prose-base text-slate-800/80">
-            Loo ja vaheta kergesti erinevaid ajakavasid (nt tavaline nädal,
-            pühadenädal).
-          </p>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="350"
-          className={baseCss}
-        >
-          <Earth size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">
-            Veebiklient – juhtimine igalt poolt
-          </h4>
-          <p className="prose prose-base text-slate-800/80">
-            Halda koolikelli ja ajakavasid mis tahes seadmest, kõik
-            sünkroonitakse automaatselt.
-          </p>
-        </div>
-      </div>
+const features = [
+  {
+    Icon: Laptop,
+    title: "Kasutajasõbralik liides",
+    text: "Intuitiivne ja hõlpsasti kasutatav.",
+    delay: 150,
+  },
+  {
+    Icon: BellRing,
+    title: "Paindlik tunniplaan ja kellad",
+    text: "Loo ja vaheta kergesti erinevaid ajakavasid (nt tavaline nädal, pühadenädal).",
+    delay: 250,
+  },
+  {
+    Icon: Earth,
+    title: "Veebiklient – juhtimine igalt poolt",
+    text: "Halda koolikelli ja ajakavasid mis tahes seadmest, kõik sünkroonitakse automaatselt.",
+    delay: 350,
+  },
+  {
+    Icon: Siren,
+    title: "Alarmsüsteem kriitilisteks olukordadeks",
+    text: "Käivita kiiresti tulekahju-, evakuatsiooni- või muud häiresignaalid.",
+    delay: 450,
+    alarm: true,
+  },
+  {
+    Icon: Mic,
+    title: "Helisalvestus ja teadaannete esitamine",
+    text: "Salvesta ja mängi tähtsaid kooliteateid, teadandeid ja erakorralisi sõnumeid.",
+    delay: 550,
+  },
+  {
+    Icon: Music,
+    title: "Kohandatavad koolikella helid",
+    text: "Kasuta enda muusikat, salvestisi või muid helisid koolikelladena.",
+    delay: 650,
+  },
+];
 
-      <div className="flex w-full flex-col gap-8 max-md:px-8 md:flex-row">
+const PointsComponent = () => {
+  return (
+    <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
+      {features.map(({ Icon, title, text, delay, alarm }) => (
         <div
+          key={title}
           data-aos="fade-up"
           data-aos-offset="200"
-          data-aos-delay="450"
-          className={baseCss}
+          data-aos-delay={delay}
+          className="flex flex-col items-center gap-4 text-center"
         >
-          <Siren size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">
-            Alarmsüsteem kriitilisteks olukordadeks
+          <span
+            className={`flex h-16 w-16 items-center justify-center rounded-2xl ring-1 ${
+              alarm ? "bg-signal/10 ring-signal/20" : "bg-chalk ring-ink/10"
+            }`}
+          >
+            <Icon
+              size={30}
+              strokeWidth={1.75}
+              className={alarm ? "text-signal" : "text-brass"}
+            />
+          </span>
+          <h4 className="font-display text-lg font-semibold leading-snug text-ink">
+            {title}
           </h4>
-          <p className="prose prose-base text-slate-800/80">
-            Käivita kiiresti tulekahju-, evakuatsiooni- või muud häiresignaalid.
-          </p>
+          <p className="max-w-xs leading-relaxed text-ink/65">{text}</p>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="550"
-          className={baseCss}
-        >
-          <Mic size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">
-            Helisalvestus ja teadaannete esitamine
-          </h4>
-          <p className="prose prose-base text-slate-800/80">
-            Salvesta ja mängi tähtsaid kooliteateid, teadandeid ja erakorralisi
-            sõnumeid.
-          </p>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="650"
-          className={baseCss}
-        >
-          <Music size={96} className={logoCss} />
-          <h4 className="text-xl font-semibold">
-            Kohandatavad koolikella helid
-          </h4>
-          <p className="prose prose-base text-slate-800/80">
-            Kasuta enda muusikat, salvestisi või muid helisid koolikelladena.
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

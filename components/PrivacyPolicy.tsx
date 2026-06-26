@@ -3,7 +3,7 @@ import Policies from "./Policies";
 
 const PrivacyPolicy = () => {
   return (
-    <Policies>
+    <Policies eyebrow="Privaatsus">
       <h1>Privaatsustingimused</h1>
       <p>
         KooliTech OÜ jaoks on oluline Teie privaatsus ja järgida kõiki kehtivaid

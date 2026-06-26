@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface Item {
@@ -30,24 +30,26 @@ const Accordion = ({ items }: Props) => {
   };
 
   return (
-    <>
+    <div className="divide-y divide-ink/10 border-y border-ink/10">
+      {/* Reading scrollHeight from the ref during render is safe here: the
+          content is static, so the measured height is stable. */}
+      {/* eslint-disable-next-line react-hooks/refs */}
       {items.map((item, index) => (
-        <div
-          key={index + item.firstText.length + item.secondText.length}
-          className={`w-full ${activeIndex[index] ? "text-slate-900" : "text-slate-900/80"} `}
-        >
+        <div key={`${index}-${item.firstText}`}>
           <button
             onClick={() => toggleAccordion(index)}
-            className="flex w-full items-center justify-between border-t p-4 text-left"
+            className={`flex w-full items-center justify-between gap-4 py-5 text-left font-medium transition-colors ${
+              activeIndex[index] ? "text-ink" : "text-ink/75 hover:text-ink"
+            }`}
+            aria-expanded={activeIndex[index]}
           >
             <span>{item.firstText}</span>
-            <span className="transition-transform duration-300">
-              {activeIndex[index] ? (
-                <ChevronUp strokeWidth={2.5} />
-              ) : (
-                <ChevronDown strokeWidth={2.5} />
-              )}
-            </span>
+            <ChevronDown
+              strokeWidth={2.5}
+              className={`shrink-0 text-brass transition-transform duration-300 ${
+                activeIndex[index] ? "rotate-180" : ""
+              }`}
+            />
           </button>
           <div
             ref={(el) => {
@@ -58,13 +60,15 @@ const Accordion = ({ items }: Props) => {
                 ? contentRefs.current[index]?.scrollHeight
                 : 0,
             }}
-            className="transition-max-height prose prose-sm max-w-none overflow-hidden leading-loose duration-300 ease-in-out"
+            className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
           >
-            <div className="bg-slate-200/50 px-8 py-4">{item.secondText}</div>
+            <p className="pb-6 leading-relaxed text-ink/70">
+              {item.secondText}
+            </p>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import Footer from "./Footer";
-import HeaderSecondary from "./HeaderSecondary";
+import HeaderPrimary from "./HeaderPrimary";
 import Loader from "./Loader";
 
 import { sendContact } from "@/actions/action";
@@ -13,7 +13,7 @@ import { z } from "zod";
 const contactSchema = z.object({
   name: z.string().min(1, "Palun sisestage oma nimi"),
   school: z.string().min(1, "Kooli nimi on kohustuslik"),
-  email: z.string().email("Vale emaili aadressi formaat"),
+  email: z.email("Vale emaili aadressi formaat"),
   phone: z.string().optional(),
   text: z.string().min(1, "Palun sisestage sõnum"),
 });
@@ -44,8 +44,7 @@ const Contact = () => {
       contactSchema.parse(formData);
     } catch (e) {
       if (e instanceof z.ZodError) {
-        e.errors.forEach((error) => {
-          console.log(error.path[0]);
+        e.issues.forEach((error) => {
           switch (error.path[0]) {
             case "name":
               setError((prevError) => ({ ...prevError, name: true }));
@@ -70,39 +69,6 @@ const Contact = () => {
       }
     }
     setLoader(true);
-    // fetch("/api/email-form", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ ...formData }),
-    // })
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       toast.error("Vabandame, midagi läks valesti! 😔");
-    //     } else {
-    //       toast.success("Teie sõnum on saadetud! Aitäh! 🚀");
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error("There was an error submitting the form!", error);
-    //   })
-    //   .finally(() => {
-    //     setError({
-    //       name: false,
-    //       school: false,
-    //       email: false,
-    //       text: false,
-    //     });
-    //     setFormData({
-    //       name: "",
-    //       school: "",
-    //       email: "",
-    //       phone: "",
-    //       text: "",
-    //     });
-    //     setLoader(false);
-    //   });
 
     const resp = await sendContact(formData);
     if (resp.status) {
@@ -130,92 +96,105 @@ const Contact = () => {
     setLoader(false);
   };
 
-  const formCSS =
-    "border rounded-md bg-white hover:bg-slate-50  outline-none ring-0 w-full p-4  duration-100 text-slate-800 focus:border-slate-400";
+  const fieldBase =
+    "w-full rounded-xl border bg-white px-4 py-3.5 text-ink outline-none transition placeholder:text-ink/40 focus:border-brass focus:ring-2 focus:ring-brass/25 disabled:cursor-not-allowed disabled:opacity-60";
+
   return (
     <>
-      <div>
-        <Toaster />
-      </div>
-      <HeaderSecondary></HeaderSecondary>
-      <main className="py-10 text-slate-800">
-        <div className="mx-auto flex max-w-3xl flex-col px-8 md:px-16">
-          <h1 className="mb-8 text-4xl font-extrabold">Kontakt</h1>
-          <p className="prose prose-base">
-            Palun kirjutage meile meili aadressile:
+      <Toaster />
+      <HeaderPrimary />
+      <main className="bg-chalk">
+        <div className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:px-8 md:pt-16">
+          <p className="mb-6 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+            Kontakt
+          </p>
+          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink md:text-5xl">
+            Võta meiega ühendust
+          </h1>
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
+            Kirjuta meile aadressile{" "}
             <a
-              className="ml-2 hover:text-blue-500 hover:underline"
+              className="font-medium text-brass underline-offset-4 hover:underline"
               href="mailto:info@koolitech.ee"
             >
-              <strong>info@koolitech.ee </strong>
-            </a>
-            <span className="block">
-              Või täitke <strong>all olev</strong> vorm.
-            </span>
+              info@koolitech.ee
+            </a>{" "}
+            või täida allolev vorm — vastame esimesel võimalusel.
           </p>
-          <div className="mx-auto my-4 h-[1px] w-full bg-slate-300"></div>
-          <input
-            className={`${formCSS} ${error.name ? "border-red-500" : "border-slate-300"} mb-4`}
-            type="text"
-            name="name"
-            placeholder="Teie nimi"
-            value={formData.name}
-            onChange={handleChange}
-            disabled={loader}
-          />
 
-          <input
-            className={`${formCSS} ${error.school ? "border-red-500" : "border-slate-300"} mb-4`}
-            type="text"
-            name="school"
-            placeholder="Kool"
-            value={formData.school}
-            onChange={handleChange}
-            disabled={loader}
-          />
-
-          <div className="mb-4 flex w-full flex-col gap-2 md:flex-row">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              sendToEmail();
+            }}
+            className="mt-10 flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10 sm:p-8"
+          >
             <input
-              name="email"
-              className={`${formCSS} ${error.email ? "border-red-500" : "border-slate-300"} `}
+              className={`${fieldBase} ${error.name ? "border-signal" : "border-ink/15"}`}
               type="text"
-              placeholder="Emaili aadress"
-              value={formData.email}
+              name="name"
+              aria-label="Teie nimi"
+              placeholder="Teie nimi"
+              value={formData.name}
               onChange={handleChange}
               disabled={loader}
             />
+
             <input
-              name="phone"
-              className={`${formCSS}`}
+              className={`${fieldBase} ${error.school ? "border-signal" : "border-ink/15"}`}
               type="text"
-              placeholder="(Valikuline) Telefoni number"
-              value={formData.phone}
+              name="school"
+              aria-label="Kool"
+              placeholder="Kool"
+              value={formData.school}
               onChange={handleChange}
               disabled={loader}
             />
-          </div>
 
-          <textarea
-            name="text"
-            className={`${formCSS} ${error.text ? "border-red-500" : "border-slate-300"} md:min-h-30 mb-4 max-h-96 min-h-48 md:max-h-60`}
-            placeholder="Sõnum"
-            value={formData.text}
-            onChange={handleChange}
-            disabled={loader}
-          ></textarea>
-          <div className="flex flex-col items-start justify-start md:flex-row">
+            <div className="flex w-full flex-col gap-4 md:flex-row">
+              <input
+                name="email"
+                className={`${fieldBase} ${error.email ? "border-signal" : "border-ink/15"}`}
+                type="text"
+                aria-label="Emaili aadress"
+                placeholder="Emaili aadress"
+                value={formData.email}
+                onChange={handleChange}
+                disabled={loader}
+              />
+              <input
+                name="phone"
+                className={`${fieldBase} border-ink/15`}
+                type="text"
+                aria-label="Telefoni number (valikuline)"
+                placeholder="(Valikuline) Telefoni number"
+                value={formData.phone}
+                onChange={handleChange}
+                disabled={loader}
+              />
+            </div>
+
+            <textarea
+              name="text"
+              className={`${fieldBase} max-h-96 min-h-48 md:max-h-60 md:min-h-32 ${error.text ? "border-signal" : "border-ink/15"}`}
+              aria-label="Sõnum"
+              placeholder="Sõnum"
+              value={formData.text}
+              onChange={handleChange}
+              disabled={loader}
+            />
+
             <button
+              type="submit"
               disabled={loader}
-              onClick={sendToEmail}
-              className="mt-4 flex min-w-48 flex-row items-center justify-center rounded-md bg-blue-500 px-6 py-3 font-semibold text-slate-100 transition duration-100 hover:bg-opacity-50"
+              className="mt-2 inline-flex min-w-48 items-center justify-center self-start rounded-xl bg-brass px-7 py-3.5 font-semibold text-ink transition duration-150 hover:bg-brass/85 disabled:opacity-70"
             >
-              {loader ? <Loader></Loader> : "Saada"}
-              <span className="loading loading-spinner loading-xs ml-2 hidden"></span>
+              {loader ? <Loader /> : "Saada"}
             </button>
-          </div>
+          </form>
         </div>
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

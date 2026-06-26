@@ -3,7 +3,7 @@ import Policies from "./Policies";
 
 const Terms = () => {
   return (
-    <Policies>
+    <Policies eyebrow="Tingimused">
       <h1>Kasutajatingimused</h1>
       <p>
         Veebisaidi koolitech.ee külastamisel, nõustute järgima käesolevas

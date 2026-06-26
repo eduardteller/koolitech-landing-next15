@@ -6,7 +6,7 @@ import { z } from "zod";
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   school: z.string().min(1, "School name is required"),
-  email: z.string().email("Invalid email format"),
+  email: z.email("Invalid email format"),
   phone: z.string().optional(),
   text: z.string().min(1, "Message is required"),
 });
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           message: "Invalid request data",
-          errors: error.errors,
+          errors: error.issues,
           success: false,
         },
         { status: 400 },
