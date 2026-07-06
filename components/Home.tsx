@@ -1,11 +1,37 @@
+import { DownloadCloud, KeyRound, RefreshCw, WifiOff } from "lucide-react";
 import Image from "next/image";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import MediaShowcase from "./MediaShowcase";
+import PlatformCompare from "./PlatformCompare";
 import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
 import TimeRail from "./TimeRail";
+
+const reliability = [
+  {
+    Icon: RefreshCw,
+    title: "Pilvesünkroonimine",
+    text: "Ajakavad ja seaded sünkroonitakse automaatselt taustal.",
+  },
+  {
+    Icon: WifiOff,
+    title: "Offline varuvõimalus",
+    text: "Kellad mängivad ka ilma internetiühenduseta.",
+  },
+  {
+    Icon: DownloadCloud,
+    title: "Automaatsed uuendused",
+    text: "Uusimad funktsioonid ja turvaparandused paigalduvad ise.",
+  },
+  {
+    Icon: KeyRound,
+    title: "Litsentsihaldus",
+    text: "Näe litsentsi kehtivust ja pikenda see õigel ajal.",
+  },
+];
 
 const App = () => {
   return (
@@ -13,6 +39,7 @@ const App = () => {
       <HeaderPrimary />
       <div className="relative overflow-x-hidden">
         <main className="z-50">
+          {/* ---------- Hero ---------- */}
           <section className="relative overflow-hidden bg-chalk">
             {/* faint ruled-paper texture — the schedule grid */}
             <div
@@ -56,20 +83,12 @@ const App = () => {
 
                 <div className="relative">
                   <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_30px_60px_-25px_rgba(15,23,42,0.35)] ring-1 ring-ink/10">
-                    <div className="flex items-center gap-1.5 border-b border-ink/5 px-4 py-3">
-                      <span className="h-2.5 w-2.5 rounded-full bg-ink/10" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-ink/10" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-brass/60" />
-                      <span className="ml-3 font-mono text-[11px] text-ink/40">
-                        e-kell · töölaud
-                      </span>
-                    </div>
                     <Image
-                      width={1000}
-                      height={800}
-                      alt="E-Kell töölauarakendus"
+                      width={1920}
+                      height={1030}
+                      alt="E-Kell töölauarakenduse peavaade"
                       className="h-auto w-full object-cover"
-                      src="/heading2.png"
+                      src="/assets/desktop/toolaud.png"
                       priority
                     />
                   </div>
@@ -83,6 +102,8 @@ const App = () => {
               </div>
             </div>
           </section>
+
+          {/* ---------- Intro band ---------- */}
           <div className="bg-white px-6 py-24 sm:px-8">
             <div
               className="container mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-6 text-center"
@@ -96,15 +117,13 @@ const App = () => {
                 E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus
               </h2>
               <p className="max-w-2xl text-lg leading-relaxed text-ink/70">
-                KooliTech E-Kell tarkvara automatiseerib ajamahukad ülesanded,
-                pakkudes tõhusa lahenduse tunniplaanide ja koolikellade
-                juhtimiseks. See kaugjuhitav ja paindlik süsteem lihtsustab
-                koolikorraldust, muutes õpetajate töö stressivabaks ja
-                efektiivseks.
+                Automatiseeri koolikellad ja tunniplaanid, halda häireid ning
+                juhi kõike kaugelt — üks süsteem kogu koolipäeva jaoks.
               </p>
             </div>
           </div>
 
+          {/* ---------- Ajakavad & tunniplaanid ---------- */}
           <div id="scroll-to-div" className="bg-chalk px-6 py-24 sm:px-8">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
@@ -114,11 +133,11 @@ const App = () => {
               >
                 <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10">
                   <Image
-                    width={1280}
-                    height={800}
+                    width={1920}
+                    height={1030}
                     className="h-auto w-full object-contain"
-                    src="/desktop.png"
-                    alt="E-Kell töölauarakenduse tunniplaani vaade"
+                    src="/assets/desktop/loomuuda.png"
+                    alt="E-Kell tunniplaani redaktor päevade ja plaanidega"
                   />
                 </div>
               </div>
@@ -128,25 +147,90 @@ const App = () => {
                 className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
               >
                 <p className="mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
-                  Lihtne, nutikas ja võimas
+                  Tunniplaanid
                 </p>
                 <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-ink md:text-3xl">
-                  Uus tase koolikellade haldamises
+                  Terve kooliaasta ajakavad ühes kohas
                 </h3>
 
                 <PointsList
                   text={[
-                    "Mugav ajastamine: Loo erinevaid ajakavasid (tavaline nädal, pühadenädal, eriüritused) ja lülita neid kiiresti.",
-                    "Lihtne ja arusaadav: Moodsalt kujundatud kasutajaliides, mida saab kasutada igaüks, ilma tehniliste teadmisteta.",
-                    "Tark automatiseerimine: Süsteem haldab koolikelli iseseisvalt, et saaksid keskenduda olulisemale.",
-                    "Ühendatud ja paindlik: Veebiklient võimaldab ajakavasid hallata kaugelt ja igast seadmest.",
+                    "Mitu plaani: Loo tavaline nädal, lühendatud päev, pühad või aktus ja vaheta neid ühe klikiga.",
+                    "Eelkell, peakell ja järelkell: Määra igale tunnile eraldi ajad ja helid.",
+                    "Kopeeri päev: Kanna ühe päeva ajad teistele üle, ilma uuesti sisestamata.",
+                    "Aktiivne plaan: Vaheta kehtiv ajakava kohe töölaualt või veebist.",
                   ]}
                 />
               </div>
             </div>
           </div>
 
+          {/* ---------- Häiresüsteem ---------- */}
+          <div className="bg-ink px-6 py-24 sm:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
+              <div
+                data-aos="fade-right"
+                data-aos-offset="200"
+                className="order-2 flex flex-col md:order-1 md:mt-0 md:basis-1/2 md:px-16"
+              >
+                <p className="mb-5 flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-signal">
+                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-signal" />
+                  Häiresüsteem
+                </p>
+                <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-chalk md:text-3xl">
+                  Reageeri sekunditega
+                </h3>
+
+                <PointsList
+                  tone="dark"
+                  text={[
+                    "Häire presetid: Loo eraldi häired tulekahju, evakuatsiooni ja muude olukordade jaoks.",
+                    "Täielikult kohandatav: Vali igale presetile ikoon, heli, korduste arv ja viivitus.",
+                    "Kaugkäivitus: Käivita häire otse tarkvarast või kaugelt veebiliidesest.",
+                    "Eraldi tulekahjuhäire: Kiire nupp kõige kriitilisemaks olukorraks.",
+                  ]}
+                />
+              </div>
+
+              <div
+                data-aos="fade-left"
+                data-aos-offset="200"
+                className="order-1 md:order-2 md:flex md:basis-1/2 md:items-center md:justify-center"
+              >
+                <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_-25px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
+                  <Image
+                    width={1920}
+                    height={1030}
+                    className="h-auto w-full object-contain"
+                    src="/assets/desktop/haire2.png"
+                    alt="E-Kell häire preseti loomine tulekahjuhäirega"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ---------- Heli & meedia ---------- */}
           <div className="bg-white px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-7xl">
+              <div
+                className="flex flex-col items-center gap-5 text-center"
+                data-aos="fade-up"
+                data-aos-offset="200"
+              >
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Heli & meedia
+                </p>
+                <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink md:w-3/4 md:text-4xl">
+                  Terve kooli helisüsteem tarkvaras
+                </h2>
+              </div>
+              <MediaShowcase />
+            </div>
+          </div>
+
+          {/* ---------- Veebiliides ---------- */}
+          <div className="bg-chalk px-6 py-24 sm:px-8">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
                 data-aos="fade-right"
@@ -162,10 +246,10 @@ const App = () => {
 
                 <PointsList
                   text={[
-                    "Täielik kontroll kõikjal: Kohanda kavasid, seadista alarme ja juhi ajakavasid mis tahes veebibrauserist, arvutist või nutitelefonist.",
-                    "Reaalajas sünkroonimine: Sinu tehtud muudatused saadetakse koheselt töölauarakendusse ja rakenduvad hetkega.",
-                    "Mitme kasutaja tugi: Koolitöötajad saavad ajakavasid mugavalt koos hallata.",
-                    "Turvaline ja kaitstud: Krüpteeritud andmeedastus hoiab sinu ajakavad kindlalt kaitstud.",
+                    "Kaugjuhtimine: Muuda ajakavasid, käivita häireid ja juhi raadiot mis tahes brauserist.",
+                    "Reaalajas sünkroonimine: Sinu muudatused jõuavad töölauarakendusse kohe.",
+                    "Mitme kasutaja tugi: Koolitöötajad logivad sisse ja haldavad süsteemi koos.",
+                    "Admin ja litsentsid: Halda kasutajakontosid ja litsentse ühest kohast.",
                   ]}
                 />
               </div>
@@ -177,10 +261,10 @@ const App = () => {
               >
                 <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10">
                   <Image
-                    width={1280}
-                    height={800}
+                    width={2560}
+                    height={1600}
                     className="h-auto w-full object-contain"
-                    src="/web.png"
+                    src="/assets/web/web.png"
                     alt="E-Kell veebiliides brauseris"
                   />
                 </div>
@@ -188,49 +272,73 @@ const App = () => {
             </div>
           </div>
 
-          <div className="bg-ink px-6 py-24 sm:px-8">
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
+          {/* ---------- Pilvesünk & töökindlus ---------- */}
+          <div className="bg-white px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-screen-xl">
               <div
-                data-aos="fade-right"
+                className="flex flex-col items-center gap-5 text-center"
+                data-aos="fade-up"
                 data-aos-offset="200"
-                className="md:flex md:basis-1/2 md:items-center md:justify-center"
               >
-                <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_-25px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
-                  <Image
-                    width={1280}
-                    height={800}
-                    className="h-auto w-full object-contain"
-                    src="/alarm.png"
-                    alt="E-Kell häiresüsteemi juhtpaneel"
-                  />
-                </div>
-              </div>
-              <div
-                data-aos="fade-left"
-                data-aos-offset="200"
-                className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
-              >
-                <p className="mb-5 flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-signal">
-                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-signal" />
-                  Häiresüsteem
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Töökindlus
                 </p>
-                <h3 className="font-display text-2xl font-bold leading-tight tracking-tight text-chalk md:text-3xl">
-                  Rohkem kui lihtsalt koolikellade planeerija
-                </h3>
-
-                <PointsList
-                  tone="dark"
-                  text={[
-                    "Häiresüsteem: Võimaldab operatiivselt aktiveerida tulekahju-, evakuatsiooni- või muid häiresignaale otse tarkvarast, tagades kiire reageerimise eriolukordades.",
-                    "Häälsalvestus ja taasesitus: Salvesta olulised teadaanded otse tarkvaras ning esita need automaatselt või käsitsi.",
-                    "Automaatne uuendamine: Tarkvara püsib alati ajakohane – saad alati uusimad funktsioonid ja parimad turvauuendused.",
-                    "Kohandatavad koolikella helid: Kasuta enda helifaile koolikelladena! Vali muusikapalad või muud helid, et muuta koolikella süsteem ainulaadseks ja õpilastele meeldivamaks.",
-                  ]}
-                />
+                <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink md:w-3/4 md:text-4xl">
+                  Loodud igapäevaseks tööks
+                </h2>
+              </div>
+              <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-4">
+                {reliability.map(({ Icon, title, text }, i) => (
+                  <div
+                    key={title}
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay={150 + i * 100}
+                    className="flex flex-col items-center gap-4 text-center"
+                  >
+                    <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-chalk ring-1 ring-ink/10">
+                      <Icon
+                        size={28}
+                        strokeWidth={1.75}
+                        className="text-brass"
+                      />
+                    </span>
+                    <h4 className="font-display text-lg font-semibold leading-snug text-ink">
+                      {title}
+                    </h4>
+                    <p className="max-w-xs leading-relaxed text-ink/65">
+                      {text}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
+          {/* ---------- Desktop vs Veeb ---------- */}
+          <div className="bg-ink px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-4xl">
+              <div
+                className="flex flex-col items-center gap-5 text-center"
+                data-aos="fade-up"
+                data-aos-offset="200"
+              >
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Töölaud ja veeb
+                </p>
+                <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-chalk md:text-4xl">
+                  Kaks tööriista, üks litsents
+                </h2>
+                <p className="max-w-xl text-lg leading-relaxed text-chalk/70">
+                  Töölauarakendus mängib kellad kohapeal, veebiliides juhib kõike
+                  kaugelt.
+                </p>
+              </div>
+              <PlatformCompare />
+            </div>
+          </div>
+
+          {/* ---------- Feature grid ---------- */}
           <div className="bg-white px-6 py-24 sm:px-8">
             <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center gap-5">
               <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
@@ -245,6 +353,7 @@ const App = () => {
             </div>
           </div>
 
+          {/* ---------- KKK ---------- */}
           <div className="bg-chalk px-6 py-24 sm:px-8">
             <div className="mx-auto max-w-3xl">
               <p className="mb-4 text-center font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
@@ -256,51 +365,65 @@ const App = () => {
               <Accordion
                 items={[
                   {
-                    firstText: "Kuidas paigaldada E-Kella tarkvara?",
+                    firstText: "Kuidas E-Kell paigaldada?",
                     secondText:
-                      "Paigaldusprotsess on lihtne ja nõuab vaid mõne nupu vajutamist. Järgige paigaldusjuhiseid meie veebisaidil.",
+                      "Laadi töölauarakendus kooli arvutisse ja sisesta litsentsivõti — paari klikiga on süsteem töövalmis.",
                   },
                   {
-                    firstText: "Kas E-Kell töötab kõikides seadmetes?",
+                    firstText:
+                      "Mille poolest erinevad töölauarakendus ja veebiliides?",
                     secondText:
-                      "Jah, meie tarkvara on ühilduv arvutite, tahvelarvutite ja nutitelefonidega.",
+                      "Töölauarakendus töötab kooli arvutis, mängib kellad ja hoiab andmeid; veebiliides on kaugjuht, mis avaneb igas brauseris — arvutis, tahvlis või telefonis.",
                   },
                   {
-                    firstText: "Kuidas saab tarkvara kaugelt juhtida?",
+                    firstText: "Kas E-Kell töötab ka ilma internetita?",
                     secondText:
-                      "Kaugjuhtimine on võimalik veebiliidese kaudu, mis tagab ligipääsu kõikjal, kus on internetiühendus.",
+                      "Jah — töölauarakendus mängib kellad ka võrguühenduseta ning sünkroonib muudatused, kui ühendus taastub.",
+                  },
+                  {
+                    firstText: "Kuidas käib pilvesünkroonimine?",
+                    secondText:
+                      "Ajakavad ja seaded sünkroonitakse automaatselt töölauarakenduse ja serveri vahel, nii et kõik seadmed näevad sama infot.",
+                  },
+                  {
+                    firstText:
+                      "Kas mitu kasutajat saavad ajakavasid korraga hallata?",
+                    secondText:
+                      "Jah, koolitöötajad saavad ajakavasid hallata veebiliidese kaudu ja muudatused jõuavad reaalajas kõikjale.",
+                  },
+                  {
+                    firstText:
+                      "Kas saan kasutada oma muusikat või helifaile kellahelina?",
+                    secondText:
+                      "Jah — lae üles MP3-failid või salvestused ja määra need koolikella helideks.",
                   },
                   {
                     firstText:
                       "Kas on võimalik seadistada erinevaid häireliike?",
                     secondText:
-                      "Jah, tarkvaras on mitu nuppu erinevate ohuliikide häirete käivitamiseks.",
+                      "Jah, saad luua eraldi presetid tulekahju-, evakuatsiooni- ja muudeks olukordadeks ning käivitada need ühe vajutusega.",
                   },
                   {
-                    firstText: "Kuidas kohandada heliaegu ja kestusi?",
+                    firstText: "Kuidas muuta kellaaegu ja helisid?",
                     secondText:
-                      "Heliaegu ja kestusi saab kohandada tarkvara seadete menüüs vastavalt kooli vajadustele.",
+                      "Iga tunni eelkella, peakella ja järelkella aja ning heli saad määrata plaani redaktoris kooli vajaduste järgi.",
                   },
                   {
-                    firstText: "Kas tarkvara uuendused on automaatsed?",
+                    firstText: "Kuidas litsents toimib ja kas saan enne proovida?",
                     secondText:
-                      "Jah, kõik uuendused toimuvad automaatselt ja kasutajad saavad alati kõige värskema versiooni.",
-                  },
-                  {
-                    firstText:
-                      "Kas on võimalik proovida tarkvara enne ostmist?",
-                    secondText:
-                      "Jah, pakume tasuta prooviperioodi, et saaksite tutvuda tarkvara funktsioonidega.",
+                      "E-Kell töötab litsentsivõtmega, mille kehtivust näed rakenduses ja saad pikendada; enne ostu saab tutvuda tasuta prooviperioodiga.",
                   },
                   {
                     firstText: "Kas klienditugi on saadaval?",
                     secondText:
-                      "Meie pühendunud tugitiim on alati valmis abistama ja lahendama kõiki küsimusi kiiresti ja tõhusalt. Võtke meiega ühendust e-posti või telefoni teel.",
+                      "Meie tugitiim aitab e-posti või telefoni teel kõik küsimused kiiresti ja tõhusalt lahendada.",
                   },
                 ]}
               ></Accordion>
             </div>
           </div>
+
+          {/* ---------- CTA ---------- */}
           <div className="bg-ink px-6 py-28 text-center sm:px-8">
             <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-6">
               <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">

@@ -1,4 +1,14 @@
-import { BellRing, Earth, Laptop, Mic, Music, Siren } from "lucide-react";
+import {
+  BellRing,
+  Earth,
+  FileMusic,
+  Laptop,
+  Mic,
+  Music,
+  Radio,
+  RefreshCw,
+  Siren,
+} from "lucide-react";
 
 const features = [
   {
@@ -37,6 +47,24 @@ const features = [
     title: "Kohandatavad koolikella helid",
     text: "Kasuta enda muusikat, salvestisi või muid helisid koolikelladena.",
     delay: 650,
+  },
+  {
+    Icon: Radio,
+    title: "Raadio otse ja ajakavaga",
+    text: "Mängi raadiojaamu käsitsi või ajasta need automaatselt käivituma.",
+    delay: 750,
+  },
+  {
+    Icon: FileMusic,
+    title: "MP3-helifailide mängija",
+    text: "Lae üles ja mängi oma MP3-faile otse tarkvarast.",
+    delay: 850,
+  },
+  {
+    Icon: RefreshCw,
+    title: "Pilvesünkroonimine",
+    text: "Ajakavad ja seaded sünkroonitakse automaatselt ja töötavad ka võrguühenduseta.",
+    delay: 950,
   },
 ];
 

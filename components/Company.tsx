@@ -139,10 +139,10 @@ const Company = () => {
               >
                 <div className="overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_-25px_rgba(0,0,0,0.65)] ring-1 ring-white/10">
                   <Image
-                    width={1280}
-                    height={800}
+                    width={1920}
+                    height={1030}
                     className="h-auto w-full object-contain"
-                    src="/main-ekell.png"
+                    src="/assets/desktop/toolaud.png"
                     alt="E-Kell koolikellade süsteem"
                   />
                 </div>
