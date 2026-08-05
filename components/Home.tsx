@@ -8,6 +8,7 @@ import PlatformCompare from "./PlatformCompare";
 import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
+import SystemRequirements from "./SystemRequirements";
 import TimeRail from "./TimeRail";
 
 const reliability = [
@@ -338,6 +339,32 @@ const App = () => {
             </div>
           </div>
 
+          {/* ---------- Süsteeminõuded ---------- */}
+          <div className="bg-chalk px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-3xl">
+              <div
+                className="flex flex-col items-center gap-5 text-center"
+                data-aos="fade-up"
+                data-aos-offset="200"
+              >
+                <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+                  Süsteeminõuded
+                </p>
+                <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink md:text-4xl">
+                  Kas kooli arvuti sobib?
+                </h2>
+                <p className="max-w-xl text-lg leading-relaxed text-ink/70">
+                  Töölauarakendus töötab tavalises Windowsi arvutis, mis jääb
+                  koolis sisse lülitatuks. Nõuded on väikesed — enamik
+                  olemasolevaid arvuteid sobib.
+                </p>
+              </div>
+              <div className="mt-14">
+                <SystemRequirements />
+              </div>
+            </div>
+          </div>
+
           {/* ---------- Feature grid ---------- */}
           <div className="bg-white px-6 py-24 sm:px-8">
             <div className="container mx-auto flex max-w-6xl flex-col items-center justify-center gap-5">
@@ -439,7 +466,7 @@ const App = () => {
                 href="/contact"
                 className="mt-2 rounded-xl bg-brass px-8 py-4 font-semibold text-ink transition duration-150 hover:bg-brass/85"
               >
-                Kirjuta meile
+                Küsi hinnapakkumist
               </a>
             </div>
           </div>
