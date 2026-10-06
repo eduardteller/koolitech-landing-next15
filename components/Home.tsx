@@ -3,6 +3,7 @@ import Image from "next/image";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import HeroScheme from "./HeroScheme";
 import LegacyCompare from "./LegacyCompare";
 import MediaShowcase from "./MediaShowcase";
 import PointsComponent from "./PointsComponent";
@@ -10,7 +11,6 @@ import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
 import SystemBridge from "./SystemBridge";
 import SystemRequirements from "./SystemRequirements";
-import TimeRail from "./TimeRail";
 
 const reliability = [
   {
@@ -79,23 +79,9 @@ const App = () => {
                       Dokumentatsioon →
                     </a>
                   </div>
-                  <div className="mt-14">
-                    <TimeRail />
-                  </div>
                 </div>
 
-                <div className="relative">
-                  <div className="border-line bg-surface relative overflow-hidden rounded-xl border shadow-sm">
-                    <Image
-                      width={1920}
-                      height={1030}
-                      alt="E-Kell töölauarakenduse peavaade"
-                      className="h-auto w-full object-cover"
-                      src="/assets/desktop/toolaud.png"
-                      priority
-                    />
-                  </div>
-                </div>
+                <HeroScheme />
               </div>
             </div>
           </section>

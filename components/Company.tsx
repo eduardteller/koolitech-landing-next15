@@ -323,7 +323,7 @@ const Company = () => {
 
 /* The page signature: KooliTech's offering as a stack of layers.
    Echoes the site's rail grammar (small caps labels, dots, a vertical
-   thread) without reusing E-Kell's clock-like TimeRail. */
+   thread). */
 const layers = [
   {
     label: "Tarkvara",

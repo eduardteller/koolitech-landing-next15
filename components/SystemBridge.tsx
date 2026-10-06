@@ -68,8 +68,8 @@ const HalfCard = ({ half }: { half: Half }) => (
   </div>
 );
 
-// Wire end: the same ringed dot as the hero time-rail, sitting on the
-// card border so the wire reads as plugged in.
+// Wire end: a ringed dot sitting on the card border, so the wire reads
+// as plugged in.
 const plug =
   "absolute top-1/2 hidden h-2.5 w-2.5 -translate-y-1/2 rounded-full border-2 border-primary bg-ground lg:block";
 

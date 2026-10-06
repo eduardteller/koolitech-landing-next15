@@ -143,95 +143,62 @@ html {
 }
 
 /* ---------------------------------------------------------------
-   Time-rail — the signature element.
-   A school day rendered as a vertical schedule. A "now" dot travels
-   down the rail on load and rests at the current period.
-   Everything keys off the vertical centre (50%), so the growing
-   fill, the travelling dot and the active row always align.
+   Hero scheme (components/HeroScheme.tsx).
+   On load the wires light from the web down to the school computer
+   and out to the speakers (0.25s to 1.85s), then the speakers ring
+   every 2.6s. Without motion the wires are simply lit and the
+   speakers still.
 ----------------------------------------------------------------- */
-.rail-track,
-.rail-fill {
+.scheme-flow {
   position: absolute;
-  top: 0;
-  left: 4.25rem;
-  width: 2px;
-  transform: translateX(-1px);
-  border-radius: 2px;
-}
-
-.rail-track {
-  bottom: 0;
-  background: var(--color-line);
-}
-
-.rail-fill {
-  height: 50%;
+  inset: 0;
   background: var(--color-primary);
-}
-
-.rail-now {
-  position: absolute;
-  top: 50%;
-  left: 4.25rem;
-  z-index: 2;
-  height: 14px;
-  width: 14px;
-  transform: translate(-50%, -50%);
-  border-radius: 9999px;
-  background: var(--color-primary);
-  box-shadow: 0 0 0 4px
-    color-mix(in oklab, var(--color-primary) 18%, transparent);
-}
-
-.rail-dot {
-  position: relative;
-  z-index: 1;
-  display: block;
-  height: 8px;
-  width: 8px;
-  border-radius: 9999px;
-  background: var(--color-ground);
-  border: 2px solid var(--color-primary-line);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .rail-fill {
-    animation: rail-grow 1.5s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+  .scheme-flow {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-fill-mode: both;
   }
-  .rail-now {
-    animation:
-      rail-travel 1.5s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both,
-      rail-pulse 2.6s ease-in-out 1.9s infinite;
+
+  .scheme-flow-y {
+    transform-origin: top;
+    animation-name: scheme-flow-y;
+  }
+
+  .scheme-flow-x {
+    transform-origin: center;
+    animation-name: scheme-flow-x;
+  }
+
+  .scheme-speaker {
+    animation: scheme-ring 2.6s ease-out 1.9s infinite;
   }
 }
 
-@keyframes rail-grow {
+@keyframes scheme-flow-y {
   from {
-    height: 0;
-  }
-  to {
-    height: 50%;
+    transform: scaleY(0);
   }
 }
 
-@keyframes rail-travel {
+@keyframes scheme-flow-x {
   from {
-    top: 0;
-  }
-  to {
-    top: 50%;
+    transform: scaleX(0);
   }
 }
 
-@keyframes rail-pulse {
-  0%,
+/* A ring that leaves the speaker and fades: the sound going out. */
+@keyframes scheme-ring {
+  0% {
+    box-shadow: 0 0 0 0
+      color-mix(in oklab, var(--color-primary) 35%, transparent);
+  }
+  70%,
   100% {
-    box-shadow: 0 0 0 4px
-      color-mix(in oklab, var(--color-primary) 18%, transparent);
-  }
-  50% {
-    box-shadow: 0 0 0 9px
-      color-mix(in oklab, var(--color-primary) 5%, transparent);
+    box-shadow: 0 0 0 14px
+      color-mix(in oklab, var(--color-primary) 0%, transparent);
   }
 }
 
