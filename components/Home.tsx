@@ -3,11 +3,12 @@ import Image from "next/image";
 import Accordion from "./Accordion";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import LegacyCompare from "./LegacyCompare";
 import MediaShowcase from "./MediaShowcase";
-import PlatformCompare from "./PlatformCompare";
 import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
 import ScrollButton from "./ScrollButton";
+import SystemBridge from "./SystemBridge";
 import SystemRequirements from "./SystemRequirements";
 import TimeRail from "./TimeRail";
 
@@ -46,7 +47,18 @@ const App = () => {
                   <h1 className="text-ink text-5xl leading-[1.05] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
                     Kõikvõimas
                     <br />
-                    <span className="text-accent">koolikell</span>
+                    {/* nowrap keeps the logo on the word's line on phones */}
+                    <span className="whitespace-nowrap">
+                      <span className="text-accent">koolikell</span>
+                      <Image
+                        width={512}
+                        height={512}
+                        src="/assets/ekell-logo.png"
+                        alt="E-Kell"
+                        priority
+                        className="ml-[0.2em] inline-block h-[0.78em] w-auto align-baseline"
+                      />
+                    </span>
                   </h1>
                   <p className="text-muted mt-6 max-w-md text-lg leading-relaxed">
                     Muuda koolipäevad lihtsaks ja turvaliseks. Halda kellasid,
@@ -253,7 +265,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* ---------- Pilvesünk & töökindlus ---------- */}
+          {/* ---------- Pilvesünk & töökindlus ----------
           <div className="bg-surface px-6 py-24 sm:px-8">
             <div className="mx-auto max-w-screen-xl">
               <div
@@ -294,11 +306,11 @@ const App = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* ---------- Desktop vs Veeb ---------- */}
-          <div className="band px-6 py-24 sm:px-8">
-            <div className="mx-auto max-w-4xl">
+          {/* ---------- Töölaud + veeb: üks süsteem ---------- */}
+          <div className="bg-ground px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-6xl">
               <div
                 className="flex flex-col items-center gap-5 text-center"
                 data-aos="fade-up"
@@ -308,14 +320,29 @@ const App = () => {
                   Töölaud ja veeb
                 </p>
                 <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
-                  Kaks tööriista, üks litsents
+                  Üks süsteem kahes kohas
                 </h2>
-                <p className="text-muted max-w-xl text-lg leading-relaxed">
-                  Töölauarakendus mängib kellad kohapeal, veebiliides juhib
-                  kõike kaugelt.
-                </p>
               </div>
-              <PlatformCompare />
+              <SystemBridge />
+            </div>
+          </div>
+
+          {/* ---------- E-Kell vs vana süsteem ---------- */}
+          <div className="band px-6 py-24 sm:px-8">
+            <div className="mx-auto max-w-4xl">
+              <div
+                className="flex flex-col items-center gap-5 text-center"
+                data-aos="fade-up"
+                data-aos-offset="200"
+              >
+                <p className="text-kicker text-xs font-semibold tracking-widest uppercase">
+                  Võrdlus
+                </p>
+                <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
+                  Miks E-Kell?
+                </h2>
+              </div>
+              <LegacyCompare />
             </div>
           </div>
 
@@ -373,9 +400,9 @@ const App = () => {
                   },
                   {
                     firstText:
-                      "Mille poolest erinevad töölauarakendus ja veebiliides?",
+                      "Kuidas töölauarakendus ja veebiliides koos töötavad?",
                     secondText:
-                      "Töölauarakendus töötab kooli arvutis, mängib kellad ja hoiab andmeid; veebiliides on kaugjuht, mis avaneb igas brauseris — arvutis, tahvlis või telefonis.",
+                      "Töölauarakendus töötab kooli arvutis, mängib kellad ja hoiab andmeid; veebiliides on kaugjuht, mis avaneb igas brauseris — arvutis, tahvlis või telefonis. Muudatus ühes jõuab kohe ka teise.",
                   },
                   {
                     firstText: "Kas E-Kell töötab ka ilma internetita?",

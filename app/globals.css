@@ -236,6 +236,23 @@ html {
 }
 
 /* ---------------------------------------------------------------
+   System bridge (components/SystemBridge.tsx).
+   The features both apps share are the wires between them. When the
+   section scrolls in (AOS adds .aos-animate), each wire draws outward
+   from its label to the two cards. Hidden only after AOS has set up
+   the element, so the wires show without JS.
+----------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  [data-aos="wire"] .wire {
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-aos="wire"].aos-init:not(.aos-animate) .wire {
+    transform: scaleX(0);
+  }
+}
+
+/* ---------------------------------------------------------------
    Partner logo marquee (components/LogoMarquee.tsx).
    The track holds two identical passes and slides right by one, so
    the loop is seamless. The mask fades logos and hairlines at both
