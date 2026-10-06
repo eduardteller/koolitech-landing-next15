@@ -79,7 +79,7 @@ const PointsComponent = () => {
           className="flex flex-col items-center gap-4 text-center"
         >
           <span className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary-tint">
-            <Icon size={30} strokeWidth={1.75} className="text-primary" />
+            <Icon size={30} strokeWidth={1.75} className="text-accent" />
           </span>
           <h4 className="text-lg font-semibold leading-snug text-ink">
             {title}

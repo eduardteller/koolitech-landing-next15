@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="et" className={`${inter.variable} ${logo.variable}`}>
       <AOSInit />
-      <body className="bg-surface font-sans text-ink antialiased">
+      <body className="bg-ground font-sans text-ink antialiased">
         {children}
       </body>
     </html>

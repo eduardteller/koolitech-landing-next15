@@ -1,27 +1,48 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Dark mode is class-based (.dark on <html>). It is switched off for now:
+   nothing sets .dark, so the site is always light. To bring it back, render
+   components/ThemeToggle.tsx again and restore the no-flash theme script
+   in app/layout.tsx (see git history).
+   .band sections are dark islands, so dark: variants match inside them. */
+@custom-variant dark (&:where(.dark, .dark *, .band, .band *));
+
 /* ---------------------------------------------------------------
-   "Classroom blue" theme. Semantic tokens mapped to stock Tailwind
-   colors — markup uses the token names (bg-primary, text-ink), never
-   raw palette classes. Dark mode swaps the tokens below, so markup
-   needs no dark: variants for these colors.
+   "Pencil" theme. Semantic tokens — brand blue accent, neutral grays,
+   neutral dark bands. Markup uses the token names (bg-primary,
+   text-ink), never raw palette classes.
+   .dark swaps the tokens below, so markup needs no dark: variants;
+   .band does the same for the dark highlight sections.
 ----------------------------------------------------------------- */
 @theme {
-  --color-primary: var(--color-blue-700);
-  --color-primary-hover: var(--color-blue-800);
-  --color-primary-tint: var(--color-blue-50);
-  --color-primary-line: var(--color-blue-200);
-  --color-ink: var(--color-slate-900);
-  --color-muted: var(--color-slate-600);
-  --color-accent: var(--color-amber-300);
-  --color-surface: var(--color-slate-50);
-  --color-card: var(--color-white);
-  --color-line: var(--color-slate-200);
-  --color-success: var(--color-emerald-700);
+  /* The E-Kell desktop app's light-theme blue: daisyUI "fantasy"
+     secondary (desktop/tailwind.config.js), #0075c2. Shades are mixed
+     from it the way daisyUI does — black for hover/pressed, white for
+     tints — so the site and the app share one blue. */
+  --color-brand: oklch(53.92% 0.162 241.36);
+
+  --color-ground: var(--color-neutral-50); /* page background */
+  --color-surface: var(--color-neutral-100); /* cards, strips, header */
+  --color-ink: var(--color-neutral-900); /* text */
+  --color-muted: var(--color-neutral-600); /* secondary text */
+  --color-line: var(--color-neutral-300); /* borders, dividers */
+
+  --color-primary: var(--color-brand); /* filled buttons, progress */
+  --color-primary-hover: color-mix(in oklab, var(--color-brand) 90%, black);
+  --color-primary-active: color-mix(in oklab, var(--color-brand) 80%, black);
+  /* tinted fills, hover bg — the app's bg-secondary/10 */
+  --color-primary-tint: color-mix(in oklab, var(--color-brand) 10%, white);
+  /* subtle highlights, focus rings */
+  --color-primary-line: color-mix(in oklab, var(--color-brand) 30%, white);
+  --color-on-primary: var(--color-white); /* 5.0:1 on brand */
+
+  --color-accent: var(--color-brand); /* icons, checks, emphasis — 4.8:1 */
+  --color-kicker: var(--color-brand); /* small section labels */
+
+  /* Not part of the Pencil palette: the contact form still needs an
+     error state that reads as an error. */
   --color-error: var(--color-red-600);
-  --color-on-primary: var(--color-white);
-  --color-on-accent: var(--color-slate-900);
 
   /* --font-inter and --font-bricolage are set on <html> by next/font
      (app/layout.tsx). */
@@ -29,27 +50,55 @@
   --font-logo: var(--font-bricolage), ui-sans-serif, sans-serif;
 }
 
-:root {
-  color-scheme: light;
-}
-
-/* @media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    color-scheme: dark;
-    --color-primary: var(--color-blue-400);
-    --color-primary-hover: var(--color-blue-300);
-    --color-primary-tint: var(--color-blue-950);
-    --color-primary-line: var(--color-blue-800);
-    --color-ink: var(--color-slate-100);
-    --color-muted: var(--color-slate-400);
-    --color-surface: var(--color-slate-950);
-    --color-card: var(--color-slate-900);
-    --color-line: var(--color-slate-800);
-    --color-success: var(--color-emerald-400);
-    --color-error: var(--color-red-400);
-    --color-on-primary: var(--color-slate-950);
+    color-scheme: light;
   }
-} */
+
+  .dark {
+    color-scheme: dark;
+    --color-ground: var(--color-neutral-950);
+    --color-surface: var(--color-neutral-900);
+    --color-ink: var(--color-neutral-100);
+    --color-muted: var(--color-neutral-400);
+    --color-line: var(--color-neutral-700);
+
+    --color-primary-tint: color-mix(in oklab, var(--color-brand) 20%, black);
+    --color-primary-line: color-mix(in oklab, var(--color-brand) 50%, black);
+
+    /* Brand lightened for text on dark grounds (6.3:1 on neutral-900). */
+    --color-accent: color-mix(in oklab, var(--color-brand) 70%, white);
+    --color-kicker: color-mix(in oklab, var(--color-brand) 70%, white);
+
+    --color-error: var(--color-red-400);
+  }
+
+  /* Dark highlight section ("secondary background"): neutral near-black
+     with a filled accent button and dimmed neutral
+     links. One step lighter in dark mode so it stands apart from the page. */
+  .band {
+    color-scheme: dark;
+    --color-ground: var(--color-neutral-900);
+    --color-surface: var(--color-neutral-800);
+    --color-ink: var(--color-neutral-100);
+    --color-muted: var(--color-neutral-400);
+    --color-line: var(--color-neutral-700);
+    --color-accent: color-mix(in oklab, var(--color-brand) 70%, white);
+    --color-kicker: color-mix(in oklab, var(--color-brand) 70%, white);
+    background-color: var(--color-ground);
+  }
+
+  .dark .band {
+    --color-ground: var(--color-neutral-800);
+    --color-surface: var(--color-neutral-700);
+    --color-line: var(--color-neutral-600);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
 
 /* Long-form copy (docs, policies) takes its colors from the tokens, so
    it follows dark mode like the rest of the site. */
@@ -57,10 +106,10 @@
   --tw-prose-body: var(--color-ink);
   --tw-prose-headings: var(--color-ink);
   --tw-prose-lead: var(--color-muted);
-  --tw-prose-links: var(--color-primary);
+  --tw-prose-links: var(--color-accent);
   --tw-prose-bold: var(--color-ink);
   --tw-prose-counters: var(--color-muted);
-  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-bullets: var(--color-accent);
   --tw-prose-hr: var(--color-line);
   --tw-prose-quotes: var(--color-ink);
   --tw-prose-quote-borders: var(--color-line);
@@ -68,7 +117,7 @@
   --tw-prose-kbd: var(--color-ink);
   --tw-prose-code: var(--color-ink);
   --tw-prose-pre-code: var(--color-ink);
-  --tw-prose-pre-bg: var(--color-card);
+  --tw-prose-pre-bg: var(--color-surface);
   --tw-prose-th-borders: var(--color-line);
   --tw-prose-td-borders: var(--color-line);
 }
@@ -87,7 +136,7 @@ html {
 .ruled-paper {
   background-image: linear-gradient(
     to bottom,
-    color-mix(in oklab, var(--color-line) 60%, transparent) 1px,
+    color-mix(in oklab, var(--color-line) 45%, transparent) 1px,
     transparent 1px
   );
   background-size: 100% 2.5rem;
@@ -141,7 +190,7 @@ html {
   height: 8px;
   width: 8px;
   border-radius: 9999px;
-  background: var(--color-surface);
+  background: var(--color-ground);
   border: 2px solid var(--color-primary-line);
 }
 
@@ -183,5 +232,44 @@ html {
   50% {
     box-shadow: 0 0 0 9px
       color-mix(in oklab, var(--color-primary) 5%, transparent);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Partner logo marquee (components/LogoMarquee.tsx).
+   The track holds two identical passes and slides right by one, so
+   the loop is seamless. The mask fades logos and hairlines at both
+   edges. The component sets the duration inline from the item
+   count, so speed stays even. Not gated on reduced motion: the strip
+   is meant to move everywhere, and hover pauses it.
+----------------------------------------------------------------- */
+.logo-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 36s linear infinite;
+}
+
+.logo-marquee:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Left to right: start one pass to the left and slide back to zero. */
+@keyframes logo-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

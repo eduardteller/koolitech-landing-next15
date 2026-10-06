@@ -38,13 +38,13 @@ const Accordion = ({ items }: Props) => {
         <div key={`${index}-${item.firstText}`}>
           <button
             onClick={() => toggleAccordion(index)}
-            className="flex w-full items-center justify-between gap-4 py-5 text-left font-semibold text-ink transition-colors hover:text-primary"
+            className="flex w-full items-center justify-between gap-4 py-5 text-left font-semibold text-ink transition-colors hover:text-accent"
             aria-expanded={activeIndex[index]}
           >
             <span>{item.firstText}</span>
             <ChevronDown
               strokeWidth={2.5}
-              className={`shrink-0 text-primary transition-transform duration-300 ${
+              className={`shrink-0 text-accent transition-transform duration-300 ${
                 activeIndex[index] ? "rotate-180" : ""
               }`}
             />

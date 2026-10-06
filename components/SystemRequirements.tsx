@@ -25,14 +25,14 @@ const SystemRequirements = () => {
     <div
       data-aos="fade-up"
       data-aos-offset="200"
-      className="overflow-hidden rounded-xl border border-line bg-card shadow-sm"
+      className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm"
     >
       {/* Plate header — names the equipment and the tier the values describe */}
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line bg-primary-tint px-6 py-4 sm:px-8">
         <span className="text-xs font-semibold uppercase tracking-widest text-ink">
           E-Kell töölauarakendus
         </span>
-        <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+        <span className="text-xs font-semibold uppercase tracking-widest text-kicker">
           Miinimumnõuded
         </span>
       </div>

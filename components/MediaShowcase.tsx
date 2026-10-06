@@ -30,9 +30,9 @@ const MediaShowcase = () => {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay={150 + i * 100}
-          className="flex flex-col overflow-hidden rounded-xl border border-line bg-card shadow-sm"
+          className="flex flex-col overflow-hidden rounded-xl border border-line bg-surface shadow-sm"
         >
-          <div className="aspect-[16/10] overflow-hidden border-b border-line bg-surface">
+          <div className="aspect-[16/10] overflow-hidden border-b border-line bg-ground">
             <Image
               width={1920}
               height={1030}

@@ -19,7 +19,7 @@ const EkellDocs = () => {
   return (
     <>
       <HeaderPrimary />
-      <main className="bg-surface">
+      <main className="bg-ground">
         <div className="mx-auto flex max-w-screen-xl flex-col px-6 pb-24 pt-12 sm:px-8 md:pt-16 lg:flex-row lg:gap-12">
           <DocsSidebar sections={sections} />
 
@@ -27,13 +27,13 @@ const EkellDocs = () => {
             <div className="mb-10 flex flex-wrap items-center gap-5">
               <Link
                 href="/ekell"
-                className="text-sm font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
+                className="text-sm font-semibold text-muted underline-offset-4 hover:text-ink hover:underline"
               >
                 ← Tagasi E-Kell lehele
               </Link>
               <a
                 href="https://dashboard.koolitech.ee"
-                className="text-sm font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
+                className="text-sm font-semibold text-muted underline-offset-4 hover:text-ink hover:underline"
               >
                 E-Kell Web →
               </a>

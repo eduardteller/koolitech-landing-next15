@@ -12,7 +12,7 @@ const PointsList = ({ text }: Props) => {
           <Check
             size={20}
             strokeWidth={2.5}
-            className="mt-1 shrink-0 text-success"
+            className="mt-1 shrink-0 text-accent"
           />
           <span className="leading-relaxed text-muted">
             <span className="font-semibold text-ink">

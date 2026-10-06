@@ -20,7 +20,7 @@ const Cell = ({ value }: { value: Availability }) =>
     <Check
       size={18}
       strokeWidth={2.75}
-      className="mx-auto text-success"
+      className="mx-auto text-accent"
       aria-label="jah"
     />
   ) : (
@@ -37,7 +37,7 @@ const PlatformCompare = () => {
     <div
       data-aos="fade-up"
       data-aos-offset="200"
-      className="mt-12 overflow-hidden rounded-xl border border-line bg-card shadow-sm"
+      className="mt-12 overflow-hidden rounded-xl border border-line bg-surface shadow-sm"
     >
       {/* Column headers */}
       <div className="grid grid-cols-[1fr_4.5rem_4.5rem] items-end gap-2 border-b border-line px-5 py-4 sm:grid-cols-[1fr_7rem_7rem] sm:px-8">
@@ -45,13 +45,13 @@ const PlatformCompare = () => {
           Võimalus
         </span>
         <span className="flex flex-col items-center gap-1.5 text-ink">
-          <Monitor size={20} strokeWidth={1.75} className="text-primary" />
+          <Monitor size={20} strokeWidth={1.75} className="text-accent" />
           <span className="text-xs font-semibold uppercase tracking-widest">
             Töölaud
           </span>
         </span>
         <span className="flex flex-col items-center gap-1.5 text-ink">
-          <Globe size={20} strokeWidth={1.75} className="text-primary" />
+          <Globe size={20} strokeWidth={1.75} className="text-accent" />
           <span className="text-xs font-semibold uppercase tracking-widest">
             Veeb
           </span>

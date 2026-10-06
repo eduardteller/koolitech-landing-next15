@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <span className="font-logo text-xl font-extrabold uppercase tracking-tight text-ink">
-      kooli<span className="text-primary">tech</span>
+      kooli<span className="text-accent">tech</span>
     </span>
   );
 };

@@ -97,15 +97,15 @@ const Contact = () => {
   };
 
   const fieldBase =
-    "w-full rounded-lg border bg-card px-4 py-3 text-ink outline-none transition placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary-line disabled:cursor-not-allowed disabled:opacity-60";
+    "w-full rounded-lg border bg-surface px-4 py-3 text-ink outline-none transition placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary-line disabled:cursor-not-allowed disabled:opacity-45";
 
   return (
     <>
       <Toaster />
       <HeaderPrimary />
-      <main className="bg-surface">
+      <main className="bg-ground">
         <div className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:px-8 md:pt-16">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-kicker">
             Kontakt
           </p>
           <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-5xl">
@@ -114,7 +114,7 @@ const Contact = () => {
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
             Kirjuta meile aadressile{" "}
             <a
-              className="font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
+              className="font-semibold text-accent underline-offset-4 hover:underline"
               href="mailto:info@koolitech.ee"
             >
               info@koolitech.ee
@@ -127,7 +127,7 @@ const Contact = () => {
               e.preventDefault();
               sendToEmail();
             }}
-            className="mt-10 flex flex-col gap-4 rounded-xl border border-line bg-card p-6 shadow-sm sm:p-8"
+            className="mt-10 flex flex-col gap-4 rounded-xl border border-line bg-surface p-6 shadow-sm sm:p-8"
           >
             <input
               className={`${fieldBase} ${error.name ? "border-error" : "border-line"}`}
@@ -187,7 +187,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loader}
-              className="mt-2 inline-flex min-w-48 items-center justify-center self-start rounded-lg bg-primary px-6 py-3 font-semibold text-on-primary transition duration-150 hover:bg-primary-hover disabled:opacity-70"
+              className="mt-2 inline-flex min-w-48 items-center justify-center self-start rounded-lg bg-primary px-6 py-3 font-semibold text-on-primary transition duration-150 hover:bg-primary-hover active:bg-primary-active disabled:opacity-45"
             >
               {loader ? <Loader /> : "Saada"}
             </button>

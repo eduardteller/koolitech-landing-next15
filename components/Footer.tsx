@@ -2,7 +2,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-line bg-card">
+    <footer className="border-t border-line bg-surface">
       <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <Logo />

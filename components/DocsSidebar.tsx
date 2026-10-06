@@ -38,7 +38,7 @@ const DocsSidebar = ({ sections }: Props) => {
     <>
       {/* Desktop sidebar */}
       <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] w-60 shrink-0 self-start overflow-y-auto lg:block">
-        <p className="mb-4 pl-4 text-xs font-semibold uppercase tracking-widest text-primary">
+        <p className="mb-4 pl-4 text-xs font-semibold uppercase tracking-widest text-kicker">
           Dokumentatsioon
         </p>
         <nav>
@@ -67,18 +67,18 @@ const DocsSidebar = ({ sections }: Props) => {
           type="button"
           onClick={() => setMobileOpen((o) => !o)}
           aria-expanded={mobileOpen}
-          className="flex w-full items-center justify-between rounded-lg border border-line bg-card px-4 py-3 text-sm font-semibold text-ink"
+          className="flex w-full items-center justify-between rounded-lg border border-line bg-surface px-4 py-3 text-sm font-semibold text-ink"
         >
           <span>Sisukord</span>
           <span
-            className={`text-primary transition-transform ${mobileOpen ? "rotate-180" : ""}`}
+            className={`text-accent transition-transform ${mobileOpen ? "rotate-180" : ""}`}
             aria-hidden
           >
             ▾
           </span>
         </button>
         {mobileOpen && (
-          <ul className="mt-2 overflow-hidden rounded-lg border border-line bg-card">
+          <ul className="mt-2 overflow-hidden rounded-lg border border-line bg-surface">
             {sections.map((s) => (
               <li key={s.id} className="border-b border-line last:border-b-0">
                 <a
@@ -86,7 +86,7 @@ const DocsSidebar = ({ sections }: Props) => {
                   onClick={() => setMobileOpen(false)}
                   className={`block px-4 py-2.5 text-sm transition ${
                     activeId === s.id
-                      ? "font-semibold text-primary"
+                      ? "font-semibold text-accent"
                       : "text-muted hover:text-ink"
                   }`}
                 >

@@ -11,9 +11,9 @@ const Policies = ({ eyebrow, children }: Props) => {
   return (
     <>
       <HeaderPrimary />
-      <main className="bg-surface">
+      <main className="bg-ground">
         <div className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:px-8 md:pt-16">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-kicker">
             {eyebrow}
           </p>
           <article

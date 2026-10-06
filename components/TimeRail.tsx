@@ -20,7 +20,7 @@ const TimeRail = () => {
           >
             <span
               className={`text-right text-xs tabular-nums ${
-                p.now ? "font-semibold text-primary" : "text-muted"
+                p.now ? "font-semibold text-accent" : "text-muted"
               }`}
             >
               {p.time}
@@ -35,7 +35,7 @@ const TimeRail = () => {
             >
               {p.label}
               {p.now && (
-                <span className="ml-2 rounded-md bg-accent px-2 py-0.5 align-middle text-sm font-semibold text-on-accent">
+                <span className="ml-2 rounded-md bg-primary px-2 py-0.5 align-middle text-sm font-semibold text-on-primary">
                   nüüd
                 </span>
               )}
