@@ -1,12 +1,19 @@
 import { AOSInit } from "@/components/AOSInit";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "600"],
   variable: "--font-inter",
+});
+
+// Wordmark only (components/Logo.tsx).
+const logo = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"],
+  weight: "800",
+  variable: "--font-bricolage",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="et" className={inter.variable}>
+    <html lang="et" className={`${inter.variable} ${logo.variable}`}>
       <AOSInit />
       <body className="bg-surface font-sans text-ink antialiased">
         {children}

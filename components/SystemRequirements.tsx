@@ -1,62 +1,22 @@
 type Requirement = {
   label: string;
   minimum: string;
-  recommended?: string;
-  /** Replaces the "soovitatav" line where a second tier makes no sense. */
+  /** Short qualifier shown under the value. */
   note?: string;
 };
 
 const requirements: Requirement[] = [
-  {
-    label: "Operatsioonisüsteem",
-    minimum: "Windows 10 (64-bit)",
-    recommended: "Windows 11",
-  },
-  {
-    label: "Protsessor",
-    minimum: "Kahetuumaline x64",
-    recommended: "Neljatuumaline",
-  },
-  { label: "Mälu (RAM)", minimum: "4 GB", recommended: "8 GB" },
-  { label: "Vaba kettaruum", minimum: "1 GB", recommended: "2 GB" },
-  {
-    label: "Ekraan",
-    minimum: "1024 × 768",
-    recommended: "1280 × 800 või suurem",
-  },
-  {
-    label: "Heliväljund",
-    minimum: "Helikaart või USB-helikaart",
-    recommended: "Eraldi väljund kooli valjuhääldisüsteemi",
-  },
-  {
-    label: "Võrguühendus",
-    minimum: "Vajalik",
-    recommended: "Juhtmega püsiühendus",
-  },
+  { label: "Operatsioonisüsteem", minimum: "Windows 10 (64-bit)" },
+  { label: "Protsessor", minimum: "Kahetuumaline x64" },
+  { label: "Mälu (RAM)", minimum: "4 GB" },
+  { label: "Vaba kettaruum", minimum: "1 GB" },
+  { label: "Ekraan", minimum: "1024 × 768" },
+  { label: "Heliväljund", minimum: "Helikaart või USB-helikaart" },
+  { label: "Võrguühendus", minimum: "Vajalik" },
   {
     label: "Mikrofon",
     minimum: "Valikuline",
     note: "vajalik teadete salvestamiseks",
-  },
-];
-
-const conditions = [
-  {
-    title: "Aktiveerimiseks on vaja internetti",
-    text: "Esimesel käivitamisel kontrollitakse litsentsivõtit serverist. Pärast seda helisevad kellad ka võrguühenduseta.",
-  },
-  {
-    title: "Administraatori õigusi pole vaja",
-    text: "Rakendus paigaldub kasutaja kausta, seega saab selle paigaldada ka piiratud õigustega kontolt.",
-  },
-  {
-    title: "Arvuti kellaaeg peab olema õige",
-    text: "Kellad helisevad arvuti kellaaja järgi — kontrolli enne paigaldust kellaaega ja ajavööndit.",
-  },
-  {
-    title: "Arvuti jääb sisse lülitatuks",
-    text: "Kellad helisevad ainult töötavast rakendusest. Rakendus töötab taustal edasi ka siis, kui aken on suletud.",
   },
 ];
 
@@ -78,7 +38,7 @@ const SystemRequirements = () => {
       </div>
 
       <dl className="divide-y divide-line px-6 sm:px-8">
-        {requirements.map(({ label, minimum, recommended, note }) => (
+        {requirements.map(({ label, minimum, note }) => (
           <div
             key={label}
             className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-4"
@@ -91,35 +51,13 @@ const SystemRequirements = () => {
             />
             <dd className="basis-full sm:basis-auto sm:text-right">
               <span className="text-sm tabular-nums text-ink">{minimum}</span>
-              {(recommended || note) && (
-                <span className="mt-0.5 block text-xs text-muted">
-                  {recommended ? `soovitatav: ${recommended}` : note}
-                </span>
+              {note && (
+                <span className="mt-0.5 block text-xs text-muted">{note}</span>
               )}
             </dd>
           </div>
         ))}
       </dl>
-
-      {/* Site conditions — prerequisites rather than specs, so a plainer register */}
-      <div className="border-t border-line bg-surface px-6 py-10 sm:px-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-          Enne paigaldust
-        </p>
-        <div className="mt-7 grid gap-x-10 gap-y-7 sm:grid-cols-2">
-          {conditions.map(({ title, text }) => (
-            <div key={title}>
-              <h4 className="text-base font-semibold leading-snug text-ink">
-                {title}
-              </h4>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                {text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
     </div>
   );
 };

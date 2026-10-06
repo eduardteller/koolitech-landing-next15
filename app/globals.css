@@ -23,15 +23,17 @@
   --color-on-primary: var(--color-white);
   --color-on-accent: var(--color-slate-900);
 
-  /* --font-inter is set on <html> by next/font (app/layout.tsx). */
+  /* --font-inter and --font-bricolage are set on <html> by next/font
+     (app/layout.tsx). */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-logo: var(--font-bricolage), ui-sans-serif, sans-serif;
 }
 
 :root {
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --color-primary: var(--color-blue-400);
@@ -47,7 +49,7 @@
     --color-error: var(--color-red-400);
     --color-on-primary: var(--color-slate-950);
   }
-}
+} */
 
 /* Long-form copy (docs, policies) takes its colors from the tokens, so
    it follows dark mode like the rest of the site. */
@@ -128,7 +130,8 @@ html {
   transform: translate(-50%, -50%);
   border-radius: 9999px;
   background: var(--color-primary);
-  box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 18%, transparent);
+  box-shadow: 0 0 0 4px
+    color-mix(in oklab, var(--color-primary) 18%, transparent);
 }
 
 .rail-dot {
@@ -174,9 +177,11 @@ html {
 @keyframes rail-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 18%, transparent);
+    box-shadow: 0 0 0 4px
+      color-mix(in oklab, var(--color-primary) 18%, transparent);
   }
   50% {
-    box-shadow: 0 0 0 9px color-mix(in oklab, var(--color-primary) 5%, transparent);
+    box-shadow: 0 0 0 9px
+      color-mix(in oklab, var(--color-primary) 5%, transparent);
   }
 }
