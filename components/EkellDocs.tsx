@@ -19,7 +19,7 @@ const EkellDocs = () => {
   return (
     <>
       <HeaderPrimary />
-      <main className="bg-chalk">
+      <main className="bg-surface">
         <div className="mx-auto flex max-w-screen-xl flex-col px-6 pb-24 pt-12 sm:px-8 md:pt-16 lg:flex-row lg:gap-12">
           <DocsSidebar sections={sections} />
 
@@ -27,19 +27,19 @@ const EkellDocs = () => {
             <div className="mb-10 flex flex-wrap items-center gap-5">
               <Link
                 href="/ekell"
-                className="font-mono text-sm font-medium text-ink/70 underline-offset-4 hover:text-ink hover:underline"
+                className="text-sm font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
               >
                 ← Tagasi E-Kell lehele
               </Link>
               <a
                 href="https://dashboard.koolitech.ee"
-                className="font-mono text-sm font-medium text-ink/70 underline-offset-4 hover:text-ink hover:underline"
+                className="text-sm font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
               >
                 E-Kell Web →
               </a>
             </div>
 
-            <article className="prose prose-lg max-w-none prose-headings:font-display prose-headings:scroll-mt-28 prose-headings:tracking-tight prose-headings:text-ink prose-h1:mb-8 prose-h1:text-4xl prose-h1:font-bold prose-h1:leading-[1.05] md:prose-h1:text-5xl prose-h2:mt-12 prose-h2:text-2xl prose-h2:font-bold prose-h3:mt-8 prose-h3:text-lg prose-h3:font-semibold prose-p:leading-relaxed prose-p:text-ink/70 prose-a:font-medium prose-a:text-brass prose-a:no-underline hover:prose-a:underline prose-strong:font-semibold prose-strong:text-ink prose-li:text-ink/70 marker:text-brass">
+            <article className="prose prose-lg max-w-none prose-headings:scroll-mt-28 prose-headings:font-semibold prose-headings:tracking-tight prose-h1:mb-8 prose-h1:text-4xl prose-h1:font-semibold prose-h1:leading-[1.05] md:prose-h1:text-5xl prose-h2:mt-12 prose-h2:text-2xl prose-h2:font-semibold prose-h3:mt-8 prose-h3:text-lg prose-h3:font-semibold prose-p:leading-relaxed prose-a:font-semibold prose-a:no-underline hover:prose-a:underline prose-strong:font-semibold">
               <Markdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeSlug]}

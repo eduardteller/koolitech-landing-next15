@@ -2,11 +2,9 @@ import { Check } from "lucide-react";
 
 interface Props {
   text: string[];
-  tone?: "light" | "dark";
 }
 
-const PointsList = ({ text, tone = "light" }: Props) => {
-  const dark = tone === "dark";
+const PointsList = ({ text }: Props) => {
   return (
     <ul className="mt-8 flex w-full flex-col gap-4 md:self-center">
       {text.map((point, i) => (
@@ -14,12 +12,10 @@ const PointsList = ({ text, tone = "light" }: Props) => {
           <Check
             size={20}
             strokeWidth={2.5}
-            className={`mt-1 shrink-0 ${dark ? "text-signal" : "text-brass"}`}
+            className="mt-1 shrink-0 text-success"
           />
-          <span className={`leading-relaxed ${dark ? "text-chalk/75" : "text-ink/70"}`}>
-            <span
-              className={`font-semibold ${dark ? "text-chalk" : "text-ink"}`}
-            >
+          <span className="leading-relaxed text-muted">
+            <span className="font-semibold text-ink">
               {point.split(":")[0]}
             </span>
             : {point.split(":").slice(1).join(" ")}

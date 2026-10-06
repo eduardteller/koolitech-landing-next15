@@ -38,19 +38,19 @@ const DocsSidebar = ({ sections }: Props) => {
     <>
       {/* Desktop sidebar */}
       <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] w-60 shrink-0 self-start overflow-y-auto lg:block">
-        <p className="mb-4 pl-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+        <p className="mb-4 pl-4 text-xs font-semibold uppercase tracking-widest text-primary">
           Dokumentatsioon
         </p>
         <nav>
-          <ul className="border-l border-ink/10">
+          <ul className="border-l border-line">
             {sections.map((s) => (
               <li key={s.id}>
                 <a
                   href={`#${s.id}`}
                   className={`-ml-px block border-l-2 py-1.5 pl-4 text-sm transition ${
                     activeId === s.id
-                      ? "border-brass font-medium text-ink"
-                      : "border-transparent text-ink/55 hover:border-ink/25 hover:text-ink"
+                      ? "border-primary font-semibold text-ink"
+                      : "border-transparent text-muted hover:border-primary-line hover:text-ink"
                   }`}
                 >
                   {s.title}
@@ -67,27 +67,27 @@ const DocsSidebar = ({ sections }: Props) => {
           type="button"
           onClick={() => setMobileOpen((o) => !o)}
           aria-expanded={mobileOpen}
-          className="flex w-full items-center justify-between rounded-xl border border-ink/10 bg-white px-4 py-3 font-mono text-sm font-medium text-ink"
+          className="flex w-full items-center justify-between rounded-lg border border-line bg-card px-4 py-3 text-sm font-semibold text-ink"
         >
           <span>Sisukord</span>
           <span
-            className={`text-brass transition-transform ${mobileOpen ? "rotate-180" : ""}`}
+            className={`text-primary transition-transform ${mobileOpen ? "rotate-180" : ""}`}
             aria-hidden
           >
             ▾
           </span>
         </button>
         {mobileOpen && (
-          <ul className="mt-2 overflow-hidden rounded-xl border border-ink/10 bg-white">
+          <ul className="mt-2 overflow-hidden rounded-lg border border-line bg-card">
             {sections.map((s) => (
-              <li key={s.id} className="border-b border-ink/5 last:border-b-0">
+              <li key={s.id} className="border-b border-line last:border-b-0">
                 <a
                   href={`#${s.id}`}
                   onClick={() => setMobileOpen(false)}
                   className={`block px-4 py-2.5 text-sm transition ${
                     activeId === s.id
-                      ? "font-medium text-brass"
-                      : "text-ink/60 hover:text-ink"
+                      ? "font-semibold text-primary"
+                      : "text-muted hover:text-ink"
                   }`}
                 >
                   {s.title}

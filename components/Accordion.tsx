@@ -30,7 +30,7 @@ const Accordion = ({ items }: Props) => {
   };
 
   return (
-    <div className="divide-y divide-ink/10 border-y border-ink/10">
+    <div className="divide-y divide-line border-y border-line">
       {/* Reading scrollHeight from the ref during render is safe here: the
           content is static, so the measured height is stable. */}
       {/* eslint-disable-next-line react-hooks/refs */}
@@ -38,15 +38,13 @@ const Accordion = ({ items }: Props) => {
         <div key={`${index}-${item.firstText}`}>
           <button
             onClick={() => toggleAccordion(index)}
-            className={`flex w-full items-center justify-between gap-4 py-5 text-left font-medium transition-colors ${
-              activeIndex[index] ? "text-ink" : "text-ink/75 hover:text-ink"
-            }`}
+            className="flex w-full items-center justify-between gap-4 py-5 text-left font-semibold text-ink transition-colors hover:text-primary"
             aria-expanded={activeIndex[index]}
           >
             <span>{item.firstText}</span>
             <ChevronDown
               strokeWidth={2.5}
-              className={`shrink-0 text-brass transition-transform duration-300 ${
+              className={`shrink-0 text-primary transition-transform duration-300 ${
                 activeIndex[index] ? "rotate-180" : ""
               }`}
             />
@@ -62,7 +60,7 @@ const Accordion = ({ items }: Props) => {
             }}
             className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
           >
-            <p className="pb-6 leading-relaxed text-ink/70">
+            <p className="pb-6 leading-relaxed text-muted">
               {item.secondText}
             </p>
           </div>

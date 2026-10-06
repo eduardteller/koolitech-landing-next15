@@ -1,36 +1,36 @@
+import Logo from "./Logo";
+
 const Footer = () => {
   return (
-    <footer className="bg-ink text-chalk">
+    <footer className="border-t border-line bg-card">
       <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <div className="font-display text-xl font-black uppercase tracking-tight">
-            kooli<span className="text-brass">tech</span>
-          </div>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-chalk/65">
+          <Logo />
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
             KooliTech OÜ on spetsialiseerunud koolidele suunatud tarkvara
             lahenduste pakkumisele. Meie teenuste hulka kuuluvad tarkvara
-            lahendused, tehnika müük ja rent ning tehnika paigaldusteenused.
+            lahendused, tehnika müük ning tehnika paigaldusteenused.
           </p>
         </div>
         <div>
-          <h3 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
             Toode
           </h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-chalk/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-muted">
             <li>
-              <a href="/ekell" className="transition hover:text-chalk">
+              <a href="/ekell" className="transition hover:text-ink">
                 E-Kell
               </a>
             </li>
             <li>
-              <a href="/ekell/docs" className="transition hover:text-chalk">
+              <a href="/ekell/docs" className="transition hover:text-ink">
                 Dokumentatsioon
               </a>
             </li>
             <li>
               <a
                 href="https://dashboard.koolitech.ee"
-                className="transition hover:text-chalk"
+                className="transition hover:text-ink"
               >
                 E-Kell Web
               </a>
@@ -38,40 +38,40 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
             Klienditugi
           </h3>
-          <ul className="mt-4 space-y-2.5 text-sm text-chalk/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-muted">
             <li>
               <a
                 id="btn-contact-2"
                 href="/contact"
-                className="transition hover:text-chalk"
+                className="transition hover:text-ink"
               >
                 Kontakt
               </a>
             </li>
             <li>
-              <a href="/cookies" className="transition hover:text-chalk">
+              <a href="/cookies" className="transition hover:text-ink">
                 Küpsiste kasutamine
               </a>
             </li>
             <li>
-              <a href="/terms" className="transition hover:text-chalk">
+              <a href="/terms" className="transition hover:text-ink">
                 Müügi- ja kasutustingimused
               </a>
             </li>
             <li>
-              <a href="/privacy" className="transition hover:text-chalk">
+              <a href="/privacy" className="transition hover:text-ink">
                 Privaatsustingimused
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-chalk/10">
+      <div className="border-t border-line">
         <div className="mx-auto max-w-screen-xl px-6 py-6 sm:px-8">
-          <p className="text-xs text-chalk/50">
+          <p className="text-xs text-muted">
             Copyright © {new Date().getFullYear()} KooliTech OÜ
           </p>
         </div>

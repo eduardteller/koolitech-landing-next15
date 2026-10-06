@@ -19,8 +19,8 @@ const TimeRail = () => {
             className="grid grid-cols-[3.5rem_1.5rem_1fr] items-center"
           >
             <span
-              className={`text-right font-mono text-xs tracking-tight ${
-                p.now ? "text-brass" : "text-ink/40"
+              className={`text-right text-xs tabular-nums ${
+                p.now ? "font-semibold text-primary" : "text-muted"
               }`}
             >
               {p.time}
@@ -30,12 +30,12 @@ const TimeRail = () => {
             </span>
             <span
               className={`text-sm ${
-                p.now ? "font-medium text-ink" : "text-ink/45"
+                p.now ? "font-semibold text-ink" : "text-muted"
               }`}
             >
               {p.label}
               {p.now && (
-                <span className="ml-2 align-middle rounded-full bg-brass/15 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-brass">
+                <span className="ml-2 rounded-md bg-accent px-2 py-0.5 align-middle text-sm font-semibold text-on-accent">
                   nüüd
                 </span>
               )}

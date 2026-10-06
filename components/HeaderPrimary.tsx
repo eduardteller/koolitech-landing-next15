@@ -1,50 +1,32 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 const HeaderPrimary = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`sticky top-0 z-50 transition-colors duration-200 ${
-        scrolled
-          ? "border-b border-ink/10 bg-chalk/85 backdrop-blur-sm"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-line bg-card">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-4 sm:px-8">
-        <Link
-          href="/"
-          className="font-display text-xl font-black uppercase tracking-tight text-ink"
-        >
-          kooli<span className="text-brass">tech</span>
+        <Link href="/" aria-label="KooliTech avaleht">
+          <Logo />
         </Link>
 
         <nav className="flex items-center gap-6">
           <Link
             href="/ekell"
-            className="hidden font-medium text-ink/70 transition hover:text-ink md:block"
+            className="hidden text-sm font-semibold text-muted transition hover:text-ink md:block"
           >
             E-Kell
           </Link>
           <a
             href="/contact"
-            className="hidden font-medium text-ink/70 transition hover:text-ink md:block"
+            className="hidden text-sm font-semibold text-muted transition hover:text-ink md:block"
           >
             Kontakt
           </a>
+          {/* Secondary style: the page's own CTA is the one filled button
+              on screen, and this header is on every screen. */}
           <a
             href="https://dashboard.koolitech.ee"
-            className="rounded-lg bg-brass px-4 py-2 text-sm font-semibold text-ink transition hover:bg-brass/85"
+            className="rounded-lg border border-primary-line px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary-tint"
           >
             E-Kell Web
           </a>

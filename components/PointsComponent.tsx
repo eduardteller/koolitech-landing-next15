@@ -34,7 +34,6 @@ const features = [
     title: "Alarmsüsteem kriitilisteks olukordadeks",
     text: "Käivita kiiresti tulekahju-, evakuatsiooni- või muud häiresignaalid.",
     delay: 450,
-    alarm: true,
   },
   {
     Icon: Mic,
@@ -71,7 +70,7 @@ const features = [
 const PointsComponent = () => {
   return (
     <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
-      {features.map(({ Icon, title, text, delay, alarm }) => (
+      {features.map(({ Icon, title, text, delay }) => (
         <div
           key={title}
           data-aos="fade-up"
@@ -79,21 +78,13 @@ const PointsComponent = () => {
           data-aos-delay={delay}
           className="flex flex-col items-center gap-4 text-center"
         >
-          <span
-            className={`flex h-16 w-16 items-center justify-center rounded-2xl ring-1 ${
-              alarm ? "bg-signal/10 ring-signal/20" : "bg-chalk ring-ink/10"
-            }`}
-          >
-            <Icon
-              size={30}
-              strokeWidth={1.75}
-              className={alarm ? "text-signal" : "text-brass"}
-            />
+          <span className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary-tint">
+            <Icon size={30} strokeWidth={1.75} className="text-primary" />
           </span>
-          <h4 className="font-display text-lg font-semibold leading-snug text-ink">
+          <h4 className="text-lg font-semibold leading-snug text-ink">
             {title}
           </h4>
-          <p className="max-w-xs leading-relaxed text-ink/65">{text}</p>
+          <p className="max-w-xs leading-relaxed text-muted">{text}</p>
         </div>
       ))}
     </div>

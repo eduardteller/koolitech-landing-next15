@@ -10,7 +10,7 @@ const ScrollButton = () => {
         ) as HTMLDivElement | null;
         target?.scrollIntoView({ behavior: "smooth" });
       }}
-      className="rounded-xl bg-ink px-7 py-3.5 font-medium text-chalk shadow-xs transition duration-150 hover:bg-ink/85"
+      className="rounded-lg bg-primary px-6 py-3 font-semibold text-on-primary transition duration-150 hover:bg-primary-hover"
     >
       Uuri lähemalt
     </button>

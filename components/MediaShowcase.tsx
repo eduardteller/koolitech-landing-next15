@@ -30,9 +30,9 @@ const MediaShowcase = () => {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay={150 + i * 100}
-          className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10"
+          className="flex flex-col overflow-hidden rounded-xl border border-line bg-card shadow-sm"
         >
-          <div className="aspect-[16/10] overflow-hidden border-b border-ink/5 bg-chalk">
+          <div className="aspect-[16/10] overflow-hidden border-b border-line bg-surface">
             <Image
               width={1920}
               height={1030}
@@ -42,10 +42,10 @@ const MediaShowcase = () => {
             />
           </div>
           <figcaption className="flex flex-col gap-1.5 p-6">
-            <h4 className="font-display text-lg font-semibold leading-snug text-ink">
+            <h4 className="text-lg font-semibold leading-snug text-ink">
               {title}
             </h4>
-            <p className="leading-relaxed text-ink/65">{text}</p>
+            <p className="leading-relaxed text-muted">{text}</p>
           </figcaption>
         </figure>
       ))}

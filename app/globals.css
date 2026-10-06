@@ -1,15 +1,100 @@
 @import "tailwindcss";
-@config "../tailwind.config.ts";
+@plugin "@tailwindcss/typography";
+
+/* ---------------------------------------------------------------
+   "Classroom blue" theme. Semantic tokens mapped to stock Tailwind
+   colors — markup uses the token names (bg-primary, text-ink), never
+   raw palette classes. Dark mode swaps the tokens below, so markup
+   needs no dark: variants for these colors.
+----------------------------------------------------------------- */
+@theme {
+  --color-primary: var(--color-blue-700);
+  --color-primary-hover: var(--color-blue-800);
+  --color-primary-tint: var(--color-blue-50);
+  --color-primary-line: var(--color-blue-200);
+  --color-ink: var(--color-slate-900);
+  --color-muted: var(--color-slate-600);
+  --color-accent: var(--color-amber-300);
+  --color-surface: var(--color-slate-50);
+  --color-card: var(--color-white);
+  --color-line: var(--color-slate-200);
+  --color-success: var(--color-emerald-700);
+  --color-error: var(--color-red-600);
+  --color-on-primary: var(--color-white);
+  --color-on-accent: var(--color-slate-900);
+
+  /* --font-inter is set on <html> by next/font (app/layout.tsx). */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-primary: var(--color-blue-400);
+    --color-primary-hover: var(--color-blue-300);
+    --color-primary-tint: var(--color-blue-950);
+    --color-primary-line: var(--color-blue-800);
+    --color-ink: var(--color-slate-100);
+    --color-muted: var(--color-slate-400);
+    --color-surface: var(--color-slate-950);
+    --color-card: var(--color-slate-900);
+    --color-line: var(--color-slate-800);
+    --color-success: var(--color-emerald-400);
+    --color-error: var(--color-red-400);
+    --color-on-primary: var(--color-slate-950);
+  }
+}
+
+/* Long-form copy (docs, policies) takes its colors from the tokens, so
+   it follows dark mode like the rest of the site. */
+.prose {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-muted);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-line);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-kbd: var(--color-ink);
+  --tw-prose-code: var(--color-ink);
+  --tw-prose-pre-code: var(--color-ink);
+  --tw-prose-pre-bg: var(--color-card);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+}
+
+.prose pre {
+  border: 1px solid var(--color-line);
+}
 
 /* Animate in-page anchor jumps (used by the docs portal sidebar). */
 html {
   scroll-behavior: smooth;
 }
 
+/* Faint ruled-paper lines behind the hero sections — the light "school"
+   touch. Flat 1px lines, not a color gradient. */
+.ruled-paper {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-line) 60%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 100% 2.5rem;
+}
+
 /* ---------------------------------------------------------------
    Time-rail — the signature element.
-   A school day rendered as a vertical schedule. A brass "now" dot
-   travels down the rail on load and rests at the current period.
+   A school day rendered as a vertical schedule. A "now" dot travels
+   down the rail on load and rests at the current period.
    Everything keys off the vertical centre (50%), so the growing
    fill, the travelling dot and the active row always align.
 ----------------------------------------------------------------- */
@@ -25,12 +110,12 @@ html {
 
 .rail-track {
   bottom: 0;
-  background: rgba(15, 23, 42, 0.1); /* slate-900 */
+  background: var(--color-line);
 }
 
 .rail-fill {
   height: 50%;
-  background: #0ea5e9; /* sky-500 */
+  background: var(--color-primary);
 }
 
 .rail-now {
@@ -42,8 +127,8 @@ html {
   width: 14px;
   transform: translate(-50%, -50%);
   border-radius: 9999px;
-  background: #0ea5e9; /* sky-500 */
-  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.18); /* sky-500 */
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 18%, transparent);
 }
 
 .rail-dot {
@@ -53,8 +138,8 @@ html {
   height: 8px;
   width: 8px;
   border-radius: 9999px;
-  background: #f8fafc; /* slate-50 */
-  border: 2px solid rgba(15, 23, 42, 0.2); /* slate-900 */
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary-line);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -89,9 +174,9 @@ html {
 @keyframes rail-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.18); /* sky-500 */
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 18%, transparent);
   }
   50% {
-    box-shadow: 0 0 0 9px rgba(14, 165, 233, 0.05); /* sky-500 */
+    box-shadow: 0 0 0 9px color-mix(in oklab, var(--color-primary) 5%, transparent);
   }
 }

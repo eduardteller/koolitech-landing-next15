@@ -97,24 +97,24 @@ const Contact = () => {
   };
 
   const fieldBase =
-    "w-full rounded-xl border bg-white px-4 py-3.5 text-ink outline-none transition placeholder:text-ink/40 focus:border-brass focus:ring-2 focus:ring-brass/25 disabled:cursor-not-allowed disabled:opacity-60";
+    "w-full rounded-lg border bg-card px-4 py-3 text-ink outline-none transition placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary-line disabled:cursor-not-allowed disabled:opacity-60";
 
   return (
     <>
       <Toaster />
       <HeaderPrimary />
-      <main className="bg-chalk">
+      <main className="bg-surface">
         <div className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:px-8 md:pt-16">
-          <p className="mb-6 font-mono text-xs font-medium uppercase tracking-[0.2em] text-brass">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
             Kontakt
           </p>
-          <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink md:text-5xl">
+          <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-5xl">
             Võta meiega ühendust
           </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
             Kirjuta meile aadressile{" "}
             <a
-              className="font-medium text-brass underline-offset-4 hover:underline"
+              className="font-semibold text-primary underline-offset-4 hover:text-primary-hover hover:underline"
               href="mailto:info@koolitech.ee"
             >
               info@koolitech.ee
@@ -127,10 +127,10 @@ const Contact = () => {
               e.preventDefault();
               sendToEmail();
             }}
-            className="mt-10 flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] ring-1 ring-ink/10 sm:p-8"
+            className="mt-10 flex flex-col gap-4 rounded-xl border border-line bg-card p-6 shadow-sm sm:p-8"
           >
             <input
-              className={`${fieldBase} ${error.name ? "border-signal" : "border-ink/15"}`}
+              className={`${fieldBase} ${error.name ? "border-error" : "border-line"}`}
               type="text"
               name="name"
               aria-label="Teie nimi"
@@ -141,7 +141,7 @@ const Contact = () => {
             />
 
             <input
-              className={`${fieldBase} ${error.school ? "border-signal" : "border-ink/15"}`}
+              className={`${fieldBase} ${error.school ? "border-error" : "border-line"}`}
               type="text"
               name="school"
               aria-label="Kool"
@@ -154,7 +154,7 @@ const Contact = () => {
             <div className="flex w-full flex-col gap-4 md:flex-row">
               <input
                 name="email"
-                className={`${fieldBase} ${error.email ? "border-signal" : "border-ink/15"}`}
+                className={`${fieldBase} ${error.email ? "border-error" : "border-line"}`}
                 type="text"
                 aria-label="Emaili aadress"
                 placeholder="Emaili aadress"
@@ -164,7 +164,7 @@ const Contact = () => {
               />
               <input
                 name="phone"
-                className={`${fieldBase} border-ink/15`}
+                className={`${fieldBase} border-line`}
                 type="text"
                 aria-label="Telefoni number (valikuline)"
                 placeholder="(Valikuline) Telefoni number"
@@ -176,7 +176,7 @@ const Contact = () => {
 
             <textarea
               name="text"
-              className={`${fieldBase} max-h-96 min-h-48 md:max-h-60 md:min-h-32 ${error.text ? "border-signal" : "border-ink/15"}`}
+              className={`${fieldBase} max-h-96 min-h-48 md:max-h-60 md:min-h-32 ${error.text ? "border-error" : "border-line"}`}
               aria-label="Sõnum"
               placeholder="Sõnum"
               value={formData.text}
@@ -187,7 +187,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loader}
-              className="mt-2 inline-flex min-w-48 items-center justify-center self-start rounded-xl bg-brass px-7 py-3.5 font-semibold text-ink transition duration-150 hover:bg-brass/85 disabled:opacity-70"
+              className="mt-2 inline-flex min-w-48 items-center justify-center self-start rounded-lg bg-primary px-6 py-3 font-semibold text-on-primary transition duration-150 hover:bg-primary-hover disabled:opacity-70"
             >
               {loader ? <Loader /> : "Saada"}
             </button>

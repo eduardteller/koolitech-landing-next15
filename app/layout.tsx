@@ -1,21 +1,12 @@
 import { AOSInit } from "@/components/AOSInit";
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const body = Inter({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-body",
-});
-
-const display = Bricolage_Grotesque({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-display",
-});
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "600"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -45,11 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ee">
+    <html lang="et" className={inter.variable}>
       <AOSInit />
-      <body
-        className={`${body.variable} ${display.variable} ${mono.variable} bg-chalk font-sans text-ink antialiased`}
-      >
+      <body className="bg-surface font-sans text-ink antialiased">
         {children}
       </body>
     </html>
