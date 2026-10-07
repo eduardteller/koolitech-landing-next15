@@ -3,7 +3,7 @@ import Logo from "./Logo";
 const Footer = () => {
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div>
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
@@ -67,6 +67,25 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+        </div>
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
+            Ettevõte
+          </h3>
+          <dl className="mt-4 space-y-2.5 text-sm text-muted">
+            <div>
+              <dt className="sr-only">Ärinimi</dt>
+              <dd className="text-ink">KooliTech OÜ</dd>
+            </div>
+            <div className="flex flex-wrap gap-x-2">
+              <dt>Registrikood</dt>
+              <dd className="text-ink tabular-nums">17111270</dd>
+            </div>
+            <div className="flex flex-wrap gap-x-2">
+              <dt>KMKR number</dt>
+              <dd className="text-ink tabular-nums">EE103009649</dd>
+            </div>
+          </dl>
         </div>
       </div>
       <div className="border-t border-line">
