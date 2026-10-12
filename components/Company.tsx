@@ -251,16 +251,18 @@ const Company = () => {
                 <div
                   data-aos="fade-left"
                   data-aos-offset="200"
-                  className="order-1 flex justify-center md:order-2 md:basis-1/2"
+                  className="order-1 w-full md:order-2 md:basis-1/2"
                 >
-                  <Image
-                    width={2500}
-                    height={2500}
-                    sizes="(min-width: 768px) 40vw, 90vw"
-                    className="h-auto w-full max-w-lg"
-                    src="/assets/ip.png"
-                    alt="Kooli IP-võrgu illustratsioon: võrguseadmed ja nendega ühendatud koolitehnika"
-                  />
+                  <div className="border-line bg-surface mx-auto max-w-xl overflow-hidden rounded-xl border shadow-sm">
+                    <Image
+                      width={1448}
+                      height={1086}
+                      sizes="(min-width: 1280px) 576px, (min-width: 768px) 45vw, 100vw"
+                      className="h-auto w-full object-contain"
+                      src="/assets/tech.png"
+                      alt="Klassiruum KooliTechi tehnikaga: seinal nutitahvel ja kõlar"
+                    />
+                  </div>
                 </div>
               </div>
 
