@@ -54,7 +54,10 @@ const ProductDetail = ({ product, category }: Props) => {
               </nav>
 
               <div className="mt-10 grid items-start gap-12 md:grid-cols-2">
-                <div className="border-line bg-surface relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border shadow-sm">
+                {/* White behind manufacturer photos, as in ProductCard */}
+                <div
+                  className={`${product.image ? "bg-white" : "bg-surface"} border-line relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border shadow-sm`}
+                >
                   {product.image ? (
                     <Image
                       src={product.image}

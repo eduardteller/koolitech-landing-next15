@@ -17,6 +17,8 @@ export type Category = {
   title: string;
   description: string;
   Icon: LucideIcon;
+  /** Switched off for now: no nav entry, no page, its products left out. */
+  hidden?: boolean;
 };
 
 // Catalog categories, in sidebar order. The slug is the URL segment
@@ -31,6 +33,7 @@ export const categories = [
   },
   {
     slug: "lisad",
+    hidden: true,
     title: "Lisad",
     description:
       "Kinnitused, ratastel alused, OPS-arvutid, pliiatsid, puldid ja muu ekraani juurde.",
@@ -38,6 +41,7 @@ export const categories = [
   },
   {
     slug: "dokid",
+    hidden: true,
     title: "Dokid ja jaoturid",
     description:
       "Üks kaabel õpetaja sülearvutist ekraanini: pilt, laadimine ja võrk korraga.",
@@ -45,6 +49,7 @@ export const categories = [
   },
   {
     slug: "dokumendikaamerad",
+    hidden: true,
     title: "Dokumendikaamerad",
     description:
       "Raamat, tööleht või katse suurele ekraanile, et kogu klass näeks.",
@@ -59,6 +64,7 @@ export const categories = [
   },
   {
     slug: "videokonverentsiseadmed",
+    hidden: true,
     title: "Videokonverentsiseadmed",
     description:
       "Kaamerad ja kõneribad hübriidtundide ning kaugkoosolekute jaoks.",
@@ -66,6 +72,7 @@ export const categories = [
   },
   {
     slug: "laadimiskarud",
+    hidden: true,
     title: "Laadimiskärud",
     description:
       "Kärud ja kapid, mis hoiavad ja laevad terve klassi sülearvuteid ja tahvleid.",

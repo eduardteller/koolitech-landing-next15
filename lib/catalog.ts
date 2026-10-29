@@ -1,4 +1,8 @@
-import { categories, type CategorySlug } from "@/content/categories";
+import {
+  categories,
+  type Category,
+  type CategorySlug,
+} from "@/content/categories";
 import { products } from "@/content/products";
 
 export type Product = {
@@ -20,8 +24,27 @@ export type Product = {
   order?: number;
 };
 
+// Hidden categories are switched off everywhere: no nav entry or page,
+// and their products are left out of every list.
+const shownCategories = categories.filter(
+  (category: Category) => !category.hidden,
+);
+const shownProducts = products.filter((product) =>
+  shownCategories.some((category) => category.slug === product.category),
+);
+
 export const getCategory = (slug: string) =>
-  categories.find((category) => category.slug === slug);
+  shownCategories.find((category) => category.slug === slug);
+
+const hasProducts = (slug: CategorySlug) =>
+  shownProducts.some((product) => product.category === slug);
+
+/** Categories with products first, then the empty ones; each group keeps
+    the content/categories.ts order (sort is stable). */
+export const getCategories = () =>
+  [...shownCategories].sort(
+    (a, b) => Number(hasProducts(b.slug)) - Number(hasProducts(a.slug)),
+  );
 
 // Explicit order first, then alphabetical. Unordered products sort last
 // (Infinity - Infinity is NaN, which falls through to the name compare).
@@ -30,12 +53,12 @@ const byOrder = (a: Product, b: Product) =>
   a.name.localeCompare(b.name, "et");
 
 export const getProducts = (category?: CategorySlug) =>
-  products
+  shownProducts
     .filter((product) => !category || product.category === category)
     .sort(byOrder);
 
 export const getProduct = (category: string, slug: string) =>
-  products.find(
+  shownProducts.find(
     (product) => product.category === category && product.slug === slug,
   );
 

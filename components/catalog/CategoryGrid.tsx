@@ -1,9 +1,10 @@
-import { categories, type CategorySlug } from "@/content/categories";
-import { getProducts } from "@/lib/catalog";
+import type { CategorySlug } from "@/content/categories";
+import { getCategories, getCategory, getProducts } from "@/lib/catalog";
 import Link from "next/link";
 
 interface Props {
-  /** Subset to show, in this order; all categories by default. */
+  /** Subset to show, in this order (hidden categories are skipped); by
+      default all categories, those with products first. */
   slugs?: CategorySlug[];
   /** Grid columns; the catalog column is narrower than a full page. */
   className?: string;
@@ -14,8 +15,8 @@ const CategoryGrid = ({
   className = "sm:grid-cols-2 lg:grid-cols-3",
 }: Props) => {
   const shown = slugs
-    ? slugs.map((slug) => categories.find((c) => c.slug === slug)!)
-    : categories;
+    ? slugs.flatMap((slug) => getCategory(slug) ?? [])
+    : getCategories();
 
   return (
     <ul className={`grid grid-cols-1 gap-6 ${className}`}>

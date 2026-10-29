@@ -1,4 +1,5 @@
-import { categories, type CategorySlug } from "@/content/categories";
+import type { CategorySlug } from "@/content/categories";
+import { getCategories } from "@/lib/catalog";
 import Link from "next/link";
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 
 const items = [
   { href: "/tooted", title: "Kõik tooted", slug: undefined },
-  ...categories.map(({ slug, title }) => ({
+  ...getCategories().map(({ slug, title }) => ({
     href: `/tooted/${slug}`,
     title,
     slug,

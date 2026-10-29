@@ -50,14 +50,6 @@ const App = () => {
                     {/* nowrap keeps the logo on the word's line on phones */}
                     <span className="whitespace-nowrap">
                       <span className="text-accent">koolikell</span>
-                      <Image
-                        width={512}
-                        height={512}
-                        src="/assets/ekell-logo.png"
-                        alt="E-Kell"
-                        priority
-                        className="ml-[0.2em] inline-block h-[0.78em] w-auto align-baseline"
-                      />
                     </span>
                   </h1>
                   <p className="text-muted mt-6 max-w-md text-lg leading-relaxed">

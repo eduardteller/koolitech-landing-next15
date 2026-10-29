@@ -15,7 +15,11 @@ const ProductCard = ({ product }: { product: Product }) => {
       href={`/tooted/${product.category}/${product.slug}`}
       className="group border-line bg-ground hover:border-primary-line flex h-full flex-col rounded-xl border p-5 shadow-sm transition"
     >
-      <div className="bg-surface relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg">
+      {/* Manufacturer photos are shot on white, so their tile is white in
+          both themes; the icon fallback keeps the surface colour. */}
+      <div
+        className={`${product.image ? "bg-white" : "bg-surface"} relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg`}
+      >
         {product.image ? (
           <Image
             src={product.image}
