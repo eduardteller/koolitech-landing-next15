@@ -243,10 +243,7 @@ const Company = () => {
                   </p>
 
                   <PointsList
-                    text={[
-                      "Tasuta konsultatsioon: vaatame kooli praeguse tehnika üle ja näitame, kus uuendus annab kõige rohkem kasu.",
-                      "Paigaldus koolis: planeerime, kuhu seadmed koolimajas lähevad, ning paigaldame ja seadistame need kohapeal.",
-                    ]}
+                    text={["Tasuta konsultatsioon", "Paigaldus koolis"]}
                   />
                 </div>
 
@@ -292,7 +289,9 @@ const Company = () => {
                         <h3 className="text-ink text-lg leading-snug font-semibold">
                           {title}
                         </h3>
-                        <p className="text-muted mt-1 leading-relaxed">{text}</p>
+                        <p className="text-muted mt-1 leading-relaxed">
+                          {text}
+                        </p>
                       </div>
                     </Link>
                   </li>
@@ -319,8 +318,8 @@ const Company = () => {
                 Räägime, kuidas saame aidata
               </h2>
               <p className="text-muted max-w-md text-lg leading-relaxed">
-                Vajad tarkvara, tehnikat või paigaldust? Kirjuta meile ja
-                leiame koolile sobiva lahenduse.
+                Vajad tarkvara, tehnikat või paigaldust? Kirjuta meile ja leiame
+                koolile sobiva lahenduse.
               </p>
               <a
                 href="/contact"
