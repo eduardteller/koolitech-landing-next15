@@ -6,11 +6,11 @@ export const ANNOUNCEMENT_BAR_HEIGHT = 36;
 
 const AnnouncementBar = () => {
   return (
-    <div className="band flex h-9 items-center justify-center gap-3 whitespace-nowrap px-6 text-xs font-semibold tracking-wide text-ink sm:text-sm">
-      <span>E-Kell saadaval nüüd!</span>
+    <div className="band text-ink flex h-9 items-center justify-center gap-3 px-6 text-xs font-semibold tracking-wide whitespace-nowrap sm:text-sm">
+      <span>E-Kell on nüüd saadaval!</span>
       <Link
         href="/ekell"
-        className="text-ink underline underline-offset-4 transition hover:text-muted"
+        className="text-ink hover:text-muted underline underline-offset-4 transition"
       >
         Vaata, mida see oskab →
       </Link>

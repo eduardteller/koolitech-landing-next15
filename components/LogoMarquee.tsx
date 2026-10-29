@@ -7,12 +7,12 @@ const partners = [
     width: 383,
     height: 400,
   },
-  {
-    name: "Pirita Majandusgümnaasium",
-    src: "/assets/partners/pmg.png",
-    width: 447,
-    height: 447,
-  },
+  // {
+  //   name: "Pirita Majandusgümnaasium",
+  //   src: "/assets/partners/pmg.png",
+  //   width: 447,
+  //   height: 447,
+  // },
 ];
 
 /* One pass of the track must be wider than the strip, or the loop shows a
