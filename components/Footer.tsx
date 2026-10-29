@@ -1,9 +1,10 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-6 pb-16 pt-20 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
         <div>
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
@@ -14,18 +15,18 @@ const Footer = () => {
         </div>
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
-            Toode
+            E-Kell
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-muted">
             <li>
-              <a href="/ekell" className="transition hover:text-ink">
+              <Link href="/ekell" className="transition hover:text-ink">
                 E-Kell
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/ekell/docs" className="transition hover:text-ink">
+              <Link href="/ekell/docs" className="transition hover:text-ink">
                 Dokumentatsioon
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -39,32 +40,73 @@ const Footer = () => {
         </div>
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
+            Tooted
+          </h3>
+          <ul className="mt-4 space-y-2.5 text-sm text-muted">
+            <li>
+              <Link href="/tooted" className="transition hover:text-ink">
+                Tootevalik
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tooted/interaktiivsed-ekraanid"
+                className="transition hover:text-ink"
+              >
+                Interaktiivsed ekraanid
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tooted/audiolahendused"
+                className="transition hover:text-ink"
+              >
+                Audiolahendused
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tooted/vorguseadmed"
+                className="transition hover:text-ink"
+              >
+                Võrguseadmed
+              </Link>
+            </li>
+            <li>
+              <Link href="/koolidele" className="transition hover:text-ink">
+                Koolidele
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-ink">
             Klienditugi
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-muted">
             <li>
-              <a
+              <Link
                 id="btn-contact-2"
                 href="/contact"
                 className="transition hover:text-ink"
               >
                 Kontakt
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/cookies" className="transition hover:text-ink">
+              <Link href="/cookies" className="transition hover:text-ink">
                 Küpsiste kasutamine
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/terms" className="transition hover:text-ink">
+              <Link href="/terms" className="transition hover:text-ink">
                 Müügi- ja kasutustingimused
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/privacy" className="transition hover:text-ink">
+              <Link href="/privacy" className="transition hover:text-ink">
                 Privaatsustingimused
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

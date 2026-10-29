@@ -40,31 +40,37 @@ const hardware = [
   {
     Icon: Speaker,
     title: "Välikõlarid",
+    href: "/tooted/audiolahendused",
     text: "Ilmastikukindlad kõlarid koolihoovi, spordiväljakule ja sissepääsude juurde.",
   },
   {
     Icon: Volume2,
     title: "Sisekõlarid",
+    href: "/tooted/audiolahendused",
     text: "Selge heli klassidesse, koridoridesse, aulasse ja võimlasse.",
   },
   {
     Icon: Network,
     title: "IP-võrgulülitid",
+    href: "/tooted/vorguseadmed",
     text: "Töökindel võrk, mis ühendab kooli IP-seadmed üheks tervikuks.",
   },
   {
     Icon: PhoneCall,
     title: "Interkomid",
+    href: "/tooted/interkomid",
     text: "Kiire side klasside, õpetajate toa ja valvelaua vahel.",
   },
   {
     Icon: Presentation,
     title: "Nutitahvlid",
+    href: "/tooted/interaktiivsed-ekraanid",
     text: "Interaktiivsed puutetahvlid kaasaegseks ja kaasavaks õppetööks.",
   },
   {
     Icon: Projector,
     title: "Projektorid",
+    href: "/tooted/projektorid",
     text: "Projektorid klassiruumidesse, aulasse ja saalidesse.",
   },
 ];
@@ -265,31 +271,43 @@ const Company = () => {
               </div>
 
               <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {hardware.map(({ Icon, title, text }, i) => (
+                {hardware.map(({ Icon, title, text, href }, i) => (
                   <li
                     key={title}
                     data-aos="fade-up"
                     data-aos-offset="120"
                     data-aos-delay={100 + i * 75}
-                    className="border-line bg-ground flex items-start gap-4 rounded-xl border p-6"
                   >
-                    <span className="bg-primary-tint flex h-12 w-12 shrink-0 items-center justify-center rounded-xl">
-                      <Icon
-                        size={24}
-                        strokeWidth={1.75}
-                        className="text-accent"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    <div>
-                      <h3 className="text-ink text-lg leading-snug font-semibold">
-                        {title}
-                      </h3>
-                      <p className="text-muted mt-1 leading-relaxed">{text}</p>
-                    </div>
+                    <Link
+                      href={href}
+                      className="border-line bg-ground hover:border-primary-line flex h-full items-start gap-4 rounded-xl border p-6 transition"
+                    >
+                      <span className="bg-primary-tint flex h-12 w-12 shrink-0 items-center justify-center rounded-xl">
+                        <Icon
+                          size={24}
+                          strokeWidth={1.75}
+                          className="text-accent"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <div>
+                        <h3 className="text-ink text-lg leading-snug font-semibold">
+                          {title}
+                        </h3>
+                        <p className="text-muted mt-1 leading-relaxed">{text}</p>
+                      </div>
+                    </Link>
                   </li>
                 ))}
               </ul>
+              <div className="mt-10 text-center">
+                <Link
+                  href="/tooted"
+                  className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
+                >
+                  Vaata kogu tootevalikut →
+                </Link>
+              </div>
             </div>
           </section>
 

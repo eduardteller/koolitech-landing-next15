@@ -18,7 +18,12 @@ const contactSchema = z.object({
   text: z.string().min(1, "Palun sisestage sõnum"),
 });
 
-const Contact = () => {
+interface Props {
+  /** Prefilled message, e.g. from a product's "Küsi pakkumist" link. */
+  initialText?: string;
+}
+
+const Contact = ({ initialText = "" }: Props) => {
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState({
     name: false,
@@ -31,7 +36,7 @@ const Contact = () => {
     school: "",
     email: "",
     phone: "",
-    text: "",
+    text: initialText,
   });
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
