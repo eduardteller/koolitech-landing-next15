@@ -54,19 +54,13 @@ const Company = () => {
                     tarkvara ja tehnikaga. Pakume kõike nutikatest
                     koolikelladest kuni terve maja helisüsteemini.
                   </p>
-                  <div className="mt-8 flex flex-wrap items-center gap-5">
+                  <div className="mt-8">
                     <Link
-                      href="/ekell"
-                      className="bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active rounded-lg px-6 py-3 font-semibold transition duration-150"
-                    >
-                      Tutvu E-Kellaga
-                    </Link>
-                    <a
                       href="/contact"
-                      className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
+                      className="bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active inline-block rounded-lg px-6 py-3 font-semibold transition duration-150"
                     >
-                      Võta ühendust →
-                    </a>
+                      Võta ühendust
+                    </Link>
                   </div>
                 </div>
 
