@@ -56,26 +56,8 @@ const App = () => {
                     Muuda koolipäevad lihtsaks ja turvaliseks. Halda kellasid,
                     tunniplaane ja häireid ühest kohast ja igast seadmest.
                   </p>
-                  <div className="mt-8 flex flex-wrap items-center gap-5">
+                  <div className="mt-8">
                     <ScrollButton />
-                    <a
-                      href="/ekell/laadi-alla"
-                      className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
-                    >
-                      Laadi alla →
-                    </a>
-                    <a
-                      href="https://dashboard.koolitech.ee"
-                      className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
-                    >
-                      E-Kell Web →
-                    </a>
-                    <a
-                      href="/ekell/docs"
-                      className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
-                    >
-                      Dokumentatsioon →
-                    </a>
                   </div>
                 </div>
 

@@ -1,6 +1,7 @@
 import { getLatestRelease } from "@/lib/ekell-release";
+import Link from "next/link";
 import CtaBand from "./CtaBand";
-import DownloadHero from "./DownloadHero";
+import DownloadCard from "./DownloadCard";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
 import type { SpecRow } from "./SpecPlate";
@@ -35,7 +36,7 @@ const EkellDownload = async () => {
           { label: "Faili suurus", value: fileSize(release.size) },
         ]
       : []),
-    { label: "Süsteem", value: "Windows 10 või uuem (64-bit)" },
+    { label: "Operatsioonisüsteem", value: "Windows 10 või uuem (64-bit)" },
   ];
 
   return (
@@ -43,7 +44,23 @@ const EkellDownload = async () => {
       <HeaderPrimary />
       <div className="relative overflow-x-hidden">
         <main>
-          <DownloadHero rows={rows} fileName={release?.fileName} />
+          <section className="bg-ground px-6 pt-12 pb-24 sm:px-8 md:pt-20">
+            <div className="mx-auto max-w-xl">
+              <h1 className="sr-only">Laadi alla E-Kell</h1>
+              <DownloadCard rows={rows} fileName={release?.fileName} />
+              <p className="text-muted mt-6 text-center text-sm leading-relaxed text-balance">
+                Kui Windows näitab teadet „Windows kaitses teie arvutit“, vali
+                Lisateave ja siis Käivita siiski. Täpsemad juhised leiad{" "}
+                <Link
+                  href="/ekell/docs"
+                  className="text-ink font-semibold underline underline-offset-4"
+                >
+                  dokumentatsioonist
+                </Link>
+                .
+              </p>
+            </div>
+          </section>
 
           <div className="bg-surface px-6 py-24 sm:px-8">
             <div className="mx-auto max-w-3xl">

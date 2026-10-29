@@ -80,11 +80,6 @@ const Footer = () => {
                 Võrguseadmed
               </Link>
             </li>
-            <li>
-              <Link href="/koolidele" className="transition hover:text-ink">
-                Koolidele
-              </Link>
-            </li>
           </ul>
         </div>
         <div>

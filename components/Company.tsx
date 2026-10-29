@@ -1,76 +1,32 @@
-import {
-  Boxes,
-  MonitorSmartphone,
-  Network,
-  PhoneCall,
-  Presentation,
-  Projector,
-  Speaker,
-  Volume2,
-  Wrench,
-} from "lucide-react";
+import { ClipboardList, FileCheck, LifeBuoy, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CategoryGrid from "./catalog/CategoryGrid";
+import CtaBand from "./CtaBand";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
 import PointsList from "./PointsList";
 
-const services = [
+const steps = [
   {
-    Icon: MonitorSmartphone,
-    title: "Tarkvara",
-    text: "E-Kell on lihtne ja mugav viis juhtida koolikellasid ja häireid.",
+    Icon: ClipboardList,
+    title: "Kaardistame vajadused",
+    text: "Käime koolis kohal, vaatame üle ruumid ja olemasoleva tehnika ning kuulame, mida juhtkond vajab.",
   },
   {
-    Icon: Boxes,
-    title: "Tehnika müük",
-    text: "Valime ja müüme helitehnikat, mis sobib just teie koolimajja.",
+    Icon: FileCheck,
+    title: "Pakume lahenduse",
+    text: "Paneme kokku sobiva komplekti ja saadame hinnapakkumise, kus on kirjeldatud sobivad seadmed ja töö.",
   },
   {
     Icon: Wrench,
-    title: "Paigaldus ja hooldus",
-    text: "Paigaldame tehnika kohapeal ja hoolitseme selle eest ka edaspidi.",
-  },
-];
-
-// Koolitehnika block — product names double as the search terms schools
-// use (välikõlarid, nutitahvlid, projektorid …), so keep them plain.
-const hardware = [
-  {
-    Icon: Speaker,
-    title: "Välikõlarid",
-    href: "/tooted/audiolahendused",
-    text: "Ilmastikukindlad kõlarid koolihoovi, spordiväljakule ja sissepääsude juurde.",
+    title: "Paigaldame ja koolitame",
+    text: "Paigaldame ja seadistame tehnika kohapeal ning näitame kooliperele, kuidas neid kasutada.",
   },
   {
-    Icon: Volume2,
-    title: "Sisekõlarid",
-    href: "/tooted/audiolahendused",
-    text: "Selge heli klassidesse, koridoridesse, aulasse ja võimlasse.",
-  },
-  {
-    Icon: Network,
-    title: "IP-võrgulülitid",
-    href: "/tooted/vorguseadmed",
-    text: "Töökindel võrk, mis ühendab kooli IP-seadmed üheks tervikuks.",
-  },
-  {
-    Icon: PhoneCall,
-    title: "Interkomid",
-    href: "/tooted/interkomid",
-    text: "Kiire side klasside, õpetajate toa ja valvelaua vahel.",
-  },
-  {
-    Icon: Presentation,
-    title: "Nutitahvlid",
-    href: "/tooted/interaktiivsed-ekraanid",
-    text: "Interaktiivsed puutetahvlid kaasaegseks ja kaasavaks õppetööks.",
-  },
-  {
-    Icon: Projector,
-    title: "Projektorid",
-    href: "/tooted/projektorid",
-    text: "Projektorid klassiruumidesse, aulasse ja saalidesse.",
+    Icon: LifeBuoy,
+    title: "Jääme toeks",
+    text: "Pärast paigaldust aitame hoolduse ja tehnilise toega, kui midagi vajab tähelepanu.",
   },
 ];
 
@@ -120,47 +76,60 @@ const Company = () => {
             </div>
           </section>
 
-          {/* ---------- What we do ---------- */}
-          <div className="bg-surface px-6 py-24 sm:px-8">
+          {/* ---------- Process ---------- */}
+          <section
+            aria-labelledby="process-title"
+            className="bg-surface px-6 py-24 sm:px-8"
+          >
             <div className="mx-auto max-w-screen-xl">
               <div
                 className="flex flex-col items-center gap-5 text-center"
                 data-aos="fade-up"
                 data-aos-offset="200"
               >
-                <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:w-3/4 md:text-4xl">
-                  Kolm viisi, kuidas koolipäeva sujuvamaks muuta
+                <p className="text-kicker text-xs font-semibold tracking-widest uppercase">
+                  Kuidas see käib
+                </p>
+                <h2
+                  id="process-title"
+                  className="text-ink text-3xl leading-tight font-semibold tracking-tight md:w-3/4 md:text-4xl"
+                >
+                  Neli sammu ideest töötava lahenduseni
                 </h2>
               </div>
-              <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
-                {services.map(({ Icon, title, text }, i) => (
-                  <div
+              <ol className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {steps.map(({ Icon, title, text }, i) => (
+                  <li
                     key={title}
                     data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-delay={150 + i * 100}
-                    className="flex flex-col items-center gap-4 text-center"
+                    data-aos-offset="120"
+                    data-aos-delay={100 + i * 75}
+                    className="border-line bg-ground flex flex-col gap-4 rounded-xl border p-6"
                   >
-                    <span className="bg-primary-tint flex h-16 w-16 items-center justify-center rounded-xl">
-                      <Icon
-                        size={30}
-                        strokeWidth={1.75}
-                        className="text-accent"
-                      />
-                    </span>
+                    <div className="flex items-center justify-between">
+                      <span className="bg-primary-tint flex h-12 w-12 items-center justify-center rounded-xl">
+                        <Icon
+                          size={24}
+                          strokeWidth={1.75}
+                          className="text-accent"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      <span className="text-muted text-sm font-semibold tabular-nums">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
                     <h3 className="text-ink text-lg leading-snug font-semibold">
                       {title}
                     </h3>
-                    <p className="text-muted max-w-xs leading-relaxed">
-                      {text}
-                    </p>
-                  </div>
+                    <p className="text-muted leading-relaxed">{text}</p>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
-          </div>
+          </section>
 
-          {/* ---------- E-Kell flagship spotlight ---------- */}
+          {/* ---------- Software: E-Kell ---------- */}
           <div className="band px-6 py-24 sm:px-8">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
               <div
@@ -183,26 +152,23 @@ const Company = () => {
                 data-aos-offset="200"
                 className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
               >
+                <p className="text-kicker mb-5 text-xs font-semibold tracking-widest uppercase">
+                  Tarkvara
+                </p>
                 <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
-                  Kõikvõimas koolikell E-Kell
+                  E-Kell: koolikellad, tunniplaanid ja häired
                 </h2>
                 <p className="text-muted mt-5 max-w-md text-lg leading-relaxed">
-                  E-Kell paneb koolikellad õigel ajal helisema. Kellasid ja
-                  häireid saad juhtida ka eemalt.
+                  Kellad helisevad õigel ajal ning kellasid ja häireid saab
+                  juhtida ka eemalt.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-5">
                   <Link
                     href="/ekell"
                     className="bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active rounded-lg px-6 py-3 font-semibold transition duration-150"
                   >
-                    E-Kell tutvustus
+                    Tutvu E-Kellaga
                   </Link>
-                  <a
-                    href="https://dashboard.koolitech.ee"
-                    className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
-                  >
-                    E-Kell Web →
-                  </a>
                   <Link
                     href="/ekell/docs"
                     className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
@@ -265,38 +231,18 @@ const Company = () => {
                 </div>
               </div>
 
-              <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {hardware.map(({ Icon, title, text, href }, i) => (
-                  <li
-                    key={title}
-                    data-aos="fade-up"
-                    data-aos-offset="120"
-                    data-aos-delay={100 + i * 75}
-                  >
-                    <Link
-                      href={href}
-                      className="border-line bg-ground hover:border-primary-line flex h-full items-start gap-4 rounded-xl border p-6 transition"
-                    >
-                      <span className="bg-primary-tint flex h-12 w-12 shrink-0 items-center justify-center rounded-xl">
-                        <Icon
-                          size={24}
-                          strokeWidth={1.75}
-                          className="text-accent"
-                          aria-hidden="true"
-                        />
-                      </span>
-                      <div>
-                        <h3 className="text-ink text-lg leading-snug font-semibold">
-                          {title}
-                        </h3>
-                        <p className="text-muted mt-1 leading-relaxed">
-                          {text}
-                        </p>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-16">
+                <CategoryGrid
+                  slugs={[
+                    "interaktiivsed-ekraanid",
+                    "audiolahendused",
+                    "vorguseadmed",
+                    "interkomid",
+                    "projektorid",
+                    "laadimiskarud",
+                  ]}
+                />
+              </div>
               <div className="mt-10 text-center">
                 <Link
                   href="/tooted"
@@ -308,27 +254,13 @@ const Company = () => {
             </div>
           </section>
 
-          {/* ---------- CTA ---------- */}
-          <div className="bg-ground px-6 py-28 text-center sm:px-8">
-            <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-6">
-              <p className="text-kicker text-xs font-semibold tracking-widest uppercase">
-                Alusta täna
-              </p>
-              <h2 className="text-ink text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
-                Räägime, kuidas saame aidata
-              </h2>
-              <p className="text-muted max-w-md text-lg leading-relaxed">
-                Vajad tarkvara, tehnikat või paigaldust? Kirjuta meile ja leiame
-                koolile sobiva lahenduse.
-              </p>
-              <a
-                href="/contact"
-                className="bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active mt-2 rounded-lg px-8 py-3.5 font-semibold transition duration-150"
-              >
-                Kirjuta meile
-              </a>
-            </div>
-          </div>
+          <CtaBand
+            kicker="Alusta täna"
+            title="Räägime teie koolist"
+            text="Kirjuta meile ja tuleme kohale. Konsultatsioon on tasuta."
+            href="/contact"
+            label="Küsi koolile pakkumist"
+          />
         </main>
       </div>
       <Footer />

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // Not rendered anywhere for now: with one school a logo strip looks thin.
-// Put it back on the landing page and Koolidele once there are more logos.
+// Put it back on the landing page once there are more logos.
 const partners = [
   {
     name: "Kallavere Keskkool",
