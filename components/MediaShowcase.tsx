@@ -4,20 +4,20 @@ const media = [
   {
     src: "/assets/desktop/haalesalvestus.png",
     alt: "E-Kell häälsalvestuse vaade",
-    title: "Häälsalvestus & otseedastus",
-    text: "Salvesta teated või edasta hääl otse kõlaritesse.",
+    title: "Häälsalvestus ja otseedastus",
+    text: "Salvesta teated või räägi otse kõlaritesse.",
   },
   {
     src: "/assets/desktop/raadio.png",
     alt: "E-Kell raadiovaade jaamade nimekirjaga",
     title: "Raadio",
-    text: "Mängi raadiojaamu otse või ajakava alusel.",
+    text: "Mängi raadiojaamu kohe või ajakava järgi.",
   },
   {
     src: "/assets/desktop/mp3.png",
     alt: "E-Kell MP3-mängija esitusvaade",
     title: "MP3-mängija",
-    text: "Lae üles ja mängi oma helifaile.",
+    text: "Laadi üles ja mängi oma helifaile.",
   },
 ];
 

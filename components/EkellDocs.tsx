@@ -29,7 +29,7 @@ const EkellDocs = () => {
                 href="/ekell"
                 className="text-sm font-semibold text-muted underline-offset-4 hover:text-ink hover:underline"
               >
-                ← Tagasi E-Kell lehele
+                ← Tagasi E-Kella lehele
               </Link>
               <a
                 href="https://dashboard.koolitech.ee"

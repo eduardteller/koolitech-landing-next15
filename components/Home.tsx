@@ -89,11 +89,11 @@ const App = () => {
                 Tarkvara koolidele
               </p>
               <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:w-3/4 md:text-4xl">
-                E-Kell, teie nutikas koolikellade ja häiresüsteemide lahendus
+                E-Kell: koolikellad ja häired ühes nutikas süsteemis
               </h2>
               <p className="text-muted max-w-2xl text-lg leading-relaxed">
-                Automatiseeri koolikellad ja tunniplaanid, halda häireid ning
-                juhi kõike kaugelt — üks süsteem kogu koolipäeva jaoks.
+                Koolikellad helisevad tunniplaani järgi ise. Häireid ja kõike
+                muud saad juhtida ka eemalt — üks süsteem kogu koolipäevaks.
               </p>
             </div>
           </div>
@@ -130,10 +130,10 @@ const App = () => {
 
                 <PointsList
                   text={[
-                    "Mitu plaani: Loo tavaline nädal, lühendatud päev, pühad või aktus ja vaheta neid ühe klikiga.",
-                    "Eelkell, peakell ja järelkell: Määra igale tunnile eraldi ajad ja helid.",
-                    "Kopeeri päev: Kanna ühe päeva ajad teistele üle, ilma uuesti sisestamata.",
-                    "Aktiivne plaan: Vaheta kehtiv ajakava kohe töölaualt või veebist.",
+                    "Mitu plaani: loo eraldi plaan tavalisele nädalale, lühendatud päevale, pühadele või aktusele ja vaheta neid ühe klikiga.",
+                    "Eelkell, peakell ja järelkell: määra igale tunnile oma ajad ja helid.",
+                    "Kopeeri päev: kanna ühe päeva ajad teistele päevadele üle, ilma neid uuesti sisestamata.",
+                    "Aktiivne plaan: vaheta kehtivat ajakava kohe töölaualt või veebist.",
                   ]}
                 />
               </div>
@@ -158,9 +158,9 @@ const App = () => {
 
                 <PointsList
                   text={[
-                    "Häire presetid: Loo eraldi häired tulekahju, evakuatsiooni ja muude olukordade jaoks.",
-                    "Täielikult kohandatav: Vali igale presetile ikoon, heli, korduste arv ja viivitus.",
-                    "Kaugkäivitus: Käivita häire otse tarkvarast või veebiliidesest.",
+                    "Valmis häired: loo eraldi häire tulekahju, evakuatsiooni ja muude olukordade jaoks.",
+                    "Täielikult kohandatav: vali igale häirele ikoon, heli, korduste arv ja viivitus.",
+                    "Kaugkäivitus: käivita häire töölauarakendusest või eemalt veebiliidesest.",
                   ]}
                 />
               </div>
@@ -192,10 +192,10 @@ const App = () => {
                 data-aos-offset="200"
               >
                 <p className="text-kicker text-xs font-semibold tracking-widest uppercase">
-                  Heli & meedia
+                  Heli ja meedia
                 </p>
                 <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:w-3/4 md:text-4xl">
-                  Terve kooli helisüsteem tarkvaras
+                  Kogu kooli helisüsteem ühes rakenduses
                 </h2>
               </div>
               <MediaShowcase />
@@ -219,8 +219,8 @@ const App = () => {
 
                 <PointsList
                   text={[
-                    "Kaugjuhtimine: Muuda ajakavasid, käivita häireid ja juhi raadiot mis tahes brauserist.",
-                    "Reaalajas sünkroonimine: Sinu muudatused jõuavad töölauarakendusse kohe.",
+                    "Kaugjuhtimine: muuda ajakavasid, käivita häireid ja juhi raadiot mis tahes brauserist.",
+                    "Reaalajas sünkroonimine: muudatused jõuavad töölauarakendusse kohe.",
                   ]}
                 />
               </div>
@@ -352,7 +352,7 @@ const App = () => {
                 Võimalused
               </p>
               <h3 className="text-ink text-center text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
-                E-Kell tarkvara sisaldab
+                Kõik, mida E-Kell oskab
               </h3>
               <div className="mt-8 w-full">
                 <PointsComponent />
@@ -374,57 +374,56 @@ const App = () => {
                   {
                     firstText: "Kuidas E-Kell paigaldada?",
                     secondText:
-                      "Laadi töölauarakendus kooli arvutisse ja sisesta litsentsivõti — paari klikiga on süsteem töövalmis.",
+                      "Laadi töölauarakendus kooli arvutisse ja sisesta litsentsivõti. Paari klikiga on süsteem töövalmis.",
                   },
                   {
                     firstText:
                       "Kuidas töölauarakendus ja veebiliides koos töötavad?",
                     secondText:
-                      "Töölauarakendus töötab kooli arvutis, mängib kellad ja hoiab andmeid; veebiliides on kaugjuht, mis avaneb igas brauseris — arvutis, tahvlis või telefonis. Muudatus ühes jõuab kohe ka teise.",
+                      "Töölauarakendus töötab kooli arvutis: see mängib kellad ja hoiab andmeid. Veebiliides on nagu pult, mis avaneb igas brauseris — arvutis, tahvlis või telefonis. Kui muudad midagi ühes, jõuab muudatus kohe ka teise.",
                   },
                   {
                     firstText: "Kas E-Kell töötab ka ilma internetita?",
                     secondText:
-                      "Jah — töölauarakendus mängib kellad ka võrguühenduseta ning sünkroonib muudatused, kui ühendus taastub.",
+                      "Jah. Töölauarakendus mängib kellad ka võrguühenduseta ja sünkroonib muudatused, kui ühendus taastub.",
                   },
                   {
-                    firstText: "Kuidas käib pilvesünkroonimine?",
+                    firstText: "Kuidas pilvesünkroonimine käib?",
                     secondText:
-                      "Ajakavad ja seaded sünkroonitakse automaatselt töölauarakenduse ja serveri vahel, nii et kõik seadmed näevad sama infot.",
-                  },
-                  {
-                    firstText:
-                      "Kas mitu kasutajat saavad ajakavasid korraga hallata?",
-                    secondText:
-                      "Jah, koolitöötajad saavad ajakavasid hallata veebiliidese kaudu ja muudatused jõuavad reaalajas kõikjale.",
+                      "Ajakavad ja seaded sünkroonitakse automaatselt töölauarakenduse ja serveri vahel, nii et kõigis seadmetes on sama info.",
                   },
                   {
                     firstText:
-                      "Kas saan kasutada oma muusikat või helifaile kellahelina?",
+                      "Kas mitu kasutajat saab ajakavasid korraga hallata?",
                     secondText:
-                      "Jah — lae üles MP3-failid või salvestused ja määra need koolikella helideks.",
+                      "Jah. Koolitöötajad saavad ajakavasid veebiliideses hallata ja muudatused jõuavad kohe kõigisse seadmetesse.",
                   },
                   {
                     firstText:
-                      "Kas on võimalik seadistada erinevaid häireliike?",
+                      "Kas saan kasutada kellahelina oma muusikat või helifaile?",
                     secondText:
-                      "Jah, saad luua eraldi presetid tulekahju-, evakuatsiooni- ja muudeks olukordadeks ning käivitada need ühe vajutusega.",
+                      "Jah. Laadi üles MP3-failid või salvestused ja määra need koolikella helideks.",
+                  },
+                  {
+                    firstText: "Kas saab seadistada eri tüüpi häireid?",
+                    secondText:
+                      "Jah. Loo eraldi häire tulekahju, evakuatsiooni või muu olukorra jaoks ja käivita see ühe vajutusega.",
                   },
                   {
                     firstText: "Kuidas muuta kellaaegu ja helisid?",
                     secondText:
-                      "Iga tunni eelkella, peakella ja järelkella aja ning heli saad määrata plaani redaktoris kooli vajaduste järgi.",
+                      "Plaani redaktoris saad iga tunni eelkellale, peakellale ja järelkellale määrata oma aja ja heli.",
                   },
                   {
                     firstText:
                       "Kuidas litsents toimib ja kas saan enne proovida?",
                     secondText:
-                      "E-Kell töötab litsentsivõtmega, mille kehtivust näed rakenduses ja saad pikendada; enne ostu saab tutvuda tasuta prooviperioodiga.",
+                      "E-Kell töötab litsentsivõtmega. Rakenduses näed, kui kaua litsents kehtib, ja saad seda pikendada. Enne ostu saad E-Kella tasuta proovida.",
                   },
                   {
-                    firstText: "Kas klienditugi on saadaval?",
+                    firstText: "Kas klienditugi on olemas?",
                     secondText:
-                      "Meie tugitiim aitab e-posti või telefoni teel kõik küsimused kiiresti ja tõhusalt lahendada.",
+                      "Jah. Aitame e-posti ja telefoni teel ning lahendame küsimused kiiresti.",
                   },
                 ]}
               ></Accordion>

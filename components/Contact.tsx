@@ -11,11 +11,11 @@ import toast, { Toaster } from "react-hot-toast";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Palun sisestage oma nimi"),
-  school: z.string().min(1, "Kooli nimi on kohustuslik"),
-  email: z.email("Vale emaili aadressi formaat"),
+  name: z.string().min(1, "Sisesta oma nimi"),
+  school: z.string().min(1, "Sisesta kooli nimi"),
+  email: z.email("Kontrolli e-posti aadressi"),
   phone: z.string().optional(),
-  text: z.string().min(1, "Palun sisestage sõnum"),
+  text: z.string().min(1, "Kirjuta sõnum"),
 });
 
 interface Props {
@@ -77,13 +77,14 @@ const Contact = ({ initialText = "" }: Props) => {
 
     const resp = await sendContact(formData);
     if (resp.status) {
-      toast.success("Teie sõnum on saadetud! Aitäh! 🚀", {
+      toast.success("Sõnum on saadetud. Aitäh! 🚀", {
         position: "top-center",
       });
     } else {
-      toast.error("Vabandame, midagi läks valesti! 😔", {
-        position: "top-center",
-      });
+      toast.error(
+        "Sõnumi saatmine ebaõnnestus. Proovi uuesti või kirjuta info@koolitech.ee 😔",
+        { position: "top-center" },
+      );
     }
     setError({
       name: false,
@@ -138,8 +139,8 @@ const Contact = ({ initialText = "" }: Props) => {
               className={`${fieldBase} ${error.name ? "border-error" : "border-line"}`}
               type="text"
               name="name"
-              aria-label="Teie nimi"
-              placeholder="Teie nimi"
+              aria-label="Nimi"
+              placeholder="Nimi"
               value={formData.name}
               onChange={handleChange}
               disabled={loader}
@@ -161,8 +162,8 @@ const Contact = ({ initialText = "" }: Props) => {
                 name="email"
                 className={`${fieldBase} ${error.email ? "border-error" : "border-line"}`}
                 type="text"
-                aria-label="Emaili aadress"
-                placeholder="Emaili aadress"
+                aria-label="E-posti aadress"
+                placeholder="E-posti aadress"
                 value={formData.email}
                 onChange={handleChange}
                 disabled={loader}
@@ -171,8 +172,8 @@ const Contact = ({ initialText = "" }: Props) => {
                 name="phone"
                 className={`${fieldBase} border-line`}
                 type="text"
-                aria-label="Telefoni number (valikuline)"
-                placeholder="(Valikuline) Telefoni number"
+                aria-label="Telefoninumber (valikuline)"
+                placeholder="Telefoninumber (valikuline)"
                 value={formData.phone}
                 onChange={handleChange}
                 disabled={loader}

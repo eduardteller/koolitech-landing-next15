@@ -64,15 +64,15 @@ const hl = {
 export const products: Product[] = [
   /* ── Audiolahendused: laekõlarid ─────────────────────────────── */
   {
-    slug: "tonmind-sip-s01",
-    name: "Tonmind SIP-S01",
+    slug: "sip-s01",
+    name: "SIP-S01",
     sku: "SIP-S01",
     category: "audiolahendused",
     series: "Laekõlarid",
     size: "15 W",
     tagline: "15 W IP-laekõlar klassi, koridori ja õpetajate tuppa.",
     description:
-      "Ripplae sisse süvistatav võrgukõlar, mis saab heli ja toite ühe PoE-kaabli kaudu. Sobib koolikella, teadaannete ja taustamuusika edastamiseks. SIP- ja ONVIF-tugi lubab ühendada kõlari IP-telefonijaama või videovalvesüsteemiga, eelsalvestatud teateid saab käivitada ajakava, häiresisendi või HTTP-käsuga.",
+      "Ripplae sisse süvistatav võrgukõlar, mis saab heli ja toite ühe PoE-kaabli kaudu. Sobib koolikella, teadaannete ja taustamuusika edastamiseks. SIP- ja ONVIF-tugi võimaldab ühendada kõlari IP-telefonijaama või videovalvesüsteemiga. Eelsalvestatud teateid saab käivitada ajakava, häiresisendi või HTTP-käsuga.",
     highlights: [hl.poe, hl.sipOnvif, hl.messages, hl.alarm, hl.opus],
     specs: [
       { label: "Võimsus", value: "15 W" },
@@ -92,8 +92,8 @@ export const products: Product[] = [
     order: 401,
   },
   {
-    slug: "tonmind-sip-s01m",
-    name: "Tonmind SIP-S01M",
+    slug: "sip-s01m",
+    name: "SIP-S01M",
     sku: "SIP-S01M",
     category: "audiolahendused",
     series: "Laekõlarid",
@@ -121,8 +121,8 @@ export const products: Product[] = [
     order: 402,
   },
   {
-    slug: "tonmind-sip-s03t",
-    name: "Tonmind SIP-S03T",
+    slug: "sip-s03t",
+    name: "SIP-S03T",
     sku: "SIP-S03T",
     category: "audiolahendused",
     series: "Laekõlarid",
@@ -155,8 +155,8 @@ export const products: Product[] = [
     order: 403,
   },
   {
-    slug: "tonmind-sip-s03m",
-    name: "Tonmind SIP-S03M",
+    slug: "sip-s03m",
+    name: "SIP-S03M",
     sku: "SIP-S03M",
     category: "audiolahendused",
     series: "Laekõlarid",
@@ -190,15 +190,15 @@ export const products: Product[] = [
     order: 404,
   },
   {
-    slug: "tonmind-sip-s02",
-    name: "Tonmind SIP-S02",
+    slug: "sip-s02",
+    name: "SIP-S02",
     sku: "SIP-S02",
     category: "audiolahendused",
     series: "Laekõlarid",
     size: "50 W",
     tagline: "50 W IP-laekõlar aulasse, võimlasse ja sööklasse.",
     description:
-      "Tonmindi võimsaim laekõlar suurtesse ja kõrgete lagedega ruumidesse. Sagedusala 80 Hz – 20 kHz sobib nii kõneks kui muusikaks. 50 W võimendi vajab PoE++ toidet või eraldi 24 V toiteplokki.",
+      "Valiku võimsaim laekõlar suurtesse ja kõrgete lagedega ruumidesse. Sagedusala 80 Hz – 20 kHz sobib nii kõneks kui muusikaks. 50 W võimendi vajab PoE++ toidet või eraldi 24 V toiteplokki.",
     highlights: [
       "50 W võimendi suurtele ruumidele",
       "Sagedusala 80 Hz – 20 kHz kõneks ja muusikaks",
@@ -225,8 +225,8 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: seinakõlarid ───────────────────────────── */
   {
-    slug: "tonmind-sip-s13m",
-    name: "Tonmind SIP-S13M",
+    slug: "sip-s13m",
+    name: "SIP-S13M",
     sku: "SIP-S13M",
     category: "audiolahendused",
     series: "Seinakõlarid",
@@ -262,8 +262,8 @@ export const products: Product[] = [
     order: 411,
   },
   {
-    slug: "tonmind-sip-s11",
-    name: "Tonmind SIP-S11",
+    slug: "sip-s11",
+    name: "SIP-S11",
     sku: "SIP-S11",
     category: "audiolahendused",
     series: "Seinakõlarid",
@@ -296,8 +296,8 @@ export const products: Product[] = [
     order: 412,
   },
   {
-    slug: "tonmind-sip-s11h",
-    name: "Tonmind SIP-S11H",
+    slug: "sip-s11h",
+    name: "SIP-S11H",
     sku: "SIP-S11H",
     category: "audiolahendused",
     series: "Seinakõlarid",
@@ -331,8 +331,8 @@ export const products: Product[] = [
     order: 413,
   },
   {
-    slug: "tonmind-sip-s11t",
-    name: "Tonmind SIP-S11T",
+    slug: "sip-s11t",
+    name: "SIP-S11T",
     sku: "SIP-S11T",
     category: "audiolahendused",
     series: "Seinakõlarid",
@@ -365,8 +365,8 @@ export const products: Product[] = [
     order: 414,
   },
   {
-    slug: "tonmind-sip-s11m",
-    name: "Tonmind SIP-S11M",
+    slug: "sip-s11m",
+    name: "SIP-S11M",
     sku: "SIP-S11M",
     category: "audiolahendused",
     series: "Seinakõlarid",
@@ -402,8 +402,8 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: ruuporkõlarid ──────────────────────────── */
   {
-    slug: "tonmind-sip-s21",
-    name: "Tonmind SIP-S21",
+    slug: "sip-s21",
+    name: "SIP-S21",
     sku: "SIP-S21",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -435,15 +435,15 @@ export const products: Product[] = [
     order: 421,
   },
   {
-    slug: "tonmind-sip-s21h",
-    name: "Tonmind SIP-S21H",
+    slug: "sip-s21h",
+    name: "SIP-S21H",
     sku: "SIP-S21H",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
     size: "15 W",
     tagline: "15 W IP-ruuporkõlar mikrofoniga välikõneks.",
     description:
-      "SIP-S21 mikrofoniga versioon: valvelaud saab väravas, parklas või sissepääsu juures olijaga kahesuunaliselt rääkida. IP66 korpus talub vihma ja tolmu.",
+      "SIP-S21 mikrofoniga versioon: valvelaud saab kahesuunaliselt rääkida inimesega, kes on väravas, parklas või sissepääsu juures. IP66 korpus talub vihma ja tolmu.",
     highlights: [
       hl.mic,
       "IP66 ilmastikukindel korpus",
@@ -469,8 +469,8 @@ export const products: Product[] = [
     order: 422,
   },
   {
-    slug: "tonmind-sip-s21t",
-    name: "Tonmind SIP-S21T",
+    slug: "sip-s21t",
+    name: "SIP-S21T",
     sku: "SIP-S21T",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -502,8 +502,8 @@ export const products: Product[] = [
     order: 423,
   },
   {
-    slug: "tonmind-sip-s21m",
-    name: "Tonmind SIP-S21M",
+    slug: "sip-s21m",
+    name: "SIP-S21M",
     sku: "SIP-S21M",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -536,8 +536,8 @@ export const products: Product[] = [
     order: 424,
   },
   {
-    slug: "tonmind-sip-s22",
-    name: "Tonmind SIP-S22",
+    slug: "sip-s22",
+    name: "SIP-S22",
     sku: "SIP-S22",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -569,8 +569,8 @@ export const products: Product[] = [
     order: 425,
   },
   {
-    slug: "tonmind-sip-s22t",
-    name: "Tonmind SIP-S22T",
+    slug: "sip-s22t",
+    name: "SIP-S22T",
     sku: "SIP-S22T",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -602,8 +602,8 @@ export const products: Product[] = [
     order: 426,
   },
   {
-    slug: "tonmind-sip-s26h",
-    name: "Tonmind SIP-S26H",
+    slug: "sip-s26h",
+    name: "SIP-S26H",
     sku: "SIP-S26H",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -639,15 +639,15 @@ export const products: Product[] = [
     order: 427,
   },
   {
-    slug: "tonmind-sip-s25v",
-    name: "Tonmind SIP-S25V",
+    slug: "sip-s25v",
+    name: "SIP-S25V",
     sku: "SIP-S25V",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
     size: "50 W",
     tagline: "50 W IP-ruuporkõlar, kuni 128 dB suurte alade katmiseks.",
     description:
-      "Tonmindi võimsaim ruuporkõlar: 50 W võimendi ja kuni 128 dB helirõhk kannavad teadaanded ja häireteated kaugele, näiteks üle staadioni või suure territooriumi. IP66 alumiiniumkorpus on mõeldud välitingimustesse.",
+      "Valiku võimsaim ruuporkõlar: 50 W võimendi ja kuni 128 dB helirõhk kannavad teadaanded ja häireteated kaugele, näiteks üle staadioni või suure territooriumi. IP66 alumiiniumkorpus on mõeldud välitingimustesse.",
     highlights: [
       "50 W võimendi, kuni 128 dB",
       "IP66 alumiiniumkorpus",
@@ -671,8 +671,8 @@ export const products: Product[] = [
     order: 428,
   },
   {
-    slug: "tonmind-sip-s23",
-    name: "Tonmind SIP-S23",
+    slug: "sip-s23",
+    name: "SIP-S23",
     sku: "SIP-S23",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -706,8 +706,8 @@ export const products: Product[] = [
     order: 429,
   },
   {
-    slug: "tonmind-sip-s23t",
-    name: "Tonmind SIP-S23T",
+    slug: "sip-s23t",
+    name: "SIP-S23T",
     sku: "SIP-S23T",
     category: "audiolahendused",
     series: "Ruuporkõlarid",
@@ -743,8 +743,8 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: ripp- ja projektorkõlarid ──────────────── */
   {
-    slug: "tonmind-sip-s51",
-    name: "Tonmind SIP-S51",
+    slug: "sip-s51",
+    name: "SIP-S51",
     sku: "SIP-S51",
     category: "audiolahendused",
     series: "Ripp- ja projektorkõlarid",
@@ -777,8 +777,8 @@ export const products: Product[] = [
     order: 441,
   },
   {
-    slug: "tonmind-sip-s51h",
-    name: "Tonmind SIP-S51H",
+    slug: "sip-s51h",
+    name: "SIP-S51H",
     sku: "SIP-S51H",
     category: "audiolahendused",
     series: "Ripp- ja projektorkõlarid",
@@ -812,8 +812,8 @@ export const products: Product[] = [
     order: 442,
   },
   {
-    slug: "tonmind-sip-s61t",
-    name: "Tonmind SIP-S61T",
+    slug: "sip-s61t",
+    name: "SIP-S61T",
     sku: "SIP-S61T",
     category: "audiolahendused",
     series: "Ripp- ja projektorkõlarid",
@@ -845,8 +845,8 @@ export const products: Product[] = [
     order: 443,
   },
   {
-    slug: "tonmind-sip-s61m",
-    name: "Tonmind SIP-S61M",
+    slug: "sip-s61m",
+    name: "SIP-S61M",
     sku: "SIP-S61M",
     category: "audiolahendused",
     series: "Ripp- ja projektorkõlarid",
@@ -881,8 +881,8 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: sammaskõlarid ──────────────────────────── */
   {
-    slug: "tonmind-sip-s31bp",
-    name: "Tonmind SIP-S31BP",
+    slug: "sip-s31bp",
+    name: "SIP-S31BP",
     sku: "SIP-S31BP",
     category: "audiolahendused",
     series: "Sammaskõlarid",
@@ -915,8 +915,8 @@ export const products: Product[] = [
     order: 451,
   },
   {
-    slug: "tonmind-sip-s31fp",
-    name: "Tonmind SIP-S31FP",
+    slug: "sip-s31fp",
+    name: "SIP-S31FP",
     sku: "SIP-S31FP",
     category: "audiolahendused",
     series: "Sammaskõlarid",
@@ -949,8 +949,8 @@ export const products: Product[] = [
     order: 452,
   },
   {
-    slug: "tonmind-sip-s31f",
-    name: "Tonmind SIP-S31F",
+    slug: "sip-s31f",
+    name: "SIP-S31F",
     sku: "SIP-S31F",
     category: "audiolahendused",
     series: "Sammaskõlarid",
@@ -983,8 +983,8 @@ export const products: Product[] = [
     order: 453,
   },
   {
-    slug: "tonmind-sip-s31s",
-    name: "Tonmind SIP-S31S",
+    slug: "sip-s31s",
+    name: "SIP-S31S",
     sku: "SIP-S31S",
     category: "audiolahendused",
     series: "Sammaskõlarid",
@@ -1017,15 +1017,15 @@ export const products: Product[] = [
     order: 454,
   },
   {
-    slug: "tonmind-sip-s31e",
-    name: "Tonmind SIP-S31E",
+    slug: "sip-s31e",
+    name: "SIP-S31E",
     sku: "SIP-S31E",
     category: "audiolahendused",
     series: "Sammaskõlarid",
     size: "80 W",
-    tagline: "80 W IP-sammaskõlar, Tonmindi võimsaim.",
+    tagline: "80 W IP-sammaskõlar, valiku võimsaim.",
     description:
-      "Tonmindi võimsaim sammaskõlar, kuni 116 dB, kõige suurematele saalidele ja spordihallidele. Kitsas vertikaalne hajuvus hoiab kõne arusaadavana ka kajarohkes ruumis. Toide 12/24 V toiteplokist.",
+      "Valiku võimsaim sammaskõlar, kuni 116 dB, kõige suurematele saalidele ja spordihallidele. Kitsas vertikaalne hajuvus hoiab kõne arusaadavana ka kajarohkes ruumis. Toide 12/24 V toiteplokist.",
     highlights: [
       "80 W võimendi, kuni 116 dB",
       "Selge kõne kajarohketes saalides",
@@ -1053,15 +1053,15 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: adapterid ja moodulid ──────────────────── */
   {
-    slug: "tonmind-sip-t20",
-    name: "Tonmind SIP-T20",
+    slug: "sip-t20",
+    name: "SIP-T20",
     sku: "SIP-T20",
     category: "audiolahendused",
     series: "Adapterid",
     size: "15 W",
     tagline: "Teeb olemasolevatest analoogkõlaritest IP-kõlarid.",
     description:
-      "Väike metallkorpusega adapter, mis ühendab olemasoleva analoogkõlari või võimendi IP-teadustussüsteemi. Sisseehitatud 15 W võimendi toidab kõlarit otse, mikrofoni- ja peakomplekti liides lubavad kahesuunalist kõnet ning häiresisendid ja relee ühendavad selle teiste süsteemidega. Hea valik, kui kooli vana kõlarivõrk on alles ja töökorras.",
+      "Väike metallkorpusega adapter, mis ühendab olemasoleva analoogkõlari või võimendi IP-teadustussüsteemi. Sisseehitatud 15 W võimendi toidab kõlarit otse, mikrofoni- ja peakomplekti liides võimaldavad kahesuunalist kõnet ning häiresisendid ja relee ühendavad adapteri teiste süsteemidega. Hea valik, kui kooli vana kõlarivõrk on alles ja töökorras.",
     highlights: [
       "Olemasolevad kõlarid IP-teadustussüsteemi",
       "Sisseehitatud 15 W võimendi",
@@ -1087,8 +1087,8 @@ export const products: Product[] = [
     order: 461,
   },
   {
-    slug: "tonmind-sip-t21",
-    name: "Tonmind SIP-T21",
+    slug: "sip-t21",
+    name: "SIP-T21",
     sku: "SIP-T21",
     category: "audiolahendused",
     series: "Adapterid",
@@ -1121,15 +1121,15 @@ export const products: Product[] = [
     order: 462,
   },
   {
-    slug: "tonmind-sip-t22w",
-    name: "Tonmind SIP-T22W",
+    slug: "sip-t22w",
+    name: "SIP-T22W",
     sku: "SIP-T22W",
     category: "audiolahendused",
     series: "Adapterid",
     size: "15 W",
     tagline: "WiFi-ga teadustusadapter kohtadesse, kuhu võrgukaablit pole.",
     description:
-      "Toob analoogkõlari IP-teadustussüsteemi ka seal, kuhu kaablit vedada on keeruline: adapter ühendub 2,4 GHz WiFi kaudu kliendi või pääsupunktina. Toide tuleb 12 V toiteplokist või PoE kaudu. 15 W võimendi, mikrofon, peakomplekt, häiresisend ja relee nagu teistel T-seeria adapteritel.",
+      "Ühendab analoogkõlari IP-teadustussüsteemiga ka seal, kuhu on keeruline kaablit vedada: adapter ühendub 2,4 GHz WiFi kaudu kliendi või pääsupunktina. Toide tuleb 12 V toiteplokist või PoE kaudu. 15 W võimendi, mikrofon, peakomplekt, häiresisend ja relee nagu teistel T-seeria adapteritel.",
     highlights: [
       "2,4 GHz WiFi, võrgukaablit pole vaja",
       "Olemasolevad kõlarid IP-teadustussüsteemi",
@@ -1156,8 +1156,8 @@ export const products: Product[] = [
     order: 463,
   },
   {
-    slug: "tonmind-sip-t30",
-    name: "Tonmind SIP-T30",
+    slug: "sip-t30",
+    name: "SIP-T30",
     sku: "SIP-T30",
     category: "audiolahendused",
     series: "Adapterid",
@@ -1192,8 +1192,8 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: mikrofonid ─────────────────────────────── */
   {
-    slug: "tonmind-sip-m20",
-    name: "Tonmind SIP-M20",
+    slug: "sip-m20",
+    name: "SIP-M20",
     sku: "SIP-M20",
     category: "audiolahendused",
     series: "Mikrofonid",
@@ -1236,8 +1236,8 @@ export const products: Product[] = [
     order: 471,
   },
   {
-    slug: "tonmind-sip-m30",
-    name: "Tonmind SIP-M30",
+    slug: "sip-m30",
+    name: "SIP-M30",
     sku: "SIP-M30",
     category: "audiolahendused",
     series: "Mikrofonid",
@@ -1280,8 +1280,8 @@ export const products: Product[] = [
     order: 472,
   },
   {
-    slug: "tonmind-sip-m01",
-    name: "Tonmind SIP-M01",
+    slug: "sip-m01",
+    name: "SIP-M01",
     sku: "SIP-M01",
     category: "audiolahendused",
     series: "Mikrofonid",
@@ -1317,8 +1317,8 @@ export const products: Product[] = [
     order: 473,
   },
   {
-    slug: "tonmind-sip-d31",
-    name: "Tonmind SIP-D31",
+    slug: "sip-d31",
+    name: "SIP-D31",
     sku: "SIP-D31",
     category: "audiolahendused",
     series: "Mikrofonid",
@@ -1355,13 +1355,13 @@ export const products: Product[] = [
 
   /* ── Audiolahendused: tarkvara ───────────────────────────────── */
   {
-    slug: "tonmind-audio-manager",
-    name: "Tonmind Audio Manager",
+    slug: "audio-manager",
+    name: "Audio Manager",
     category: "audiolahendused",
     series: "Tarkvara",
     tagline: "Windowsi tarkvara tsoonide, kellade ja ajakavade haldamiseks.",
     description:
-      "Lihtsaim Tonmindi juhtimistarkvara kohtvõrgu jaoks. Leiab võrgus olevad Tonmindi kõlarid ja adapterid ning edastab neisse RTP multicast'i kaudu mikrofoni, raadio, kohaliku muusika või mis tahes Windowsi rakenduse heli. Tsoone, sisu, kellahelisid, helitugevust ja ajakava saab hallata ühest aknast.",
+      "Lihtsaim juhtimistarkvara kohtvõrgu jaoks. Leiab võrgus olevad IP-kõlarid ja -adapterid ning edastab neisse RTP multicast'i kaudu mikrofoni, raadio, kohaliku muusika või mis tahes Windowsi rakenduse heli. Tsoone, sisu, kellahelisid, helitugevust ja ajakava saab hallata ühest aknast.",
     highlights: [
       "Tsoonid, kellahelid, ajakava ja helitugevus",
       "Leiab ja seadistab võrgus olevad seadmed",
@@ -1376,20 +1376,20 @@ export const products: Product[] = [
       { label: "SIP-server", value: "Ei" },
       {
         label: "Ühilduvus",
-        value: "Tonmindi IP-kõlarid ja -adapterid, muud IP-heliseadmed",
+        value: "Kataloogi IP-kõlarid ja -adapterid, muud IP-heliseadmed",
       },
     ],
     image: "/assets/products/audio-manager.webp",
     order: 481,
   },
   {
-    slug: "tonmind-pa-system-lite",
-    name: "Tonmind PA System Lite",
+    slug: "pa-system-lite",
+    name: "PA System Lite",
     category: "audiolahendused",
     series: "Tarkvara",
     tagline: "Teadustussüsteemi tarkvara sisseehitatud SIP-serveriga.",
     description:
-      "Kõik-ühes teadustustarkvara Windowsile. Sisseehitatud SIP-server registreerib kuni 1000 SIP-seadet, nii et kõlarid, pultid ja telefonid töötavad ka ilma eraldi telefonijaamata. Tsoonid, sisu, kellahelid, helitugevus ja ajakava on hallatavad ühest kohast.",
+      "Kõik-ühes teadustustarkvara Windowsile. Sisseehitatud SIP-server registreerib kuni 1000 SIP-seadet, nii et kõlarid, pultid ja telefonid töötavad ka ilma eraldi telefonijaamata. Tsoone, sisu, kellahelisid, helitugevust ja ajakava saab hallata ühest kohast.",
     highlights: [
       "Sisseehitatud SIP-server",
       "Kuni 1000 SIP-seadet ja 1000 tsooni",
@@ -1405,25 +1405,25 @@ export const products: Product[] = [
       { label: "Edastus", value: "SIP, RTP multicast" },
       {
         label: "Ühilduvus",
-        value: "Tonmindi IP-kõlarid ja -adapterid, muud SIP-seadmed",
+        value: "Kataloogi IP-kõlarid ja -adapterid, muud SIP-seadmed",
       },
     ],
     image: "/assets/products/pa-system-lite.webp",
     order: 482,
   },
   {
-    slug: "tonmind-pa-system-pro",
-    name: "Tonmind PA System Pro",
+    slug: "pa-system-pro",
+    name: "PA System Pro",
     category: "audiolahendused",
     series: "Tarkvara",
     tagline: "Mitme kasutajaga teadustussüsteem SIP-serveri ja ONVIF-toega.",
     description:
-      "Tonmindi täisversioon suurematele koolidele ja koolikompleksidele. Server- ja kliendiosa lubavad süsteemi hallata mitmel kasutajal korraga, sisseehitatud SIP-server registreerib kuni 1000 seadet ning ONVIF-tugi seob kõlarid videovalvekaameratega. Lisaks tsoonidele, ajakavale ja kellahelidele toetab tekst-kõneks teadaandeid ja konverentskõnesid.",
+      "Teadustustarkvara täisversioon suurematele koolidele ja koolikompleksidele. Serveri- ja kliendiosa tõttu saavad süsteemi hallata mitu kasutajat korraga, sisseehitatud SIP-server registreerib kuni 1000 seadet ning ONVIF-tugi seob kõlarid videovalvekaameratega. Lisaks tsoonidele, ajakavale ja kellahelidele loeb tarkvara kirjutatud teksti teadaandena ette ja võimaldab konverentskõnesid.",
     highlights: [
       "Server ja klient, mitu kasutajat korraga",
       "Sisseehitatud SIP-server, kuni 1000 seadet",
       "ONVIF: kõlarid koos videovalvekaameratega",
-      "Tekst-kõneks teadaanded ja konverentskõned",
+      "Kõnesünteesiga teadaanded ja konverentskõned",
       "Tsoonid, kellahelid, ajakava ja helitugevus",
     ],
     specs: [
@@ -1436,21 +1436,21 @@ export const products: Product[] = [
       {
         label: "Ühilduvus",
         value:
-          "Tonmindi IP-kõlarid ja -adapterid, muud SIP-seadmed, ONVIF-kaamerad",
+          "Kataloogi IP-kõlarid ja -adapterid, muud SIP-seadmed, ONVIF-kaamerad",
       },
     ],
     image: "/assets/products/pa-system-pro.webp",
     order: 483,
   },
   {
-    slug: "tonmind-pa100",
-    name: "Tonmind PA100",
+    slug: "pa100",
+    name: "PA100",
     sku: "PA100",
     category: "audiolahendused",
     series: "Tarkvara",
     tagline: "Valmis teadustusjaam: arvuti, lauamikrofon ja tarkvara ühes.",
     description:
-      "Komplekt, kus Tonmindi teadustustarkvara (PA System Lite ja Audio Manager) on eelnevalt paigaldatud 13,25″ ekraaniga Windows 10 arvutisse koos lauamikrofoniga. Sobib koolile, kus pole eraldi serverit: jaam pannakse valvelauda või kantseleisse ja sealt hallatakse kuni 100 tsooni ja 100 SIP-seadet.",
+      "Komplekt, kus teadustustarkvara (PA System Lite ja Audio Manager) on eelnevalt paigaldatud 13,25″ ekraaniga Windows 10 arvutisse koos lauamikrofoniga. Sobib koolile, kus pole eraldi serverit: jaama saab panna valvelauda või kantseleisse ja sealt hallata kuni 100 tsooni ja 100 SIP-seadet.",
     highlights: [
       "Tarkvara eelpaigaldatud, kohe kasutusvalmis",
       "Kuni 100 tsooni ja 100 SIP-seadet",
@@ -1482,14 +1482,14 @@ export const products: Product[] = [
 
   /* ── Interkomid ──────────────────────────────────────────────── */
   {
-    slug: "tonmind-sip-d26v",
-    name: "Tonmind SIP-D26V",
+    slug: "sip-d26v",
+    name: "SIP-D26V",
     sku: "SIP-D26V",
     category: "interkomid",
     series: "IP-interkom",
     tagline: "IP-videointerkom 2 MP kaameraga sissepääsu juurde.",
     description:
-      "Kompaktne kõnepaneel välisukse, värava või kantselei ukse juurde. Nupuvajutus helistab valvelauda või õpetajate tuppa, 2 MP kaamera näitab, kes ukse taga on, ning relee saab avada ukseluku. SIP- ja ONVIF-tugi lubab ühendada paneeli IP-telefonijaama ja videovalvesüsteemiga.",
+      "Kompaktne kõnepaneel välisukse, värava või kantselei ukse juurde. Nupuvajutus helistab valvelauda või õpetajate tuppa, 2 MP kaamera näitab, kes ukse taga on, ning relee saab avada ukseluku. SIP- ja ONVIF-tugi võimaldab ühendada paneeli IP-telefonijaama ja videovalvesüsteemiga.",
     highlights: [
       "2 MP kaamera (1080p, H.264)",
       "Kahesuunaline kõne kaja- ja mürasummutusega",
@@ -1517,8 +1517,8 @@ export const products: Product[] = [
     order: 801,
   },
   {
-    slug: "tonmind-sip-d32",
-    name: "Tonmind SIP-D32",
+    slug: "sip-d32",
+    name: "SIP-D32",
     sku: "SIP-D32",
     category: "interkomid",
     series: "IP-interkom",

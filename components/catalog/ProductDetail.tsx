@@ -146,12 +146,12 @@ const ProductDetail = ({ product, category }: Props) => {
                 </h2>
                 <SpecPlate
                   title={product.name}
-                  tag={product.sku}
+                  tag={product.sku !== product.name ? product.sku : undefined}
                   rows={product.specs}
                 />
                 <p className="text-muted mt-4 text-xs leading-relaxed">
-                  Tootja võib spetsifikatsioone muuta. Täpne komplektsus
-                  kinnitatakse pakkumises.
+                  Tootja võib tehnilisi andmeid muuta. Täpse komplekti
+                  kinnitame pakkumises.
                 </p>
               </div>
             </section>
@@ -183,7 +183,7 @@ const ProductDetail = ({ product, category }: Props) => {
           <CtaBand
             kicker="Hinnapakkumine"
             title="Paneme komplekti kokku"
-            text="Ekraan, kinnitus, kaablid ja paigaldus: saadame koolile ühe selge pakkumise."
+            text="Seadmed, kinnitused, kaablid ja paigaldus: saadame koolile ühe selge pakkumise."
             href={quoteHref(product.name)}
             label="Küsi pakkumist"
           />

@@ -20,17 +20,17 @@ const services = [
   {
     Icon: MonitorSmartphone,
     title: "Tarkvara",
-    text: "E-Kell — lihtne ja mugav viis koolikellade ning häiresignaalide juhtimiseks.",
+    text: "E-Kell — lihtne ja mugav viis juhtida koolikellasid ja häireid.",
   },
   {
     Icon: Boxes,
     title: "Tehnika müük",
-    text: "Helitehnika müük vastavalt koolimaja vajadustele.",
+    text: "Valime ja müüme helitehnikat, mis sobib just teie koolimajja.",
   },
   {
     Icon: Wrench,
     title: "Paigaldus ja hooldus",
-    text: "Professionaalne paigaldus kohapeal ja järjepidev hooldus.",
+    text: "Paigaldame tehnika kohapeal ja hoolitseme selle eest ka edaspidi.",
   },
 ];
 
@@ -96,8 +96,8 @@ const Company = () => {
                   </h1>
                   <p className="text-muted mt-6 max-w-md text-lg leading-relaxed">
                     KooliTech OÜ on Eesti IT-ettevõte, mis varustab koole
-                    tarkvara ja tehnikaga — alates nutikatest koolikelladest
-                    kuni terve maja helisüsteemini.
+                    tarkvara ja tehnikaga — nutikatest koolikelladest kuni
+                    terve maja helisüsteemini.
                   </p>
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <Link
@@ -191,8 +191,8 @@ const Company = () => {
                   E-Kell — kõikvõimas koolikell
                 </h2>
                 <p className="text-muted mt-5 max-w-md text-lg leading-relaxed">
-                  E-Kell paneb koolikellad õigel ajal helisema ning võimaldab
-                  kelli ja häiresignaale juhtida ka eemalt.
+                  E-Kell paneb koolikellad õigel ajal helisema. Kellasid ja
+                  häireid saad juhtida ka eemalt.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-5">
                   <Link
@@ -248,8 +248,8 @@ const Company = () => {
 
                   <PointsList
                     text={[
-                      "Tasuta konsultatsioon: Vaatame üle kooli olemasoleva tehnika ja toome välja, kus uuendus annab kõige rohkem kasu.",
-                      "Paigaldus koolis: Planeerime seadmete paigutuse koolimajas ning paigaldame ja seadistame need kohapeal.",
+                      "Tasuta konsultatsioon: vaatame kooli praeguse tehnika üle ja näitame, kus uuendus annab kõige rohkem kasu.",
+                      "Paigaldus koolis: planeerime, kuhu seadmed koolimajas lähevad, ning paigaldame ja seadistame need kohapeal.",
                     ]}
                   />
                 </div>
@@ -350,7 +350,7 @@ const layers = [
     text: "Koolikellad, tunniplaanid ja häired",
     flagship: true,
   },
-  { label: "Riistvara", text: "Helitehnika ja muu tehnika müük" },
+  { label: "Riistvara", text: "Helitehnika ja muu koolitehnika" },
   { label: "Paigaldus", text: "Seadistus ja hooldus kohapeal" },
 ];
 
@@ -363,7 +363,7 @@ const CapabilityStack = () => {
           <span className="bg-line h-2.5 w-2.5 rounded-full" />
           <span className="bg-primary h-2.5 w-2.5 rounded-full" />
           <span className="text-muted ml-3 text-xs">
-            Koolitech · Võimalused
+            KooliTech · Võimalused
           </span>
         </div>
 

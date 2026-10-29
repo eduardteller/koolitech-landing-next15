@@ -4,146 +4,134 @@ import Policies from "./Policies";
 const Terms = () => {
   return (
     <Policies eyebrow="Tingimused">
-      <h1>Kasutajatingimused</h1>
+      <h1>Kasutustingimused</h1>
       <p>
-        Veebisaidi koolitech.ee külastamisel, nõustute järgima käesolevas
-        dokumendis välja toodud kasutajatingimusi. Kui Te nende
-        kasutajatingimustega ei nõustu, palun lahkuge veebisaidilt koheselt.
-        Sellel veebisaidil olevad materjalid on kaitstud kaubamärgi- ja
-        autoriõiguse seadusega.
+        Veebisaiti koolitech.ee külastades nõustute järgima neid
+        kasutustingimusi. Kui te tingimustega ei nõustu, lahkuge palun
+        veebisaidilt kohe. Veebisaidi materjalid on kaitstud kaubamärgi- ja
+        autoriõigusega.
       </p>
       <p>
-        Teie juurdepääs teenusele ja selle kasutamine sõltub ka sellest, kas
-        nõustute ja järgite KooliTech OÜ privaatsuspoliitikat.
-        Privaatsuspoliitika kirjeldab meie põhimõtteid ja toiminguid Teie
-        isikuandmete kogumisel, kasutamisel ja avalikustamisel, kui kasutate
-        meie rakendust või veebisaiti. Seega, enne meie lehe või teenuste
-        kasutamist, lugege hoolikalt meie privaatsuspoliitika dokumenti.
+        Teenuse kasutamine eeldab ka, et nõustute KooliTech OÜ
+        privaatsuspoliitikaga ja järgite seda. Privaatsuspoliitika kirjeldab,
+        kuidas me teie isikuandmeid kogume, kasutame ja avalikustame, kui
+        kasutate meie rakendust või veebisaiti. Palun lugege see enne meie
+        veebisaidi või teenuste kasutamist hoolikalt läbi.
       </p>
       <h2>Küpsised</h2>
       <p>
-        Nii nagu enamik kaasaegseid veebilehti, kasutab ka meie veebisait
-        küpsiseid. Kasutame küpsiseid selleks, et parandada teatud lehekülgede
-        funktsionaalsust ja muuta meie veebaidi kasutamine külastajate jaoks
-        lihtsamaks ning mugavamaks. Mõned meie partnerlehed võivad samuti
-        kasutada küpsiseid. Küpsiste kohta loe lähemalt meie privaatsuspoliitika
-        dokumendist.
+        Nagu enamik veebisaite, kasutab ka meie veebisait küpsiseid. Nende
+        abil töötavad mõned lehed paremini ning veebisaiti on lihtsam ja
+        mugavam kasutada. Küpsiseid võivad kasutada ka mõned meie partnerite
+        lehed. Küpsiste kohta lugege lähemalt meie privaatsuspoliitikast.
       </p>
       <h2>Litsents</h2>
       <p>
-        Kui pole just teisiti mainitud, kuuluvad KooliTech OÜle kõik
-        koolitech.ee lehel kuvatud intellektuaalomandi õigused. Kõik õigused on
-        kaitstud.
+        Kui pole märgitud teisiti, kuuluvad kõik koolitech.ee sisu
+        intellektuaalomandi õigused KooliTech OÜ-le. Kõik õigused on kaitstud.
       </p>
       <p>Te ei tohi:</p>
       <ul>
         <li>
-          Veebisaidil koolitech.ee kuvatud materjali (tekst, pildid, videod jne)
-          mujal avaldada.
+          avaldada veebisaidi koolitech.ee materjale (teksti, pilte, videoid
+          jms) mujal;
         </li>
-        <li>Müüa, rentida või litsentsida seda materjali.</li>
-        <li>Lehekülje sisu kopeerida.</li>
-        <li>Veebisaidi koolitech.ee lehekülgede sisu levitada.</li>
+        <li>müüa, rentida ega litsentsida neid materjale;</li>
+        <li>kopeerida veebisaidi sisu;</li>
+        <li>levitada veebisaidi koolitech.ee lehtede sisu.</li>
       </ul>
-      <p>Käesolev leping kehtib alates 22/09/2024.</p>
-      <h2>Kohustustest loobumine</h2>
+      <p>Need tingimused kehtivad alates 22.09.2024.</p>
+      <h2>Vastutuse välistamine</h2>
       <p>
-        Me ei taga, et sellel veebilehel olev teave oleks õige, täielik või
-        täpne. Samuti ei luba me, et veebileht jääb alati kättesaadavaks või
-        sellel olev info hoitakse ajakohasena.
+        Me ei taga, et veebisaidi teave on õige, täielik või täpne. Samuti ei
+        luba me, et veebisait on alati kättesaadav või selle teave alati
+        ajakohane.
       </p>
       <p>
-        Kui veebilehel pakutavat teavet ja/või teenuseid pakutakse tasuta, ei
-        vastuta me võimaliku kahjumi või kahjustuste eest.
+        Kui veebisaidi teave või teenused on tasuta, ei vastuta me võimaliku
+        kahjumi ega kahjustuste eest.
       </p>
       <h2>Vaidluste lahendamine</h2>
       <p>
-        Kui teil on teenusega seoses muresid või vaidlusi, nõustute kõigepealt
-        proovima vaidluse lahendamist mitteametlikult, pöördudes KooliTech OÜ
-        poole.
+        Kui teil tekib teenusega seoses probleem või vaidlus, nõustute
+        kõigepealt püüdma seda lahendada mitteametlikult, pöördudes KooliTech
+        OÜ poole.
       </p>
       <h2>Piirangud</h2>
       <p>
-        KooliTech OÜ ega selle tarnijad ei vastuta kahjude eest, mis tekivad
-        KooliTech OÜ veebisaidil olevate materjalide kasutamisega või
-        suutmatusega neid kasutada. Seda Isegi siis, kui KooliTech OÜ või selle
-        volitatud esindajat on suuliselt või kirjalikult teavitatud kahju
-        tekkimise võimalusest.
+        KooliTech OÜ ega selle tarnijad ei vastuta kahju eest, mis tekib
+        KooliTech OÜ veebisaidi materjalide kasutamisest või sellest, et neid
+        ei saa kasutada. See kehtib ka siis, kui KooliTech OÜ-d või selle
+        volitatud esindajat on kahju võimalusest suuliselt või kirjalikult
+        teavitatud.
       </p>
       <h2>Muudatused ja vead</h2>
       <p>
-        KooliTech OÜ veebisaidil võib esineda erinevaid vigu. Me ei vastuta
-        selle eest, et saidil olev info oleks täpne, täielik või asjakohane.
-        Võime saidil olevat infot igal ajal ette teatamata muuta või kustutada.
-        KooliTech OÜ ei ole kohustatud hoidma infot oma veebisaidil aktuaalsena.
+        KooliTech OÜ veebisaidil võib olla vigu. Me ei vastuta selle eest, et
+        saidi teave on täpne, täielik või asjakohane. Võime teavet igal ajal
+        ette teatamata muuta või kustutada. KooliTech OÜ ei ole kohustatud
+        hoidma veebisaidi teavet ajakohasena.
       </p>
-      <h2>Viited teistele veebilehtedele</h2>
+      <h2>Lingid teistele veebisaitidele</h2>
       <p>
-        Meie teenus võib sisaldada linke kolmandate osapoolte veebisaitidele või
-        teenustele. Meil puudub kontroll nende veebisaitide teenuste, sisu ja
-        privaatsuseeskirjade üle ning me ei vastuta nende eest. Selle dokumendi
-        kohaselt mõistate ja nõustute ka sellega, et KooliTech OÜ ei vastuta
-        otseselt ega kaudselt kahjude eest, mis võivad tekkida kolmandate
-        osapoolte veebisaitide kasutamisest.
+        Meie teenuses võib olla linke kolmandate isikute veebisaitidele või
+        teenustele. Me ei kontrolli nende veebisaitide teenuseid, sisu ega
+        privaatsuseeskirju ega vastuta nende eest. Nõustute, et KooliTech OÜ
+        ei vastuta otseselt ega kaudselt kahju eest, mis võib tekkida
+        kolmandate isikute veebisaitide kasutamisest.
       </p>
       <p>
-        Soovitame tungivalt tutvuda kõigi külastatavate kolmandate osapoolte
-        veebisaitide teenusetingimustega ja privaatsuseeskirjadega.
+        Soovitame tungivalt lugeda iga külastatava kolmanda isiku veebisaidi
+        kasutustingimusi ja privaatsuseeskirju.
       </p>
 
       <h2>Sätete lahusus</h2>
       <p>
-        Kui mõni käesoleva teenustetingimuste säte osutub kehtetuks, muudetakse
-        seda sätet nii, et see täidaks võimalikult maksimaalselt oma eesmärki ja
-        oleks seadusega kooskõlas ning kehtiv. Kõik ülejäänud teenustetingimuste
-        dokumendi sätted jäävad täies jõus kehtima.
+        Kui mõni nende tingimuste säte osutub kehtetuks, muudetakse seda nii,
+        et see täidaks oma eesmärki võimalikult hästi ning oleks seadusega
+        kooskõlas ja kehtiv. Ülejäänud sätted jäävad täies ulatuses kehtima.
       </p>
       <h2>Õigustest loobumine</h2>
       <p>
-        Kui käesolevas dokumendis pole teisiti välja toodud, ei tähenda ükskõik
-        millise selles dokumendis mainitud õiguse kasutamata jätmine seda, et
-        seda sama õigust pole võimalik hiljem kasutada.
+        Kui nendes tingimustes pole sätestatud teisiti, ei kaota me ühtki
+        siin nimetatud õigust sellega, et jätame selle mõnel juhul kasutamata.
+        Võime seda õigust kasutada ka hiljem.
       </p>
-      <h2>Muudatused kasutustingimustes</h2>
+      <h2>Kasutustingimuste muutmine</h2>
       <p>
-        Jätame endale õiguse neid tingimusi oma äranägemise järgi igal ajal
-        muuta. Kui muudatus on oluline, anname endast parima, et Teid enne selle
-        jõustumist vähemalt 30 päeva ette teavitada. Mis on oluline muudatus,
-        määratakse meie ainuisikulise äranägemise järgi.
+        Võime neid tingimusi igal ajal oma äranägemise järgi muuta. Olulisest
+        muudatusest püüame teid teavitada vähemalt 30 päeva enne selle
+        jõustumist. Selle, milline muudatus on oluline, otsustame ainuisikuliselt
+        meie.
       </p>
       <p>
-        Jätkates meie teenuste kasutamist peale nende muudatuste jõustumist,
-        nõustute muudetud tingimustega. Kui Te ei nõustu täielikult või
-        osaliselt uute tingimustega, lõpetage palun meie veebisaidi ja teenuse
+        Kui kasutate meie teenuseid pärast muudatuste jõustumist, nõustute
+        muudetud tingimustega. Kui te uute tingimustega täielikult või
+        osaliselt ei nõustu, lõpetage palun meie veebisaidi ja teenuste
         kasutamine.
       </p>
-      <h2>Ligipääsu peatamine</h2>
+      <h2>Juurdepääsu peatamine</h2>
       <p>
-        Käesolevas dokumendis välja toodud tingimuste rikkumisel võime
-        viivitamatult peatada Teie ligipääsu meie lehele ja teenustele. Sel
-        juhul pole me kohustatud Teid sellest teavitama. Ligipääsu peatamisel
-        kaotate koheselt õiguse meie teenuseid kasutada.
+        Kui rikute neid tingimusi, võime teie juurdepääsu meie veebisaidile ja
+        teenustele kohe peatada. Me ei pea teid sellest teavitama. Kui
+        juurdepääs on peatatud, kaotate kohe õiguse meie teenuseid kasutada.
       </p>
       <h2>Teie privaatsus</h2>
       <p>
-        Teie privaatsusega seonduvate sätetega tutvumiseks, palun vaadake meie
-        <Link href="https://koolitech.ee/privacy">privaatsuspoliitikat</Link>.
+        Teie privaatsust puudutavad sätted leiate meie{" "}
+        <Link href="https://koolitech.ee/privacy">privaatsuspoliitikast</Link>.
       </p>
-      <h2>Kohaldatav seadus</h2>
+      <h2>Kohaldatav õigus</h2>
       <p>
-        Kõiki KooliTech OÜ veebisaidiga seotud nõudeid reguleerivad Eesti
-        Vabariigi seadused.
+        KooliTech OÜ veebisaidiga seotud nõuetele kohaldatakse Eesti Vabariigi
+        õigust.
       </p>
       <h2>Kontakt</h2>
       <p>
-        Küsimuste puhul, palun võtke meiega ühendust e-posti teel:
+        Kui teil on küsimusi, kirjutage meile:{" "}
         <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>.
       </p>
-      <p>
-        KooliTech OÜ säilitab õiguse teha vastavalt vajadusele muudatusi
-        veebilehe kasutajatingimustes.
-      </p>
-      <p>Viimati muudetud 22/09/2024</p>
+      <p>Viimati muudetud 22.09.2024</p>
     </Policies>
   );
 };

@@ -8,9 +8,9 @@ const Footer = () => {
         <div>
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            KooliTech OÜ on spetsialiseerunud koolidele suunatud tarkvara
-            lahenduste pakkumisele. Meie teenuste hulka kuuluvad tarkvara
-            lahendused, tehnika müük ning tehnika paigaldusteenused.
+            KooliTech OÜ pakub koolidele tarkvara ja tehnikat. Arendame
+            koolikellade süsteemi E-Kell ning müüme, paigaldame ja hooldame
+            koolitehnikat.
           </p>
         </div>
         <div>
@@ -100,12 +100,12 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/terms" className="transition hover:text-ink">
-                Müügi- ja kasutustingimused
+                Kasutustingimused
               </Link>
             </li>
             <li>
               <Link href="/privacy" className="transition hover:text-ink">
-                Privaatsustingimused
+                Privaatsuspoliitika
               </Link>
             </li>
           </ul>

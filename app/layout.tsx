@@ -19,7 +19,7 @@ const logo = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "KooliTech",
   description:
-    "KooliTech on Eesti IT-ettevõte, mis pakub tarkvara tooteid koolidele.",
+    "KooliTech on Eesti IT-ettevõte, mis pakub koolidele tarkvara ja tehnikat.",
   keywords: [
     "KooliTech",
     "Eesti IT-ettevõte",

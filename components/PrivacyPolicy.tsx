@@ -4,334 +4,293 @@ import Policies from "./Policies";
 const PrivacyPolicy = () => {
   return (
     <Policies eyebrow="Privaatsus">
-      <h1>Privaatsustingimused</h1>
+      <h1>Privaatsuspoliitika</h1>
       <p>
-        KooliTech OÜ jaoks on oluline Teie privaatsus ja järgida kõiki kehtivaid
-        seadusi ja määrusi mis tahes isikuandmete kohta, mida võime Teie kohta
-        koguda, kui külastate meie veebilehte{" "}
+        KooliTech OÜ peab teie privaatsust oluliseks. Järgime kõiki kehtivaid
+        seadusi ja määrusi, mis puudutavad isikuandmeid, mida võime teie kohta
+        koguda, kui külastate meie veebisaiti{" "}
         <Link href="https://koolitech.ee">koolitech.ee</Link>. Meie veebisaiti
-        kasutades nõustute, et kogume ja kasutame Teie andmeid vastavalt
-        käesolevale privaatsuspoliitikale.
+        kasutades nõustute, et kogume ja kasutame teie andmeid selle
+        privaatsuspoliitika järgi.
       </p>
       <p>
-        Käesoleva privaatsuspoliitikaga soovime Teile selgitada, milliseid
-        andmeid me kogume, kuidas neid kasutame ja millised on Teie õigused oma
-        andmete kaitsmiseks. Poliis rakendub ainult meie veebilehele ja selle
-        külastajatele ning ei rakendu andmetele, mida kogutakse muude kanalite
-        kaudu.
+        Selles privaatsuspoliitikas selgitame, milliseid andmeid kogume, kuidas
+        neid kasutame ja millised õigused teil oma andmete kaitseks on.
+        Privaatsuspoliitika kehtib ainult meie veebisaidi ja selle külastajate
+        kohta, mitte andmetele, mida kogutakse muude kanalite kaudu.
       </p>
-      <p>Teie andmete töötleja on KooliTech OÜ</p>
+      <p>Teie andmete töötleja on KooliTech OÜ.</p>
       <p>
-        e-post: <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>
+        E-post: <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>
       </p>
       <p>
-        Kogume ja töötleme teavet kooskõlas Euroopa Liidu üldise andmekaitse
-        määrusega (GDPR), mis jõustus 25.05.2018.
+        Kogume ja töötleme andmeid kooskõlas Euroopa Liidu isikuandmete kaitse
+        üldmäärusega (GDPR), mida kohaldatakse alates 25.05.2018.
       </p>
       <h2>Andmete kogumine ja kasutamine</h2>
       <h3>Milliseid andmeid me kogume</h3>
       <p>
-        Kogutav teave hõlmab nii teavet, mida Te meile teadlikult ja aktiivselt
-        edastate meie teenuste või kampaaniate kasutamisel või nendes
-        osalemisel, kui ka kogu teavet, mille Teie seadmed saadavad meie
-        toodetele ja teenustele juurde pääsemisel.
+        Kogume kahte liiki teavet. Esiteks teavet, mida jagate meiega
+        teadlikult, kui kasutate meie teenuseid või osalete kampaaniates.
+        Teiseks teavet, mida teie seade saadab meile automaatselt, kui
+        kasutate meie tooteid ja teenuseid.
       </p>
-      <p>
-        Meie poolt kogutavad andmed sisaldavad endas teavet, mida olete meie
-        teenuste või kampaaniate kasutamisel meile teadlikult jaganud ning
-        teavet, mida Teie seadmed meile automaatselt edastavad.
-      </p>
-      <p>Teie isiklikud andmed võivad jõuda meieni järgmistel viisidel:</p>
+      <p>Teie isikuandmed võivad meieni jõuda näiteks siis, kui:</p>
       <ul>
+        <li>võtate meiega ühendust telefoni, e-posti või veebivestluse kaudu;</li>
         <li>
-          Kui kontakteerute meiega telefoni, e-posti või online vestluse kaudu
+          sirvite veebisaiti{" "}
+          <Link href="https://koolitech.ee">koolitech.ee</Link>;
         </li>
         <li>
-          Kui sirvite veebilehte{" "}
-          <Link href="https://koolitech.ee">koolitech.ee</Link>
+          kommenteerite, märgite meeldivaks või jagate mõnda postitust meie
+          sotsiaalmeedia kontol;
         </li>
-        <li>
-          Kui Te kommenteerite, laigite või jagate mõnda postitust meie
-          sotsiaalmeedia kontol
-        </li>
-        <li>Kui liitute meie uudiskirjaga</li>
-        <li>Kui kommenteerite meie veebilehel olevaid postitusi</li>
+        <li>liitute meie uudiskirjaga;</li>
+        <li>kommenteerite postitusi meie veebisaidil.</li>
       </ul>
-      <h3>Kogutavad andmetüübid Isikuandmed</h3>
+      <h3>Milliseid isikuandmeid kogume</h3>
       <p>
-        Küsime Teilt isiklikku informatsiooni ainult siis, kui see on vajalik
-        Teile teenuse osutamiseks. Võttes meiega ühendust või külastades meie
-        veebilehte, on võimalik, et jagate meiega järgnevat teavet:
+        Küsime teilt isikuandmeid ainult siis, kui neid on vaja teenuse
+        osutamiseks. Kui võtate meiega ühendust või külastate meie veebisaiti,
+        võite jagada meiega järgmisi andmeid:
       </p>
       <ul>
-        <li>Ees- ja perekonnanimi</li>
-        <li>E-posti aadress</li>
-        <li>Postiaadress, riik, maakond, linn</li>
-        <li>Telefoninumber</li>
-        <li>Teie ja meie vaheline vestlusajalugu</li>
-        <li>Informatsioon Teie veebibrauseri ja IP-aadressi kohta</li>
+        <li>ees- ja perekonnanimi;</li>
+        <li>e-posti aadress;</li>
+        <li>postiaadress, riik, maakond ja linn;</li>
+        <li>telefoninumber;</li>
+        <li>meievaheline vestlusajalugu;</li>
+        <li>teave teie veebibrauseri ja IP-aadressi kohta.</li>
       </ul>
       <h3>Logifailid</h3>
       <p>
-        Meie veebileht <Link href="https://koolitech.ee">koolitech.ee</Link>{" "}
-        salvestab oma külastajate kohta logifaile. Kogutava teabe hulka võib
-        kuuluda:
+        Meie veebisait <Link href="https://koolitech.ee">koolitech.ee</Link>{" "}
+        salvestab külastuste kohta logifaile. Logifailides võib olla:
       </p>
       <ul>
-        <li>Kasutatava seadme tüüp</li>
-        <li>Interneti-protokolli (IP) aadress</li>
-        <li>brauseri tüüp</li>
-        <li>Internetiteenuse pakkuja (ISP)</li>
-        <li>Veebilehe külastamise kuupäev ja kellaaeg</li>
-        <li>Sisenemis- ja väljumisleht veebilehel tehtavate klikkide arv</li>
+        <li>kasutatava seadme tüüp;</li>
+        <li>IP-aadress;</li>
+        <li>brauseri tüüp;</li>
+        <li>internetiteenuse pakkuja;</li>
+        <li>külastuse kuupäev ja kellaaeg;</li>
+        <li>sisenemis- ja väljumisleht;</li>
+        <li>veebisaidil tehtud klikkide arv.</li>
       </ul>
       <p>
-        Logifailides olevat informatsiooni kasutatakse trendide analüüsimiseks,
-        veebilehe administreerimiseks, lehe külastajate tegevuste jälgimiseks
-        ning demograafilise info kogumiseks. Saadud teabe ei ole mõeldud, ega
-        võimaldagi isikut identifitseerida.
+        Logifailide abil analüüsime trende, haldame veebisaiti, jälgime
+        külastajate tegevust lehel ja kogume demograafilist teavet. See teave
+        ei ole mõeldud isiku tuvastamiseks ega võimalda seda.
       </p>
       <h3>Küpsised</h3>
       <p>
-        Nagu enamus veebilehti, kasutab ka{" "}
-        <Link href="https://koolitech.ee">koolitech.ee</Link>{" "}
-        &quot;küpsiseid&quot;. Küpsis on sisuliselt tekstifail, mis
-        salvestatakse veebisaidi külastamisel kasutaja seadmesse. Küpsiste abil
-        määratakse ja salvestatakse eelistused, regionaalsed sätted, teenuste
-        kasutamise valikud jpm.
+        Nagu enamik veebisaite, kasutab ka{" "}
+        <Link href="https://koolitech.ee">koolitech.ee</Link> küpsiseid.
+        Küpsis on väike tekstifail, mis salvestatakse veebisaidi külastamisel
+        kasutaja seadmesse. Küpsistes hoitakse näiteks eelistusi,
+        piirkonnasätteid ja teenuste kasutamise valikuid.
       </p>
       <p>
-        Soovi korral võite brauseri seadistuses ära keelata küpsiste kasutamise,
-        kuid sel juhul on võimalik, et Teile pakutav teenus on häiritud.
+        Soovi korral saate küpsised brauseri seadetes keelata, kuid siis ei
+        pruugi kõik teenused korralikult töötada.
       </p>
       <p>
-        Küpsised jaotuvad püsi- ja sessiooniküpsisteks. Püsiküpsised jäävad Teie
-        personaalarvutisse või mobiilseadmesse ka peale seda, kui olete sulgenud
-        brauseri või arvuti. Sessiooniküpsised kustutatakse aga kohe pärast
-        brauseri sulgemist.
+        Küpsised jagunevad püsi- ja seansiküpsisteks. Püsiküpsised jäävad teie
+        arvutisse või mobiilseadmesse ka pärast brauseri või arvuti sulgemist.
+        Seansiküpsised kustutatakse kohe, kui brauser suletakse.
       </p>
-      <p>Küpsised jagunevad oma eesmärgi järgi:</p>
+      <p>Eesmärgi järgi jagunevad küpsised nii:</p>
       <p>
-        <strong>Vajalikud küpsised</strong>. Sessiooniküpsised, mille eesmärgiks
-        on võimaldada Teile meie veebisaidil pakutavate teenuste kasutamist.
-        Need küpsised aitavad kasutajaid autentida ja vältida kasutajakontode
-        pahatahtlikku kasutamist. Ilma nende küpsisteta ei saa me Teile soovitud
-        teenuseid pakkuda.
+        <strong>Vajalikud küpsised</strong>. Seansiküpsised, mis võimaldavad
+        teil kasutada meie veebisaidi teenuseid. Need aitavad kasutajaid
+        autentida ja kaitsevad kasutajakontosid väärkasutuse eest. Ilma nende
+        küpsisteta ei saa me soovitud teenuseid pakkuda.
       </p>
       <p>
-        <strong>Teavitusküpsised</strong>. Need küpsised tuvastavad, kas
-        kasutajad on veebisaidil küpsiste kasutamist aktsepteerinud.
+        <strong>Teavitusküpsised</strong>. Need küpsised jätavad meelde, kas
+        kasutaja on veebisaidil küpsiste kasutamisega nõustunud.
       </p>
       <p>
-        <strong>Funktsionaalsuse küpsised</strong>. Need küpsised võimaldavad
-        Teie brauseril meeles pidada valikuid, mida teete veebisaidi
-        kasutamisel, näiteks Teie sisselogimisandmete või keele-eelistuste
-        salvestamine. Nende küpsiste eesmärk on pakkuda Teile personaalsemat
-        kogemust ja vältida eelistuste uuesti sisestamist.
+        <strong>Funktsionaalsusküpsised</strong>. Need küpsised jätavad meelde
+        teie valikud, näiteks sisselogimisandmed või keele-eelistuse. Nii ei
+        pea te eelistusi iga kord uuesti sisestama ja veebisaiti on mugavam
+        kasutada.
       </p>
       <h2>Kuidas me andmeid kasutame</h2>
-      <p>
-        Kogutud informatsiooni võime kasutada erinevatel eesmärkidel,
-        sealhulgas:
-      </p>
+      <p>Kogutud teavet võime kasutada muu hulgas selleks, et:</p>
       <ul>
         <li>
-          Meie veebilehe hooldamiseks, haldamiseks, arendamiseks,
-          personaliseerimiseks ja laiendamiseks
+          hooldada, hallata, arendada ja laiendada veebisaiti ning kohandada
+          seda kasutajale;
         </li>
         <li>
-          Statistika kogumiseks, et saaksime pakkuda paremaid teenuseid ja/või
-          pakkumisi ning mõista ja analüüsida meie veebilehe külastajate
-          käitumist
+          koguda statistikat, et pakkuda paremaid teenuseid ja pakkumisi ning
+          mõista ja analüüsida külastajate käitumist;
         </li>
-        <li>Teie tuvastamiseks telefoni, sõnumi või e-posti teel</li>
+        <li>tuvastada teid telefoni, sõnumi või e-posti teel;</li>
+        <li>saata teile teavet ja küsida tagasisidet meie teenuste kohta;</li>
+        <li>vältida pettusi ja kaitsta veebisaiti;</li>
+        <li>suhelda teiega sotsiaalmeedia konto kaudu;</li>
+        <li>lugeda vestlusajalugu, et anda kiiremini asjakohast nõu;</li>
+        <li>parandada teenuse kvaliteeti ja muuta veebisaidi sirvimist mugavamaks;</li>
         <li>
-          Teile informatsiooni saatmisel ja meie teenuste kohta tagasiside
-          palumisel
+          arendada uusi tooteid ja teenuseid ning parandada olemasolevaid;
         </li>
-        <li>Pettuste vältimiseks ja meie veebilehe kaitsmiseks</li>
+        <li>lihtsustada ja kiirendada suhtlust, kui võtate meiega ühendust;</li>
         <li>
-          Võimaldamaks meil Teiega ühenduses olla sotsiaalmeedia konto kaudu
-        </li>
-        <li>
-          Vestlusajaloo lugemise võimaldamiseks, et kiirendada asjakohase nõu
-          andmist
-        </li>
-        <li>
-          Eesmärgiga parandada meie teenuse kvaliteeti ja pakkuda tõhusamaid
-          sirvimislahendusi
-        </li>
-        <li>
-          Et arendada uusi uusi tooteid, teenuseid või parandada nende
-          funktsionaalsust
-        </li>
-        <li>
-          Meievaheliste interaktsioonide lihtsustamiseks ja kiirendamiseks, kui
-          võtate meiega ühendust
-        </li>
-        <li>
-          Muudel eesmärkidel. Näiteks andmete analüüsimiseks, trendide
-          uurimiseks, meie reklaamikampaaniate tõhususe hindamiseks.
+          analüüsida andmeid, uurida trende ja hinnata reklaamikampaaniate
+          tõhusust.
         </li>
       </ul>
-      <h2>Millistel juhtudel on võimalik, et jagame Teie andmeid</h2>
+      <h2>Millal võime teie andmeid jagada</h2>
       <ul>
         <li>
-          Võime jagada või edastada Teie isikuandmeid seoses meie ettevõtte
-          omanike vahetuse, ühinemise, varade müügi, finantseerimise või
-          omandamise käigus. Teavitame Teid Teie isikuandmete edastamisest ja
-          sellest, kui neile hakkavad kehtima mõne teise privaatsuspoliitika
-          sätted.{" "}
+          Võime teie isikuandmeid jagada või edastada, kui ettevõtte omanik
+          vahetub või kui ettevõte ühineb, müüb vara, kaasab rahastust või
+          omandatakse. Teavitame teid, kui teie andmed edastatakse ja kui neile
+          hakkab kehtima mõni teine privaatsuspoliitika.
         </li>
         <li>
-          Võime jagada Teie andmeid oma partnerettevõtetega, nõudes neilt
-          käesoleva privaatsuspoliitika järgimist. Partnerettevõtete hulka
-          kuuluvad meie ema- ja tütarettevõtted, ühisettevõtte partnerid või
-          ettevõtted, mis kuuluvad meile.{" "}
+          Võime jagada teie andmeid oma partnerettevõtetega ja nõuame, et nad
+          järgiksid seda privaatsuspoliitikat. Partnerettevõtted on meie ema-
+          ja tütarettevõtted, ühisettevõtte partnerid ja meile kuuluvad
+          ettevõtted.
         </li>
         <li>
-          Võime jagada Teie andmeid oma äripartneritega, et pakkuda Teile teatud
-          tooteid, teenuseid või kampaaniaid.
+          Võime jagada teie andmeid oma äripartneritega, et pakkuda teile
+          teatud tooteid, teenuseid või kampaaniaid.
         </li>
         <li>
-          Võime Teie nõusolekul avaldada Teie isikuandmeid mis tahes muul
-          eesmärgil.
+          Teie nõusolekul võime teie isikuandmeid avaldada ka muul eesmärgil.
         </li>
         <li>
-          Oleme kohustatud Teie isikuandmed avaldama, kui seda nõuab seadus.
-          Heas usus võime avaldada ka Teie andmeid, et järgida seadusest
-          tulenevat kohustust, kaitsta meie õigusi või omandit, ennetada või
-          tuvastada võimalikke meie teenuse kasutamisega seonduvaid
-          õigusrikkumisi ja tagada teenuse kasutajate turvalisus.{" "}
+          Avaldame teie isikuandmed, kui seda nõuab seadus. Heas usus võime teie
+          andmeid avaldada ka selleks, et täita seadusest tulenevat kohustust,
+          kaitsta oma õigusi või vara, ennetada või avastada meie teenusega
+          seotud õigusrikkumisi ja tagada teenuse kasutajate turvalisus.
         </li>
       </ul>
       <h3>Teie isikuandmete säilitamine</h3>
       <p>
-        Ettevõte säilitab Teie isikuandmeid ainult seni, kuni see on vajalik
-        käesolevas privaatsuspoliitikas sätestatud eesmärkidel. Säilitame ja
-        kasutame Teie isikuandmeid ulatuses, mis on vajalik meie juriidiliste
-        kohustuste täitmiseks (näiteks kui peame Teie andmeid säilitama
-        kehtivate seaduste järgimiseks), vaidluste lahendamiseks ning meie
-        juriidiliste lepingute ja eeskirjade jõustamiseks.
+        Säilitame teie isikuandmeid ainult nii kaua, kui on vaja selles
+        privaatsuspoliitikas nimetatud eesmärkidel. Säilitame ja kasutame
+        andmeid ulatuses, mis on vajalik meie juriidiliste kohustuste
+        täitmiseks (näiteks kui seadus nõuab andmete säilitamist), vaidluste
+        lahendamiseks ning lepingute ja eeskirjade täitmise tagamiseks.
       </p>
       <p>
-        Ettevõte säilitab logifaile ka siseanalüüsi eesmärgil. Logifaile
-        säilitatakse tavaliselt lühemat aega, välja arvatud juhul, kui neid
-        andmeid kasutatakse turvalisuse tugevdamiseks või meie teenuse
-        funktsionaalsuse parandamiseks või kui me oleme seadusega kohustatud
-        neid andmeid pikemaks ajaks säilitama.
+        Logifaile säilitame ka siseanalüüsi jaoks. Tavaliselt hoiame neid
+        lühemat aega, välja arvatud juhul, kui kasutame neid turvalisuse
+        tugevdamiseks või teenuse parandamiseks või kui seadus kohustab meid
+        neid kauem säilitama.
       </p>
       <h3>Laste andmete töötlemine</h3>
       <p>
-        Ükski meie toode või teenus ei ole suunatud alla 13-aastastele lastele
-        ja me ei kogu teadlikult alla 13-aastaste laste andmeid. Kahtluse
-        korral, et töötleme alla 13-aastase isiku andmeid, eemaldame selle isiku
-        kõigist meie andmebaasidest.
+        Meie tooted ja teenused ei ole mõeldud alla 13-aastastele lastele ning
+        me ei kogu teadlikult nende andmeid. Kui kahtlustame, et töötleme alla
+        13-aastase lapse andmeid, kustutame need kõigist oma andmebaasidest.
       </p>
       <h2>Teie õigused oma andmete kaitsmiseks</h2>
       <p>
-        Teil on alati õigus oma andmeid meiega mitte jagada, teadmisega, et see
-        võib mõjutada Teie kogemust meie veebisaidil. Kui otsustate oma andmeid
-        meiega mitte jagada, ei kohtle me Teid seepärast halvemini. Kui edastate
-        meile isiklikku teavet, mõistate, et kogume, hoiame, kasutame ja
-        avaldame seda vastavalt käesolevale privaatsuspoliitikale. Teil on õigus
-        nõuda Teie kohta kogutavate andmete üksikasju.
+        Teil on alati õigus jätta oma andmed meiega jagamata. See võib küll
+        mõjutada teie kogemust meie veebisaidil, kuid me ei kohtle teid
+        seepärast halvemini. Kui edastate meile isikuandmeid, mõistate, et
+        kogume, hoiame, kasutame ja avaldame neid selle privaatsuspoliitika
+        järgi. Teil on õigus küsida üksikasju andmete kohta, mida oleme teie
+        kohta kogunud.
       </p>
       <p>
-        Saades Teie kohta isiklikku teavet kolmandalt osapoolelt, kaitseme seda
-        vastavalt käesolevale privaatsuspoliitikale ja Eesti Vabariigi
-        seadusele. Kui jagate ise kolmanda osapoole andmeid, kinnitate, et Teil
-        on selleks ka õigus ja luba.
+        Kui saame teie kohta isikuandmeid kolmandalt isikult, kaitseme neid
+        selle privaatsuspoliitika ja Eesti Vabariigi seaduste järgi. Kui
+        jagate meiega kolmanda isiku andmeid, kinnitate, et teil on selleks
+        õigus ja luba.
       </p>
       <p>
-        Isegi kui olete varem andnud nõusoleku meiega oma isiklikke andmeid
-        turunduse eesmärkidel jagada, jääb Teile õigus igal ajal oma meelt
-        muuta. Teil on alati õigus loobuda meiega suhtlemisest ja nõuda, et
-        eemaldaksime Teie andmed meie andmebaasidest. Aeg-ajalt võime ka küsida
-        Teie kohta teavet Teie isiku kinnitamiseks. Kui leiate, et andmed, mida
-        Teie kohta kogunud oleme, on ebatäpsed, aegunud, puudulikud, ebaolulised
-        või eksitavad, palun võtke meiega ühendust e-posti teel:
+        Kui olete andnud nõusoleku kasutada oma isikuandmeid turunduseks, võite
+        selle igal ajal tagasi võtta. Teil on alati õigus loobuda meiega
+        suhtlemisest ja nõuda, et kustutaksime teie andmed oma andmebaasidest.
+        Aeg-ajalt võime teie isiku kinnitamiseks küsida teie kohta lisateavet.
+        Kui leiate, et andmed, mida oleme teie kohta kogunud, on ebatäpsed,
+        aegunud, puudulikud, ebaolulised või eksitavad, kirjutage meile:{" "}
         <Link href="mailto:info@koolitech.ee">info@koolitech.ee</Link>. Teeme
-        kõik meist oleneva, et parandada ebatäpset, puudulikku, eksitavat või
-        aegunud teavet.
+        kõik, mis meist oleneb, et ebatäpne, puudulik, eksitav või aegunud
+        teave parandada.
       </p>
       <p>
-        Kui arvate, et oleme rikkunud asjakohast andmekaitseseadust ja soovite
-        esitada kaebuse, palun võtke meiega ühendust, kasutades käesolevast
-        dokumendist leitavaid kontaktandmeid ja edastage meile kõik rikkumise
-        kohta käivad üksikasjad. Uurime Teie kaebust viivitamata ja vastame
-        teile kirjalikult, esitades uurimise tulemused ja toome välja sammud,
-        mida Teie kaebuse lahendamiseks ette võtame. Samuti on Teil õigus
-        pöörduda reguleeriva asutuse või andmekaitseasutuse poole.
+        Kui arvate, et oleme rikkunud andmekaitseseadust, ja soovite esitada
+        kaebuse, võtke meiega ühendust selles dokumendis toodud
+        kontaktandmetel ja kirjeldage rikkumist võimalikult täpselt. Uurime
+        kaebust viivitamata ja vastame kirjalikult: anname teada, mida
+        uurimine näitas ja mida teeme kaebuse lahendamiseks. Teil on ka õigus
+        pöörduda järelevalveasutuse poole, Eestis on selleks Andmekaitse
+        Inspektsioon.
       </p>
-      <h2>GDPR andmekaitseõigused</h2>
+      <h2>Teie õigused isikuandmete kaitse üldmääruse järgi</h2>
       <p>
-        Soovime olla veendunud, et olete teadlik kõigist oma
-        andmekaitseõigustest. Igal lehe kasutajal on õigus järgmistele
-        tingimustele:
+        Soovime, et teaksite kõiki oma andmekaitseõigusi. Igal veebisaidi
+        kasutajal on järgmised õigused:
       </p>
       <ul>
         <li>
-          Juurdepääsuõigus - teil on õigus nõuda oma isikuandmete koopiaid.
+          <strong>Juurdepääsuõigus</strong> – võite nõuda oma isikuandmete
+          koopiat.
         </li>
         <li>
-          Õigus andmete parandustele - teil on õigus nõuda, et parandaksime Teie
-          arvates ebatäpsed andmed. Samuti on teil õigus nõuda, et täiendaksime
-          andmeid, mis on Teie arvates puudulikud.
+          <strong>Õigus andmete parandamisele</strong> – võite nõuda, et
+          parandaksime andmed, mis on teie arvates ebatäpsed, ja täiendaksime
+          andmed, mis on teie arvates puudulikud.
         </li>
         <li>
-          Kustutamisõigus - teatud tingimustel on teil õigus nõuda Teie
-          isikuandmete kustutamist.
+          <strong>Õigus andmete kustutamisele</strong> – teatud tingimustel
+          võite nõuda oma isikuandmete kustutamist.
         </li>
         <li>
-          Andmete töötlemise piiramise õigus - teatud tingimustel on teil õigus
-          nõuda Teie isikuandmete kasutamise piiramist.
+          <strong>Õigus töötlemise piiramisele</strong> – teatud tingimustel
+          võite nõuda, et piiraksime teie isikuandmete kasutamist.
         </li>
         <li>
-          Õigus vaidlustada isikuandmete kasutamine - teatud tingimustel on teil
-          õigus vaidlustada Teie isikuandmete kasutamine.
+          <strong>Õigus esitada vastuväiteid</strong> – teatud tingimustel
+          võite vaidlustada oma isikuandmete kasutamise.
         </li>
         <li>
-          Õigus andmete teisaldatavusele - teatud tingimustel on teil õigus
-          nõuda, et me edastaksime kogutud andmed kolmandale osapoolele või otse
-          teile.
+          <strong>Õigus andmete ülekandmisele</strong> – teatud tingimustel
+          võite nõuda, et edastaksime kogutud andmed kolmandale isikule või
+          otse teile.
         </li>
       </ul>
       <h2>Teie andmete turvalisus</h2>
       <p>
-        Teie isikuandmete turvalisus on meie jaoks oluline, kuid pidage meeles,
-        et ükski Interneti-teel info vahetamise viis ega elektrooniline
-        salvestusmeetod pole 100% turvaline. Kuigi anname endast kõik, et
-        kaitsta Teie andmeid, ei saa me tagada nende täielikku turvalisust.
+        Teie isikuandmete turvalisus on meile oluline. Pidage siiski meeles, et
+        ükski andmete edastamise viis internetis ega elektroonilise salvestamise
+        meetod pole 100% turvaline. Kuigi anname endast parima, et teie andmeid
+        kaitsta, ei saa me nende täielikku turvalisust tagada.
       </p>
       <p>
-        KooliTech OÜ võtab ette kõik mõistlikult vajalikud meetmed, et tagada
-        Teie andmete töötlemine turvaliselt ja kooskõlas käesoleva
-        privaatsuspoliitika ning Eesti Vabariigi seadusega. Teie andmeid ei
-        edastata ühelegi organisatsioonile ega riigile, välja arvatud juhul, kui
-        selleks on mõjuv põhjus ja on tagatud Teie andmete turvalisus.
+        KooliTech OÜ rakendab kõiki mõistlikke meetmeid, et teie andmeid
+        töödeldaks turvaliselt ning selle privaatsuspoliitika ja Eesti
+        Vabariigi seaduste järgi. Edastame teie andmeid organisatsioonile või
+        riigile ainult siis, kui selleks on mõjuv põhjus ja teie andmete
+        turvalisus on tagatud.
       </p>
-      <h2>Viitamine teistele veebisaitidele</h2>
+      <h2>Lingid teistele veebisaitidele</h2>
       <p>
-        Meie veebisaidilt võite leida linke teistele veebilehtedele, mis ei
-        kuulu meile. Kui vajutate kolmanda osapoole lingil, suunatakse teid
-        selle kolmanda osapoole saidile. Soovitame tungivalt tutvuda iga
-        külastatava saidi privaatsuseeskirjaga.
+        Meie veebisaidil võib olla linke teistele veebisaitidele, mis meile ei
+        kuulu. Kui klõpsate sellisel lingil, suunatakse teid kolmanda isiku
+        saidile. Soovitame tungivalt lugeda iga külastatava saidi
+        privaatsuseeskirju.
       </p>
       <p>
-        Me ei oma mingit kontrolli kolmandate osapoolte saitide üle ega võta
-        vastutust nende sisu, privaatsuspoliitika, pakutavate teenuste või muu
-        eest.
+        Meil puudub kontroll kolmandate isikute saitide üle ning me ei vastuta
+        nende sisu, privaatsuspoliitika, teenuste ega muu eest.
       </p>
-      <h2>Privaatsuspoliitika uuendused</h2>
+      <h2>Privaatsuspoliitika muutmine</h2>
       <p>
-        Vajadusel on meil õigus teha käesolevale privaatsuspoliitika dokumendile
-        muudatusi. Privaatsuspoliitika uuenemise järel muudame me selle allosas
-        paiknevat dokumendi värskendamise kuupäeva. Kui külastate ja kasutate
-        meie veebilehte ka pärast privaatsuspoliitika uuendamist, käsitleme me
-        seda kui Teie vaikivat nõusolekut muudatustega.
+        Võime seda privaatsuspoliitikat vajaduse korral muuta. Pärast muutmist
+        uuendame lehe allosas olevat kuupäeva. Kui kasutate meie veebisaiti ka
+        pärast privaatsuspoliitika muutmist, loeme seda teie vaikivaks
+        nõusolekuks muudatustega.
       </p>
-      <p>Viimati muudetud 22/09/2024</p>
+      <p>Viimati muudetud 22.09.2024</p>
     </Policies>
   );
 };

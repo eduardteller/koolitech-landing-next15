@@ -26,7 +26,7 @@ const rows: Row[] = [
   },
   {
     label: "Automaatsed uuendused",
-    detail: "Uued võimalused ja turvaparandused paigalduvad ise.",
+    detail: "Uued võimalused ja turvaparandused jõuavad arvutisse ise.",
     ekell: true,
     legacy: false,
   },

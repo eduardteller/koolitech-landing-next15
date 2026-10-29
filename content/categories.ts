@@ -75,7 +75,7 @@ export const categories = [
     hidden: true,
     title: "Laadimiskärud",
     description:
-      "Kärud ja kapid, mis hoiavad ja laevad terve klassi sülearvuteid ja tahvleid.",
+      "Kärud ja kapid, mis hoiavad ja laadivad terve klassi sülearvuteid ja tahvleid.",
     Icon: BatteryCharging,
   },
   {

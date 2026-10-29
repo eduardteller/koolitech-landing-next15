@@ -27,7 +27,7 @@ const steps = [
   {
     Icon: Wrench,
     title: "Paigaldame ja koolitame",
-    text: "Paigaldame ja seadistame seadmed kohapeal ning õpetame õpetajad neid kasutama.",
+    text: "Paigaldame ja seadistame seadmed kohapeal ning näitame õpetajatele, kuidas neid kasutada.",
   },
   {
     Icon: LifeBuoy,
@@ -83,8 +83,8 @@ const Koolidele = () => {
                   <PointsList
                     text={[
                       "Tarkvara: E-Kell juhib koolikellasid, tunniplaane ja häireid.",
-                      "Tehnika: Ekraanid, helitehnika, võrguseadmed ja muu koolimajja.",
-                      "Paigaldus ja tugi: Seadistame kohapeal ja aitame ka pärast.",
+                      "Tehnika: ekraanid, helitehnika, võrguseadmed ja muu koolimajja.",
+                      "Paigaldus ja tugi: seadistame kõik kohapeal ja aitame ka hiljem.",
                     ]}
                   />
                 </div>
@@ -175,7 +175,7 @@ const Koolidele = () => {
                   E-Kell: koolikellad, tunniplaanid ja häired
                 </h2>
                 <p className="text-muted mt-5 max-w-md text-lg leading-relaxed">
-                  Kellad helisevad õigel ajal ning kelli ja häiresignaale saab
+                  Kellad helisevad õigel ajal ning kellasid ja häireid saab
                   juhtida ka eemalt.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-5">

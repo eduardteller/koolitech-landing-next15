@@ -16,11 +16,11 @@ const EmptyCategory = ({ category }: { category: Category }) => {
         />
       </span>
       <h2 className="text-ink text-2xl leading-tight font-semibold tracking-tight">
-        Tootevalik on koostamisel
+        Tooted lisanduvad peagi
       </h2>
       <p className="text-muted max-w-md leading-relaxed">
-        Selle kategooria tooted lisame lehele peagi. Seni kirjuta meile ja
-        leiame koolile sobiva lahenduse.
+        Selle kategooria tooteid pole veel lehel. Seni kirjuta meile ja leiame
+        koolile sobiva lahenduse.
       </p>
       <Link
         href={quoteHref(category.title, "teema")}

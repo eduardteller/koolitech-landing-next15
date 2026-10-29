@@ -1,8 +1,8 @@
 # E-Kell kasutusjuhend
 
-E-Kell on Koolitech töölauarakendus ja veebiliides koolikella ajakavade, helide, raadio, salvestuste ja häirete haldamiseks.
+E-Kell on KooliTechi töölauarakendus ja veebiliides, millega saab hallata koolikella ajakavu, helisid, raadiot, salvestusi ja häireid.
 
-See juhend on koostatud saadetud video põhjal ja on mõeldud kasutajale, kes hakkab E-Kella igapäevaselt kasutama või seadistama.
+See juhend on mõeldud neile, kes hakkavad E-Kella igapäevaselt kasutama või seadistama.
 
 ---
 
@@ -26,9 +26,9 @@ E-Kellaga saab:
 - määrata igale ajale eraldi heli;
 - kasutada eelkella ja järelkella;
 - salvestada ja esitada teateid;
-- laadida üles MP3 või WAV helifaile;
+- laadida üles MP3- ja WAV-helifaile;
 - mängida raadiot;
-- luua ja käivitada häirepresette;
+- luua valmis häireid ja neid käivitada;
 - kasutada veebiliidest kaugjuhtimiseks.
 
 ---
@@ -50,7 +50,7 @@ Pärast käivitamist avaneb E-Kella peavaade ehk **Töölaud**.
 
 ## Serveri ühenduse kontrollimine
 
-Vasakul üleval kuvatakse serveri ühenduse olek.
+Serveri ühenduse olekut näed vasakul üleval.
 
 Kui näed kollast teadet:
 
@@ -59,7 +59,7 @@ Serveri ühendus
 Andmed ei salvestu pilve.
 ```
 
-siis ei ole rakendus serveriga ühendatud. Sellisel juhul võib osa andmeid jääda ainult lokaalsesse arvutisse ning E-Kell Web ei pruugi töölauarakendusega sünkroonida.
+siis ei ole rakendus serveriga ühendatud. Sel juhul võib osa andmeid jääda ainult sellesse arvutisse ja E-Kell Web ei pruugi töölauarakendusega sünkroonida.
 
 ## Mida teha, kui serveri ühendus puudub?
 
@@ -67,21 +67,21 @@ Kontrolli järjekorras:
 
 1. kas arvutil on internetiühendus;
 2. kas E-Kell Web või server on töös;
-3. kas õiged sisselogimis- või ühenduse andmed on seadetes sisestatud;
+3. kas seadetes on õiged sisselogimis- või ühendusandmed;
 4. kas tulemüür või viirusetõrje ei blokeeri ühendust.
 
 ---
 
 # Töölaud
 
-Töölaud on E-Kella peamine vaade. Siit saab näha tänast ajakava, muuta aktiivset plaani ja liikuda kiirelt teiste funktsioonide juurde.
+Töölaud on E-Kella peamine vaade. Siin näed tänast ajakava, saad vahetada aktiivset plaani ja liikuda kiiresti teiste funktsioonide juurde.
 
 ## Töölaud sisaldab
 
 | Ala | Kirjeldus |
 |---|---|
 | Tänane ajakava | Näitab aktiivset plaani ja tänase päeva kellaaegu. |
-| Kiired toimingud | Võimaldab muuta aktiivset plaani, avada plaanide muutmise või häiresüsteemi. |
+| Kiired toimingud | Siit saad vahetada aktiivset plaani ning avada plaanide muutmise või häiresüsteemi. |
 | Plaanide ülevaade | Näitab loodud plaane ja nende olekut. |
 
 ## Aktiivse plaani muutmine
@@ -91,7 +91,7 @@ Töölaud on E-Kella peamine vaade. Siit saab näha tänast ajakava, muuta aktii
 3. Ava rippmenüü **Aktiivne plaan**.
 4. Vali plaan, mida soovid kasutada.
 
-Valitud plaan määrab, milline ajakava koolikella juhtimiseks kasutusele võetakse.
+Koolikell hakkab helisema valitud plaani järgi.
 
 ## Plaani muutmine töölaualt
 
@@ -113,7 +113,7 @@ Plaan määrab, millal koolikell mängib. Iga plaan koosneb nädalapäevadest ja
 
 ## Enne alustamist
 
-Sul peaks olema teada:
+Pane enne valmis:
 
 - tundide algusajad;
 - vahetundide algusajad;
@@ -171,7 +171,7 @@ Järelkell mängib pärast põhilist kellaaega.
 
 ## Helifaili eelkuulamine
 
-Helivaliku kõrval on esitamise nupp. Vajuta seda, et kontrollida, kas valitud heli on õige.
+Helivaliku kõrval on esitusnupp. Vajuta seda, et kuulata, kas valisid õige heli.
 
 ## Elemendi muutmine
 
@@ -199,16 +199,16 @@ Kui mitmel päeval on sama ajakava, kasuta nuppu **Kopeeri Päev**.
 
 # Häälesalvestus
 
-Häälesalvestuse vaates saab salvestada või esitada kooli teateid ning kasutada mikrofoni heliedastuseks.
+Häälesalvestuse vaates saab salvestada ja esitada kooli teateid ning rääkida mikrofoni kaudu otse kõlaritesse.
 
 ## Häälesalvestuse avamine
 
 1. Ava vasakust menüüst **Häälesalvestus**.
-2. Vali, kas soovid kasutada otse edastamist või salvestada helifailina.
+2. Vali, kas soovid teate otse edastada või salvestada selle helifailina.
 
 ## Heliedastamine otse kõlarisse
 
-See funktsioon sobib kiireks teavituseks, näiteks koolipäeva jooksul tehtava teadaande edastamiseks.
+Sobib kiireks teateks, näiteks kui on vaja koolipäeva jooksul midagi teada anda.
 
 1. Vajuta **Heliedastamine otse kõlarisse**.
 2. Vali mikrofoni seade.
@@ -225,7 +225,7 @@ Saad:
 - salvestust kuulata;
 - salvestuse asukohta kerimisribalt muuta;
 - helitugevust reguleerida;
-- vajadusel salvestada heli nimega.
+- anda salvestusele nime ja selle salvestada.
 
 ## Salvestatud heli kasutamine
 
@@ -233,9 +233,9 @@ Kui salvestus on loodud, ilmub see jaotisesse **Teie salvestused**. Seal saab sa
 
 ---
 
-# MP3 helifailid
+# MP3-helifailid
 
-MP3 helifailide vaates saab lisada, esitada ja hallata koolikella helisid.
+MP3-helifailide vaates saab koolikella helisid lisada, esitada ja hallata.
 
 ## Helifaili üleslaadimine
 
@@ -248,7 +248,7 @@ Programm lisab valitud faili helide nimekirja.
 
 ## Toetatud failid
 
-Rakenduse vaates on märgitud, et saab üles laadida:
+Üles saab laadida MP3- ja WAV-faile:
 
 ```txt
 .mp3 või .wav
@@ -277,7 +277,7 @@ Raadio vaates saab valida ja mängida eelmääratud raadiojaamu.
 ## Raadio avamine
 
 1. Ava vasakust menüüst **Raadio**.
-2. Kuvatakse raadiojaamade nimekiri.
+2. Avaneb raadiojaamade nimekiri.
 
 ## Raadiojaama mängimine
 
@@ -291,7 +291,7 @@ Raadio peatamiseks vajuta **Peata raadio**.
 
 ## Režiimid
 
-Raadio vaates võib olla kaks töörežiimi:
+Raadiol on kaks režiimi:
 
 | Režiim | Kirjeldus |
 |---|---|
@@ -302,9 +302,9 @@ Raadio vaates võib olla kaks töörežiimi:
 
 # Häired
 
-Häirete vaates saab luua valmis häirepresette ja neid vajadusel käivitada.
+Häirete vaates saab luua valmis häireid ehk presette ja neid vajadusel käivitada.
 
-Häirepreset määrab:
+Iga preset määrab:
 
 - häire nime;
 - ikooni;
@@ -347,13 +347,13 @@ Häirepreset määrab:
 3. Vajuta kolme punktiga menüüd.
 4. Vali **Kustuta**.
 
-> Häirefunktsiooni tuleks kasutada ainult kooli sisekorra ja ohutusreeglite järgi.
+> Kasuta häireid ainult kooli sisekorra- ja ohutusreeglite järgi.
 
 ---
 
 # Kontakt
 
-Kontaktivaates saab saata Koolitechile sõnumi otse programmist.
+Kontaktivaates saad saata KooliTechile sõnumi otse programmist.
 
 ## Sõnumi saatmine
 
@@ -363,7 +363,7 @@ Kontaktivaates saab saata Koolitechile sõnumi otse programmist.
 4. Kirjuta sõnum.
 5. Vajuta **Saada**.
 
-Kontaktivaates kuvatakse ka Koolitechi kontaktandmed:
+Kontaktivaates on ka KooliTechi kontaktandmed:
 
 ```txt
 info@koolitech.ee
@@ -416,7 +416,7 @@ Plaanide loomiseks vajuta **Loo Plaan**.
 2. Vajuta **Uus**.
 3. Sisesta plaani nimi.
 4. Salvesta plaan.
-5. Lisa plaani sisse vajalikud kellajad.
+5. Lisa plaani vajalikud kellaajad.
 
 ## Salvestused veebis
 
@@ -446,8 +446,8 @@ Kui töölauarakenduses on kollane teade **Serveri ühendus — Andmed ei salves
 Kontrolli:
 
 - internetiühendust;
-- serveri töötamist;
-- sisselogimis- või ühenduse andmeid;
+- kas server töötab;
+- sisselogimis- või ühendusandmeid;
 - tulemüüri ja viirusetõrje seadeid.
 
 ## Kell ei mängi õigel ajal
@@ -476,9 +476,9 @@ Lahendus:
 
 Kontrolli:
 
-- kas fail on toetatud formaadis;
+- kas fail on MP3- või WAV-vormingus;
 - kas fail ei ole samal ajal teises programmis avatud;
-- kas failinimi ei sisalda probleemseid sümboleid;
+- kas failinimes pole erimärke;
 - kas rakendusel on õigus faili lugeda.
 
 ## Raadio ei mängi
@@ -488,7 +488,7 @@ Kontrolli:
 - internetiühendust;
 - helitugevust;
 - kas mõni teine heli juba mängib;
-- kas raadiojaam on hetkel kättesaadav.
+- kas raadiojaam praegu töötab.
 
 ## Vale kasutajanimi või salasõna
 
