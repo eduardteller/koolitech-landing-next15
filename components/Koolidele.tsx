@@ -1,33 +1,27 @@
-import {
-  ClipboardList,
-  FileCheck,
-  LifeBuoy,
-  Wrench,
-} from "lucide-react";
+import { ClipboardList, FileCheck, LifeBuoy, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CategoryGrid from "./catalog/CategoryGrid";
 import CtaBand from "./CtaBand";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
-import LogoMarquee from "./LogoMarquee";
 import PointsList from "./PointsList";
 
 const steps = [
   {
     Icon: ClipboardList,
     title: "Kaardistame vajadused",
-    text: "Käime koolis kohal, vaatame üle ruumid ja olemasoleva tehnika ning kuulame, mida õpetajad vajavad.",
+    text: "Käime koolis kohal, vaatame üle ruumid ja olemasoleva tehnika ning kuulame, mida juhtkond vajab.",
   },
   {
     Icon: FileCheck,
     title: "Pakume lahenduse",
-    text: "Paneme kokku sobiva komplekti ja saadame selge hinnapakkumise, kus on kirjas iga seade ja töö.",
+    text: "Paneme kokku sobiva komplekti ja saadame hinnapakkumise, kus on kirjeldatud sobivad seadmed ja töö.",
   },
   {
     Icon: Wrench,
     title: "Paigaldame ja koolitame",
-    text: "Paigaldame ja seadistame seadmed kohapeal ning näitame õpetajatele, kuidas neid kasutada.",
+    text: "Paigaldame ja seadistame tehnika kohapeal ning näitame kooliperele, kuidas neid kasutada.",
   },
   {
     Icon: LifeBuoy,
@@ -155,10 +149,10 @@ const Koolidele = () => {
               >
                 <div className="border-line bg-surface overflow-hidden rounded-xl border shadow-sm">
                   <Image
-                    width={1920}
-                    height={1030}
+                    width={2560}
+                    height={1600}
                     className="h-auto w-full object-contain"
-                    src="/assets/desktop/toolaud.png"
+                    src="/assets/desktop/toolaud.webp"
                     alt="E-Kell koolikellade süsteem"
                   />
                 </div>
@@ -243,9 +237,6 @@ const Koolidele = () => {
               </div>
             </div>
           </section>
-
-          {/* ---------- Partner logos ---------- */}
-          <LogoMarquee />
 
           <CtaBand
             kicker="Alusta täna"

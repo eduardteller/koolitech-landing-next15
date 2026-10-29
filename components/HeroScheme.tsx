@@ -82,7 +82,7 @@ const HeroScheme = () => {
           <Image
             width={512}
             height={512}
-            src="/assets/ekell-logo.png"
+            src="/assets/ekell-logo.webp"
             alt=""
             className="h-11 w-11"
           />

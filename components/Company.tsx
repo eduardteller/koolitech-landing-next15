@@ -13,7 +13,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
-import LogoMarquee from "./LogoMarquee";
 import PointsList from "./PointsList";
 
 const services = [
@@ -121,9 +120,6 @@ const Company = () => {
             </div>
           </section>
 
-          {/* ---------- Partner logos ---------- */}
-          <LogoMarquee />
-
           {/* ---------- What we do ---------- */}
           <div className="bg-surface px-6 py-24 sm:px-8">
             <div className="mx-auto max-w-screen-xl">
@@ -174,10 +170,10 @@ const Company = () => {
               >
                 <div className="border-line bg-surface overflow-hidden rounded-xl border shadow-sm">
                   <Image
-                    width={1920}
-                    height={1030}
+                    width={2560}
+                    height={1600}
                     className="h-auto w-full object-contain"
-                    src="/assets/desktop/toolaud.png"
+                    src="/assets/desktop/toolaud.webp"
                     alt="E-Kell koolikellade süsteem"
                   />
                 </div>

@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const media = [
   {
-    src: "/assets/desktop/haalesalvestus.png",
-    alt: "E-Kell häälsalvestuse vaade",
+    src: "/assets/desktop/haalesalvestus.webp",
+    alt: "E-Kell häälsalvestuse vaade salvestatud teadetega",
     title: "Häälsalvestus ja otseedastus",
     text: "Salvesta teated või räägi otse kõlaritesse.",
   },
   {
-    src: "/assets/desktop/raadio.png",
+    src: "/assets/desktop/raadio.webp",
     alt: "E-Kell raadiovaade jaamade nimekirjaga",
     title: "Raadio",
     text: "Mängi raadiojaamu kohe või ajakava järgi.",
   },
   {
-    src: "/assets/desktop/mp3.png",
+    src: "/assets/desktop/mp3.webp",
     alt: "E-Kell MP3-mängija esitusvaade",
     title: "MP3-mängija",
     text: "Laadi üles ja mängi oma helifaile.",
@@ -34,11 +34,11 @@ const MediaShowcase = () => {
         >
           <div className="aspect-[16/10] overflow-hidden border-b border-line bg-ground">
             <Image
-              width={1920}
-              height={1030}
+              width={2560}
+              height={1600}
               src={src}
               alt={alt}
-              className="h-full w-full object-cover object-left"
+              className="h-full w-full object-cover"
             />
           </div>
           <figcaption className="flex flex-col gap-1.5 p-6">

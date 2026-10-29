@@ -15,7 +15,7 @@ export default function ProductsPage() {
   return (
     <CatalogShell
       title="Koolitehnika klassist koolihoovini"
-      lead="Valime koolile sobivad seadmed, paneme komplekti kokku ning paigaldame ja seadistame selle kohapeal."
+      lead="Valime koolile sobiva tehnika, paneme komplekti kokku ning paigaldame ja seadistame selle kohapeal."
     >
       <h2 className="sr-only">Kõik tooted</h2>
       <ProductBrowser products={products} />

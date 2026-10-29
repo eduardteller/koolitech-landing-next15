@@ -11,15 +11,19 @@ interface Props {
   /** Right-hand plate label, e.g. "Miinimumnõuded". */
   tag?: string;
   rows: SpecRow[];
+  /** Fades in on scroll. Off for plates above the fold. */
+  reveal?: boolean;
+  /** Plate footer under the rows, e.g. the download button. */
+  children?: React.ReactNode;
 }
 
-/* Datasheet-style key/value plate: E-Kell system requirements and
-   product specs share it. */
-const SpecPlate = ({ title, tag, rows }: Props) => {
+/* Datasheet-style key/value plate: E-Kell system requirements, product
+   specs and the installer download share it. */
+const SpecPlate = ({ title, tag, rows, reveal = true, children }: Props) => {
   return (
     <div
-      data-aos="fade-up"
-      data-aos-offset="200"
+      data-aos={reveal ? "fade-up" : undefined}
+      data-aos-offset={reveal ? "200" : undefined}
       className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm"
     >
       {/* Plate header — names the equipment and the tier the values describe */}
@@ -55,6 +59,12 @@ const SpecPlate = ({ title, tag, rows }: Props) => {
           </div>
         ))}
       </dl>
+
+      {children && (
+        <div className="border-t border-line px-6 py-6 sm:px-8">
+          {children}
+        </div>
+      )}
     </div>
   );
 };

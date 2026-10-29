@@ -59,6 +59,12 @@ const App = () => {
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <ScrollButton />
                     <a
+                      href="/ekell/laadi-alla"
+                      className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
+                    >
+                      Laadi alla →
+                    </a>
+                    <a
                       href="https://dashboard.koolitech.ee"
                       className="text-muted hover:text-ink text-sm font-semibold underline-offset-4 hover:underline"
                     >
@@ -108,10 +114,10 @@ const App = () => {
               >
                 <div className="border-line bg-surface overflow-hidden rounded-xl border shadow-sm">
                   <Image
-                    width={1920}
-                    height={1030}
+                    width={2560}
+                    height={1600}
                     className="h-auto w-full object-contain"
-                    src="/assets/desktop/loomuuda.png"
+                    src="/assets/desktop/loomuuda.webp"
                     alt="E-Kell tunniplaani redaktor päevade ja plaanidega"
                   />
                 </div>
@@ -172,11 +178,11 @@ const App = () => {
               >
                 <div className="border-line bg-surface overflow-hidden rounded-xl border shadow-sm">
                   <Image
-                    width={1920}
-                    height={1030}
+                    width={2560}
+                    height={1600}
                     className="h-auto w-full object-contain"
-                    src="/assets/desktop/haire2.png"
-                    alt="E-Kell häire preseti loomine tulekahjuhäirega"
+                    src="/assets/desktop/haire2.webp"
+                    alt="E-Kell häirete vaade valmis häiretega tulekahju ja evakuatsiooni jaoks"
                   />
                 </div>
               </div>
@@ -235,7 +241,7 @@ const App = () => {
                     width={2560}
                     height={1600}
                     className="h-auto w-full object-contain"
-                    src="/assets/web/web.png"
+                    src="/assets/web/web.webp"
                     alt="E-Kell veebiliides brauseris"
                   />
                 </div>
