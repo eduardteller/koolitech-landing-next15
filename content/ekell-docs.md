@@ -441,7 +441,7 @@ Haldusvaates saab hallata süsteemi ja kasutajatega seotud seadeid. See osa on m
 
 ## Andmed ei salvestu pilve
 
-Kui töölauarakenduses on kollane teade **Serveri ühendus — Andmed ei salvestu pilve**, ei ole rakendus serveriga ühendatud.
+Kui töölauarakenduses on kollane teade **Andmed ei salvestu pilve**, ei ole rakendus serveriga ühendatud.
 
 Kontrolli:
 

@@ -20,7 +20,7 @@ const services = [
   {
     Icon: MonitorSmartphone,
     title: "Tarkvara",
-    text: "E-Kell — lihtne ja mugav viis juhtida koolikellasid ja häireid.",
+    text: "E-Kell on lihtne ja mugav viis juhtida koolikellasid ja häireid.",
   },
   {
     Icon: Boxes,
@@ -96,8 +96,8 @@ const Company = () => {
                   </h1>
                   <p className="text-muted mt-6 max-w-md text-lg leading-relaxed">
                     KooliTech OÜ on Eesti IT-ettevõte, mis varustab koole
-                    tarkvara ja tehnikaga — nutikatest koolikelladest kuni
-                    terve maja helisüsteemini.
+                    tarkvara ja tehnikaga. Pakume kõike nutikatest
+                    koolikelladest kuni terve maja helisüsteemini.
                   </p>
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <Link
@@ -188,7 +188,7 @@ const Company = () => {
                 className="flex flex-col md:mt-0 md:basis-1/2 md:px-16"
               >
                 <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
-                  E-Kell — kõikvõimas koolikell
+                  Kõikvõimas koolikell E-Kell
                 </h2>
                 <p className="text-muted mt-5 max-w-md text-lg leading-relaxed">
                   E-Kell paneb koolikellad õigel ajal helisema. Kellasid ja
@@ -323,8 +323,8 @@ const Company = () => {
                 Räägime, kuidas saame aidata
               </h2>
               <p className="text-muted max-w-md text-lg leading-relaxed">
-                Tarkvara, tehnika või paigaldus — kirjuta meile ja leiame
-                koolile sobiva lahenduse.
+                Vajad tarkvara, tehnikat või paigaldust? Kirjuta meile ja
+                leiame koolile sobiva lahenduse.
               </p>
               <a
                 href="/contact"

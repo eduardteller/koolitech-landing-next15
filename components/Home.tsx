@@ -54,7 +54,7 @@ const App = () => {
                   </h1>
                   <p className="text-muted mt-6 max-w-md text-lg leading-relaxed">
                     Muuda koolipäevad lihtsaks ja turvaliseks. Halda kellasid,
-                    tunniplaane ja häireid — ühest kohast, igast seadmest.
+                    tunniplaane ja häireid ühest kohast ja igast seadmest.
                   </p>
                   <div className="mt-8 flex flex-wrap items-center gap-5">
                     <ScrollButton />
@@ -93,7 +93,7 @@ const App = () => {
               </h2>
               <p className="text-muted max-w-2xl text-lg leading-relaxed">
                 Koolikellad helisevad tunniplaani järgi ise. Häireid ja kõike
-                muud saad juhtida ka eemalt — üks süsteem kogu koolipäevaks.
+                muud saad juhtida ka eemalt. Üks süsteem katab kogu koolipäeva.
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ const App = () => {
                     firstText:
                       "Kuidas töölauarakendus ja veebiliides koos töötavad?",
                     secondText:
-                      "Töölauarakendus töötab kooli arvutis: see mängib kellad ja hoiab andmeid. Veebiliides on nagu pult, mis avaneb igas brauseris — arvutis, tahvlis või telefonis. Kui muudad midagi ühes, jõuab muudatus kohe ka teise.",
+                      "Töölauarakendus töötab kooli arvutis: see mängib kellad ja hoiab andmeid. Veebiliides on nagu pult, mis avaneb arvuti, tahvli või telefoni brauseris. Kui muudad midagi ühes, jõuab muudatus kohe ka teise.",
                   },
                   {
                     firstText: "Kas E-Kell töötab ka ilma internetita?",

@@ -232,28 +232,28 @@ const PrivacyPolicy = () => {
       </p>
       <ul>
         <li>
-          <strong>Juurdepääsuõigus</strong> – võite nõuda oma isikuandmete
+          <strong>Juurdepääsuõigus</strong>: võite nõuda oma isikuandmete
           koopiat.
         </li>
         <li>
-          <strong>Õigus andmete parandamisele</strong> – võite nõuda, et
+          <strong>Õigus andmete parandamisele</strong>: võite nõuda, et
           parandaksime andmed, mis on teie arvates ebatäpsed, ja täiendaksime
           andmed, mis on teie arvates puudulikud.
         </li>
         <li>
-          <strong>Õigus andmete kustutamisele</strong> – teatud tingimustel
+          <strong>Õigus andmete kustutamisele</strong>: teatud tingimustel
           võite nõuda oma isikuandmete kustutamist.
         </li>
         <li>
-          <strong>Õigus töötlemise piiramisele</strong> – teatud tingimustel
+          <strong>Õigus töötlemise piiramisele</strong>: teatud tingimustel
           võite nõuda, et piiraksime teie isikuandmete kasutamist.
         </li>
         <li>
-          <strong>Õigus esitada vastuväiteid</strong> – teatud tingimustel
+          <strong>Õigus esitada vastuväiteid</strong>: teatud tingimustel
           võite vaidlustada oma isikuandmete kasutamise.
         </li>
         <li>
-          <strong>Õigus andmete ülekandmisele</strong> – teatud tingimustel
+          <strong>Õigus andmete ülekandmisele</strong>: teatud tingimustel
           võite nõuda, et edastaksime kogutud andmed kolmandale isikule või
           otse teile.
         </li>

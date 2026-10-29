@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { kategooria, toode } = await params;
   const product = getProduct(kategooria, toode);
   if (!product) return {};
-  return { title: `${product.name} — KooliTech`, description: product.tagline };
+  return { title: `${product.name} | KooliTech`, description: product.tagline };
 }
 
 export default async function ProductPage({ params }: Props) {

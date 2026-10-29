@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "E-Kell dokumentatsioon",
   description:
-    "E-Kella juhendid ja dokumentatsioon — paigaldus, veebiliides, häiresüsteem ja seadistamine.",
+    "E-Kella juhendid paigalduse, veebiliidese, häiresüsteemi ja seadistamise kohta.",
 };
 
 export default function EkellDocsPage() {

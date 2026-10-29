@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getCategory((await params).kategooria);
   if (!category) return {};
   return {
-    title: `${category.title} — KooliTech tootevalik`,
+    title: `${category.title} | KooliTech tootevalik`,
     description: category.description,
   };
 }

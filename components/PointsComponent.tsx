@@ -25,7 +25,7 @@ const features = [
   },
   {
     Icon: Earth,
-    title: "Veebiliides – juhi kõikjalt",
+    title: "Veebiliides igas seadmes",
     text: "Halda koolikellasid ja ajakavasid mis tahes seadmest. Muudatused sünkroonitakse automaatselt.",
     delay: 350,
   },

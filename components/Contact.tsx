@@ -125,7 +125,7 @@ const Contact = ({ initialText = "" }: Props) => {
             >
               info@koolitech.ee
             </a>{" "}
-            või täida allolev vorm — vastame esimesel võimalusel.
+            või täida allolev vorm. Vastame esimesel võimalusel.
           </p>
 
           <form

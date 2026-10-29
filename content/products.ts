@@ -198,10 +198,10 @@ export const products: Product[] = [
     size: "50 W",
     tagline: "50 W IP-laekõlar aulasse, võimlasse ja sööklasse.",
     description:
-      "Valiku võimsaim laekõlar suurtesse ja kõrgete lagedega ruumidesse. Sagedusala 80 Hz – 20 kHz sobib nii kõneks kui muusikaks. 50 W võimendi vajab PoE++ toidet või eraldi 24 V toiteplokki.",
+      "Valiku võimsaim laekõlar suurtesse ja kõrgete lagedega ruumidesse. Sagedusala 80 Hz kuni 20 kHz sobib nii kõneks kui muusikaks. 50 W võimendi vajab PoE++ toidet või eraldi 24 V toiteplokki.",
     highlights: [
       "50 W võimendi suurtele ruumidele",
-      "Sagedusala 80 Hz – 20 kHz kõneks ja muusikaks",
+      "Sagedusala 80 Hz kuni 20 kHz kõneks ja muusikaks",
       hl.sipOnvif,
       hl.messages,
       "Toide PoE++ või 24 V toiteplokist",
@@ -820,10 +820,10 @@ export const products: Product[] = [
     size: "30 W",
     tagline: "30 W IP-rippkõlar kõrgete ja avatud lagedega ruumidesse.",
     description:
-      "Laest trossi otsas rippuv kõlar ruumidesse, kus ripplage pole: aula, raamatukogu, söökla, võimla või avatud õpperuum. Lai sagedusala (70 Hz – 20 kHz) sobib nii teadaanneteks kui taustamuusikaks.",
+      "Laest trossi otsas rippuv kõlar ruumidesse, kus ripplage pole: aula, raamatukogu, söökla, võimla või avatud õpperuum. Lai sagedusala (70 Hz kuni 20 kHz) sobib nii teadaanneteks kui taustamuusikaks.",
     highlights: [
       "Ripub laest, ripplage pole vaja",
-      "Sagedusala 70 Hz – 20 kHz kõneks ja muusikaks",
+      "Sagedusala 70 Hz kuni 20 kHz kõneks ja muusikaks",
       hl.poe,
       hl.sipOnvif,
       hl.messages,

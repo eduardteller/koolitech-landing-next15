@@ -4,7 +4,7 @@ import { getProducts } from "@/lib/catalog";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tootevalik — KooliTech",
+  title: "Tootevalik | KooliTech",
   description:
     "Interaktiivsed ekraanid, helitehnika, võrguseadmed, interkomid ja muu koolitehnika koos paigalduse ja toega.",
 };
