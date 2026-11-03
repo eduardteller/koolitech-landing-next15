@@ -37,7 +37,7 @@ const EkellDownload = async () => {
           { label: "Faili suurus", value: fileSize(release.size) },
         ]
       : []),
-    { label: "Operatsioonisüsteem", value: "Windows 10 või uuem (64-bit)" },
+    { label: "Operatsioonisüsteem", value: "Windows 10 või 11 (64-bit)" },
   ];
 
   return (
