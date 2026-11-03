@@ -66,26 +66,6 @@ const App = () => {
             </div>
           </section>
 
-          {/* ---------- Intro band ---------- */}
-          <div className="bg-surface px-6 py-24 sm:px-8">
-            <div
-              className="container mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-6 text-center"
-              data-aos="fade-up"
-              data-aos-offset="200"
-            >
-              <p className="text-kicker text-xs font-semibold tracking-widest uppercase">
-                Tarkvara koolidele
-              </p>
-              <h2 className="text-ink text-3xl leading-tight font-semibold tracking-tight md:w-3/4 md:text-4xl">
-                E-Kell: koolikellad ja häired ühes nutikas süsteemis
-              </h2>
-              <p className="text-muted max-w-2xl text-lg leading-relaxed">
-                Koolikellad helisevad tunniplaani järgi ise. Häireid ja kõike
-                muud saad juhtida ka eemalt. Üks süsteem katab kogu koolipäeva.
-              </p>
-            </div>
-          </div>
-
           {/* ---------- Ajakavad & tunniplaanid ---------- */}
           <div id="scroll-to-div" className="bg-ground px-6 py-24 sm:px-8">
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-12 md:flex-row">
