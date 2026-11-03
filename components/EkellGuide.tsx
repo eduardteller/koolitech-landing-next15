@@ -1,5 +1,4 @@
 import {
-  checklist,
   desktopLegend,
   desktopMenu,
   features,
@@ -13,7 +12,7 @@ import {
   type Feature,
 } from "@/content/ekell-guide";
 import type { DocSection } from "@/lib/docs-toc";
-import { ArrowRight, BookOpen, Check, Download, Speaker } from "lucide-react";
+import { ArrowRight, BookOpen, Check, Speaker } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CtaBand from "./CtaBand";
@@ -43,14 +42,6 @@ const docsLinks = [
   { id: "kontakt", label: "Sõnum KooliTechile rakendusest" },
   { id: "e-kell-web", label: "E-Kell Web ja haldus" },
 ];
-
-const heroWindow = {
-  src: "/assets/guide/desktop/toolaud.webp",
-  width: 2560,
-  height: 1600,
-  alt: "E-Kella töölaud: tänane ajakava, aktiivne plaan ja plaanide ülevaade",
-  frame: "window" as const,
-};
 
 const SectionHead = ({
   id,
@@ -138,79 +129,14 @@ const EkellGuide = () => {
           and stop the sidebar from sticking */}
       <div className="relative overflow-x-clip">
         <main>
-          {/* ---------- Hero ---------- */}
-          <section className="ruled-paper bg-ground">
-            <div className="mx-auto grid max-w-screen-xl items-center gap-14 px-6 pt-12 pb-20 sm:px-8 md:pt-20 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
-                <p className="text-muted mb-6 text-xs font-semibold tracking-widest uppercase">
-                  E-Kell · kiirjuhend
-                </p>
-                <h1 className="text-ink text-5xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
-                  Kuidas <span className="text-accent">E-Kella</span>{" "}
-                  kasutada
-                </h1>
-                <p className="text-muted mt-6 max-w-lg text-lg leading-relaxed">
-                  Paigalda E-Kell kooli arvutisse, ühenda see helisüsteemiga ja
-                  halda kellasid ka veebist. Selleks kulub umbes kümme minutit.
-                </p>
-
-                <div className="border-line bg-surface mt-8 max-w-lg rounded-xl border p-5 shadow-sm">
-                  <p className="text-ink text-sm font-semibold">
-                    Enne alustamist on vaja
-                  </p>
-                  <ul className="mt-3 flex flex-col gap-2.5">
-                    {checklist.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5">
-                        <Check
-                          size={18}
-                          strokeWidth={2.5}
-                          aria-hidden="true"
-                          className="text-accent mt-0.5 shrink-0"
-                        />
-                        <span className="text-muted text-sm leading-relaxed">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    href="/ekell/laadi-alla"
-                    className="bg-primary text-on-primary hover:bg-primary-hover active:bg-primary-active inline-flex items-center gap-2.5 rounded-lg px-6 py-3 font-semibold transition duration-150"
-                  >
-                    <Download size={18} strokeWidth={2} aria-hidden="true" />
-                    Laadi alla
-                  </Link>
-                  <a
-                    href="https://dashboard.koolitech.ee"
-                    className="border-ink text-ink hover:bg-primary-tint rounded-lg border px-6 py-3 font-semibold transition"
-                  >
-                    Ava E-Kell Web
-                  </a>
-                </div>
-              </div>
-
-              {/* The desktop app with the web on a phone in front of it:
-                  the two halves this guide sets up. */}
-              <div className="relative pr-10 pb-12 sm:pr-16">
-                <Screenshot
-                  shot={heroWindow}
-                  priority
-                  sizes="(min-width: 1024px) 640px, 100vw"
-                />
-                <div className="absolute right-0 bottom-0 w-[26%] max-w-40 min-w-24">
-                  <Screenshot shot={phoneShots[0]} sizes="160px" />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <div className="mx-auto flex max-w-screen-xl flex-col px-6 pt-16 pb-24 sm:px-8 lg:flex-row lg:gap-12">
+          <div className="mx-auto flex max-w-screen-xl flex-col px-6 pt-12 pb-24 sm:px-8 md:pt-20 lg:flex-row lg:gap-12">
             <DocsSidebar sections={sections} title="Kiirjuhend" />
 
             <div className="max-w-3xl min-w-0 flex-1">
+              <h1 className="text-ink mb-16 text-5xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
+                Kuidas <span className="text-accent">E-Kella</span> kasutada
+              </h1>
+
               {/* ---------- Arvuti ja heli ---------- */}
               <section>
                 <SectionHead

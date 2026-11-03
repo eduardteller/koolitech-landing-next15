@@ -72,14 +72,6 @@ const web = (name: string, alt: string, extra: Partial<Shot> = {}): Shot => ({
   ...extra,
 });
 
-/* ---------- Enne alustamist ---------- */
-
-export const checklist = [
-  "Windowsi arvuti, mis on ühendatud kooli helisüsteemiga",
-  "Internetiühendus",
-  "Litsentsivõti ning E-Kell Webi kasutajanimi ja salasõna. Need saad KooliTechilt.",
-];
-
 /* ---------- Paigaldus ---------- */
 
 export const installSteps: Step[] = [
@@ -255,6 +247,7 @@ export const planSteps: Step[] = [
     text: [
       "Kui mitmel päeval on samad ajad, ava sihtpäev ja vajuta **Kopeeri päev**. Vali, millise plaani ja päeva ajad kopeerida.",
     ],
+    note: "Sihtpäeva senised ajad asendatakse kopeeritud aegadega.",
     shots: [
       {
         src: "/assets/guide/desktop/plaan-kopeeri.webp",
@@ -450,7 +443,7 @@ export const features: Feature[] = [
     text: "Seadetes on heliväljund, vaikimisi helid, teema, versioon ja litsentsi kehtivus.",
     how: [
       "**Korduste arv** määrab, mitu korda kell mängib.",
-      "Vaikimisi helid pakutakse uutele kirjetele ette.",
+      "Vaikimisi helid mängivad kirjetel, mille heliks on „Vaikimisi“.",
       "**Lähtesta** kustutab kohalikud andmed ja küsib uut võtit.",
     ],
     shot: {

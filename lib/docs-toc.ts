@@ -9,22 +9,20 @@ export interface DocSection {
 const EXCLUDED_TITLES = new Set(["Soovitatud järgmised lehed"]);
 
 /**
- * Extract the top-level (`#`) headings from a markdown string and turn them
- * into sidebar sections.
+ * Extract the section (`##`) headings from a markdown string and turn them
+ * into sidebar sections. The `#` heading is the page title and stays out.
  *
  * Every heading (any level) is fed through a single {@link GithubSlugger} in
  * document order — the exact same thing `rehype-slug` does when it assigns
  * `id`s to the rendered headings — so the ids generated here are guaranteed to
  * match the anchors in the rendered page (including duplicate numbering).
  *
- * The first `#` heading (the page title/hero) and any title listed in
- * {@link EXCLUDED_TITLES} are skipped.
+ * Any title listed in {@link EXCLUDED_TITLES} is skipped.
  */
 export function extractSections(markdown: string): DocSection[] {
   const slugger = new GithubSlugger();
   const sections: DocSection[] = [];
   let inFence = false;
-  let seenFirstH1 = false;
 
   for (const rawLine of markdown.split("\n")) {
     // Toggle fenced code blocks (``` or ~~~) so `#` lines inside code are ignored.
@@ -43,11 +41,7 @@ export function extractSections(markdown: string): DocSection[] {
     // rehype-slug, even for headings we don't surface in the nav.
     const id = slugger.slug(title);
 
-    if (level !== 1) continue;
-    if (!seenFirstH1) {
-      seenFirstH1 = true; // first H1 is the page title — skip it.
-      continue;
-    }
+    if (level !== 2) continue;
     if (EXCLUDED_TITLES.has(title)) continue;
 
     sections.push({ id, title });
