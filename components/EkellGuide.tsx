@@ -25,7 +25,6 @@ import Screenshot from "./guide/Screenshot";
 import { SoundOutput } from "./guide/Sketches";
 import Steps, { StepBody, StepMedia } from "./guide/Steps";
 import HeaderPrimary from "./HeaderPrimary";
-import SystemRequirements from "./SystemRequirements";
 
 // Sidebar entries; each id is on its section's heading.
 const sections: DocSection[] = [
@@ -249,11 +248,6 @@ const EkellGuide = () => {
                     </p>
                   </div>
                   <SoundOutput />
-                </div>
-
-                <SubHead>Arvuti miinimumnõuded</SubHead>
-                <div className="mt-6">
-                  <SystemRequirements />
                 </div>
               </section>
 

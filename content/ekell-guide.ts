@@ -144,7 +144,7 @@ export const installSteps: Step[] = [
   {
     title: "Vali heliväljund",
     text: [
-      "Ava menüüst **Seaded**. Vali **Vaikimisi heli väljund** alt kooli helisüsteem.",
+      "Ava menüüst **Seaded**. Vali **Vaikimisi heliväljund** alt kooli helisüsteem.",
       "Kui helisüsteem on Windowsis juba vaikimisi väljund, võid jätta valikuks **Vaikimisi**.",
     ],
     shots: [
@@ -152,7 +152,7 @@ export const installSteps: Step[] = [
         src: "/assets/guide/desktop/seaded.webp",
         width: 1536,
         height: 1500,
-        alt: "E-Kella seaded, vaikimisi heli väljundiks on valitud Koolikõlarid",
+        alt: "E-Kella seaded, vaikimisi heliväljundiks on valitud Koolikõlarid",
         frame: "dialog",
         maxWidth: "34rem",
         markers: [{ n: 1, x: 76, y: 24.1 }],
@@ -162,7 +162,7 @@ export const installSteps: Step[] = [
   {
     title: "Testi heli",
     text: [
-      "Ava **MP3 Helifailid**, vajuta **Lae üles** ja vali arvutist mõni MP3-fail. Klõpsa failil ja see hakkab mängima.",
+      "Ava **MP3-helifailid**, vajuta **Lae üles** ja vali arvutist mõni MP3-fail. Klõpsa failil ja see hakkab mängima.",
       "Kui heli kostab koolikõlaritest, on ühendus korras.",
     ],
     shots: [
@@ -206,10 +206,10 @@ export const desktopMenu: Shot = {
 export const desktopLegend: LegendItem[] = [
   { n: 1, title: "Serveri ühendus", text: "Roheline tähendab, et andmed jõuavad veebi." },
   { n: 2, title: "Töölaud", text: "Tänane ajakava, aktiivne plaan ja kiired toimingud." },
-  { n: 3, title: "Loo / Muuda Plaanid", text: "Kellaajad ja helid nädalapäevade kaupa." },
+  { n: 3, title: "Loo / muuda plaane", text: "Kellaajad ja helid nädalapäevade kaupa." },
   { n: 4, title: "Häälesalvestus", text: "Salvesta teade või räägi otse kõlaritesse." },
   { n: 5, title: "Raadio", text: "Raadiojaam kohe või ajakava järgi." },
-  { n: 6, title: "MP3 Helifailid", text: "Laadi üles ja mängi oma muusikat." },
+  { n: 6, title: "MP3-helifailid", text: "Laadi üles ja mängi oma muusikat." },
   { n: 7, title: "Häire", text: "Valmis häired, mis käivituvad paari klikiga." },
   { n: 8, title: "Kontakt", text: "Saada KooliTechile sõnum otse rakendusest." },
   { n: 9, title: "Seaded", text: "Heliväljund, vaikimisi helid, teema ja litsents." },
@@ -219,7 +219,7 @@ export const planSteps: Step[] = [
   {
     title: "Loo plaan",
     text: [
-      "Ava **Loo / Muuda Plaanid** ja vajuta paremal **Uus**. Anna plaanile nimi ja vajuta **OK**.",
+      "Ava **Loo / muuda plaane** ja vajuta paremal **Uus**. Anna plaanile nimi ja vajuta **OK**.",
     ],
     note: "Nimes kasuta tühiku asemel alakriipsu, näiteks Tavaline_nädal.",
     shots: [
@@ -227,7 +227,7 @@ export const planSteps: Step[] = [
         src: "/assets/guide/desktop/plaan-uus.webp",
         width: 1024,
         height: 522,
-        alt: "Aken Loo Uus Plaan, plaani nimeks on kirjutatud Tavaplaan",
+        alt: "Aken Loo uus plaan, plaani nimeks on kirjutatud Tavaplaan",
         frame: "dialog",
         maxWidth: "30rem",
       },
@@ -236,7 +236,7 @@ export const planSteps: Step[] = [
   {
     title: "Lisa kellaajad",
     text: [
-      "Vali plaan ja nädalapäev ning vajuta **Lisa Uus**. Anna kirjele nimi, määra kellaaeg ja vali heli.",
+      "Vali plaan ja nädalapäev ning vajuta **Lisa uus**. Anna kirjele nimi, määra kellaaeg ja vali heli.",
       "Soovi korral lisa **Eelkell** enne ja **Järelkell** pärast põhikella. Heli kõrval oleva noolenupuga saad seda eelnevalt kuulata.",
     ],
     shots: [
@@ -253,14 +253,14 @@ export const planSteps: Step[] = [
   {
     title: "Kopeeri teistele päevadele",
     text: [
-      "Kui mitmel päeval on samad ajad, ava sihtpäev ja vajuta **Kopeeri Päev**. Vali, millise plaani ja päeva ajad kopeerida.",
+      "Kui mitmel päeval on samad ajad, ava sihtpäev ja vajuta **Kopeeri päev**. Vali, millise plaani ja päeva ajad kopeerida.",
     ],
     shots: [
       {
         src: "/assets/guide/desktop/plaan-kopeeri.webp",
         width: 896,
         height: 896,
-        alt: "Aken Kopeeri aegad: lähteplaan Tavaplaan, lähtepäev esmaspäev, sihtkoht Tavaplaan teisipäev",
+        alt: "Aken Kopeeri ajad: lähteplaan Tavaplaan, lähtepäev esmaspäev, sihtkoht Tavaplaan teisipäev",
         frame: "dialog",
         maxWidth: "26rem",
       },
@@ -350,7 +350,7 @@ export const webMenu: Shot = {
 
 export const webLegend: LegendItem[] = [
   { n: 1, title: "Peavaade", text: "Sama ülevaade nagu töölaual." },
-  { n: 2, title: "Loo / Muuda Plaanid", text: "Muuda kellaaegu kodust või telefonist." },
+  { n: 2, title: "Loo / muuda plaane", text: "Muuda kellaaegu kodust või telefonist." },
   { n: 3, title: "Salvestused", text: "Mängi kooli arvutisse salvestatud teateid." },
   { n: 4, title: "Raadio", text: "Juhi raadiot ja selle ajakava." },
   { n: 5, title: "Häire", text: "Käivita häire kust tahes." },
@@ -407,7 +407,7 @@ export const features: Feature[] = [
     title: "Häire",
     text: "Häired on enne valmis seadistatud: nimi, ikoon, heli, korduste arv ja viivitus. Hädaolukorras jääb üle ainult käivitada.",
     how: [
-      "Loo häire: **Häire** → **Uus Preset**.",
+      "Loo häire: **Häire** → **Uus preset**.",
       "Käivita: **Käivita** → **Käivita häire**.",
       "Veebis saab häire käivitada ka eemalt.",
     ],
@@ -435,7 +435,7 @@ export const features: Feature[] = [
     title: "Häälesalvestus ja otseedastus",
     text: "Salvesta teade hilisemaks või räägi mikrofoni kaudu otse koolikõlaritesse.",
     how: [
-      "Otse: **Heliedastamine otse kõlarisse** → vali mikrofon → alusta.",
+      "Otse: **Hääleedastamine otse kõlarisse** → vali mikrofon → alusta.",
       "Salvesta: **Salvesta helifailina** → anna nimi → salvesta.",
       "Salvestusi saab mängida ka veebist.",
     ],
@@ -449,7 +449,7 @@ export const features: Feature[] = [
     title: "Seaded",
     text: "Seadetes on heliväljund, vaikimisi helid, teema, versioon ja litsentsi kehtivus.",
     how: [
-      "**Kordamise arv** määrab, mitu korda kell mängib.",
+      "**Korduste arv** määrab, mitu korda kell mängib.",
       "Vaikimisi helid pakutakse uutele kirjetele ette.",
       "**Lähtesta** kustutab kohalikud andmed ja küsib uut võtit.",
     ],

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // Shown under the landing hero and at the bottom of the E-Kell page.
 const partners = [
@@ -16,50 +19,49 @@ const partners = [
   },
 ];
 
-/* One pass of the track must be wider than the strip, or the loop shows a
-   gap before it wraps. With only a few logos, repeat them until a pass has
-   at least this many items (12 × ~130px clears the 1280px strip). */
-const MIN_ITEMS_PER_PASS = 12;
+// How long each logo stays up before the next one fades in.
+const SHOW_MS = 3000;
 
-const LogoMarquee = () => {
-  const repeats = Math.ceil(MIN_ITEMS_PER_PASS / partners.length);
-  const pass = Array.from({ length: repeats }, () => partners).flat();
+const PartnerLogos = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (partners.length < 2) return;
+    const id = setInterval(
+      () => setCurrent((i) => (i + 1) % partners.length),
+      SHOW_MS,
+    );
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <section className="bg-ground px-6 pb-20 sm:px-8">
       <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted">
-        Meid usaldavad koolid
+        Meie lahendusi kasutavad
       </p>
-      <div className="logo-marquee mx-auto mt-8 max-w-screen-xl border-y border-line py-8">
-        {/* Two identical passes; the track slides right by exactly one. */}
-        <div
-          className="logo-marquee-track"
-          style={{ animationDuration: `${pass.length * 3}s` }}
-        >
-          {[0, 1].map((copy) => (
-            <ul
-              key={copy}
-              className="flex shrink-0 items-center"
-              aria-hidden={copy === 1 || undefined}
-            >
-              {pass.map((logo, i) => (
-                <li key={i} className="shrink-0 px-8 sm:px-12">
-                  <Image
-                    src={logo.src}
-                    width={logo.width}
-                    height={logo.height}
-                    // Name each school once; the repeats are decorative.
-                    alt={copy === 0 && i < partners.length ? logo.name : ""}
-                    className="h-16 w-auto opacity-80 grayscale dark:invert sm:h-20"
-                  />
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
-      </div>
+      {/* Every logo sits in the same grid cell and only the current one is
+          opaque, so they cross-fade in place. All schools stay in the
+          accessibility tree; only what is visible changes. */}
+      <ul className="logo-strip mx-auto mt-8 grid max-w-screen-xl place-items-center border-y border-line py-8">
+        {partners.map((logo, i) => (
+          <li
+            key={logo.name}
+            className={`col-start-1 row-start-1 transition-opacity duration-700 ${
+              i === current ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={logo.src}
+              width={logo.width}
+              height={logo.height}
+              alt={logo.name}
+              className="h-16 w-auto opacity-80 grayscale dark:invert sm:h-20"
+            />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
 
-export default LogoMarquee;
+export default PartnerLogos;

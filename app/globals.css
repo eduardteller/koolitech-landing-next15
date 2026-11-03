@@ -220,15 +220,11 @@ html {
 }
 
 /* ---------------------------------------------------------------
-   Partner logo marquee (components/LogoMarquee.tsx).
-   The track holds two identical passes and slides right by one, so
-   the loop is seamless. The mask fades logos and hairlines at both
-   edges. The component sets the duration inline from the item
-   count, so speed stays even. Not gated on reduced motion: the strip
-   is meant to move everywhere, and hover pauses it.
+   Partner logo strip (components/PartnerLogos.tsx).
+   The mask fades the hairlines out at both edges. The logos cross-
+   fade in the middle, so the mask never touches them.
 ----------------------------------------------------------------- */
-.logo-marquee {
-  overflow: hidden;
+.logo-strip {
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -236,24 +232,4 @@ html {
     black 85%,
     transparent
   );
-}
-
-.logo-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: logo-marquee 36s linear infinite;
-}
-
-.logo-marquee:hover .logo-marquee-track {
-  animation-play-state: paused;
-}
-
-/* Left to right: start one pass to the left and slide back to zero. */
-@keyframes logo-marquee {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
