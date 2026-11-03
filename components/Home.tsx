@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
 import HeroScheme from "./HeroScheme";
 import LegacyCompare from "./LegacyCompare";
+import LogoMarquee from "./LogoMarquee";
 import MediaShowcase from "./MediaShowcase";
 import PointsComponent from "./PointsComponent";
 import PointsList from "./PointsList";
@@ -397,6 +398,9 @@ const App = () => {
               ></Accordion>
             </div>
           </div>
+
+          {/* ---------- Partner logos ---------- */}
+          <LogoMarquee />
 
           {/* ---------- CTA ---------- */}
           <div className="band px-6 py-28 text-center sm:px-8">

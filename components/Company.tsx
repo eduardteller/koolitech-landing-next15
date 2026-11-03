@@ -5,6 +5,7 @@ import CategoryGrid from "./catalog/CategoryGrid";
 import CtaBand from "./CtaBand";
 import Footer from "./Footer";
 import HeaderPrimary from "./HeaderPrimary";
+import LogoMarquee from "./LogoMarquee";
 import PointsList from "./PointsList";
 
 const steps = [
@@ -69,6 +70,9 @@ const Company = () => {
               </div>
             </div>
           </section>
+
+          {/* ---------- Partner logos ---------- */}
+          <LogoMarquee />
 
           {/* ---------- Process ---------- */}
           <section

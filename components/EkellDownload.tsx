@@ -1,4 +1,5 @@
 import { getLatestRelease } from "@/lib/ekell-release";
+import Image from "next/image";
 import Link from "next/link";
 import CtaBand from "./CtaBand";
 import DownloadCard from "./DownloadCard";
@@ -45,8 +46,22 @@ const EkellDownload = async () => {
       <div className="relative overflow-x-hidden">
         <main>
           <section className="bg-ground px-6 pt-12 pb-24 sm:px-8 md:pt-20">
-            <div className="mx-auto max-w-xl">
-              <h1 className="sr-only">Laadi alla E-Kell</h1>
+            <h1 className="text-ink mx-auto max-w-screen-xl text-center text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl md:text-6xl">
+              {/* nowrap keeps the logo on the word's line on phones */}
+              <span className="whitespace-nowrap">
+                <Image
+                  width={512}
+                  height={512}
+                  sizes="64px"
+                  src="/assets/ekell-logo.webp"
+                  alt=""
+                  className="mr-[0.2em] inline-block h-[1em] w-[1em] align-[-0.15em]"
+                />
+                E-Kell
+              </span>{" "}
+              töölauarakendus
+            </h1>
+            <div className="mx-auto mt-10 max-w-xl md:mt-14">
               <DownloadCard rows={rows} fileName={release?.fileName} />
               <p className="text-muted mt-6 text-center text-sm leading-relaxed text-balance">
                 Kui Windows näitab teadet „Windows kaitses teie arvutit“, vali

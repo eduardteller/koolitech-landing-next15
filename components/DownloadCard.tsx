@@ -18,7 +18,8 @@ const DownloadCard = ({ rows, fileName }: Props) => {
   const [started, setStarted] = useState(false);
 
   return (
-    <SpecPlate title="E-Kell töölauarakendus" rows={rows} reveal={false}>
+    // No plate title: the page heading above already names the app.
+    <SpecPlate rows={rows} reveal={false}>
       {/* Not next/link: the route answers with a redirect to the file,
           not a page to prefetch. */}
       <a

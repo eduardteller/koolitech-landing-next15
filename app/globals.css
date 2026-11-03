@@ -220,8 +220,7 @@ html {
 }
 
 /* ---------------------------------------------------------------
-   Partner logo marquee (components/LogoMarquee.tsx), not rendered
-   for now.
+   Partner logo marquee (components/LogoMarquee.tsx).
    The track holds two identical passes and slides right by one, so
    the loop is seamless. The mask fades logos and hairlines at both
    edges. The component sets the duration inline from the item

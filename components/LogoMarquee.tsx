@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-// Not rendered anywhere for now: with one school a logo strip looks thin.
-// Put it back on the landing page once there are more logos.
+// Shown under the landing hero and at the bottom of the E-Kell page.
 const partners = [
   {
     name: "Kallavere Keskkool",
@@ -9,12 +8,12 @@ const partners = [
     width: 383,
     height: 400,
   },
-  // {
-  //   name: "Pirita Majandusgümnaasium",
-  //   src: "/assets/partners/pmg.png",
-  //   width: 447,
-  //   height: 447,
-  // },
+  {
+    name: "Pirita Majandusgümnaasium",
+    src: "/assets/partners/pmg.png",
+    width: 447,
+    height: 447,
+  },
 ];
 
 /* One pass of the track must be wider than the strip, or the loop shows a

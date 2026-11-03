@@ -6,8 +6,9 @@ export type SpecRow = {
 };
 
 interface Props {
-  /** Names the equipment the values describe. */
-  title: string;
+  /** Names the equipment the values describe. Without it or a tag, the
+      plate has no header. */
+  title?: string;
   /** Right-hand plate label, e.g. "Miinimumnõuded". */
   tag?: string;
   rows: SpecRow[];
@@ -27,16 +28,20 @@ const SpecPlate = ({ title, tag, rows, reveal = true, children }: Props) => {
       className="overflow-hidden rounded-xl border border-line bg-surface shadow-sm"
     >
       {/* Plate header — names the equipment and the tier the values describe */}
-      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line bg-primary-tint px-6 py-4 sm:px-8">
-        <span className="text-xs font-semibold uppercase tracking-widest text-ink">
-          {title}
-        </span>
-        {tag && (
-          <span className="text-xs font-semibold uppercase tracking-widest text-kicker">
-            {tag}
-          </span>
-        )}
-      </div>
+      {(title || tag) && (
+        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line bg-primary-tint px-6 py-4 sm:px-8">
+          {title && (
+            <span className="text-xs font-semibold uppercase tracking-widest text-ink">
+              {title}
+            </span>
+          )}
+          {tag && (
+            <span className="text-xs font-semibold uppercase tracking-widest text-kicker">
+              {tag}
+            </span>
+          )}
+        </div>
+      )}
 
       <dl className="divide-y divide-line px-6 sm:px-8">
         {rows.map(({ label, value, note }) => (
