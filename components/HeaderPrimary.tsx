@@ -24,6 +24,7 @@ const navLinks: NavLink[] = [
     href: "/ekell",
     label: "E-Kell",
     children: [
+      { href: "/ekell/kuidas-kasutada", label: "Kuidas kasutada" },
       { href: "/ekell/docs", label: "Dokumentatsioon" },
       { href: "/ekell/laadi-alla", label: "Laadi alla" },
     ],

@@ -32,6 +32,14 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link
+                href="/ekell/kuidas-kasutada"
+                className="transition hover:text-ink"
+              >
+                Kuidas kasutada
+              </Link>
+            </li>
+            <li>
               <Link href="/ekell/docs" className="transition hover:text-ink">
                 Dokumentatsioon
               </Link>

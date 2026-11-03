@@ -5,9 +5,11 @@ import type { DocSection } from "@/lib/docs-toc";
 
 interface Props {
   sections: DocSection[];
+  /** Label above the desktop list. */
+  title?: string;
 }
 
-const DocsSidebar = ({ sections }: Props) => {
+const DocsSidebar = ({ sections, title = "Dokumentatsioon" }: Props) => {
   const [activeId, setActiveId] = useState<string>(sections[0]?.id ?? "");
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -39,7 +41,7 @@ const DocsSidebar = ({ sections }: Props) => {
       {/* Desktop sidebar */}
       <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] w-60 shrink-0 self-start overflow-y-auto lg:block">
         <p className="mb-4 pl-4 text-xs font-semibold uppercase tracking-widest text-kicker">
-          Dokumentatsioon
+          {title}
         </p>
         <nav>
           <ul className="border-l border-line">

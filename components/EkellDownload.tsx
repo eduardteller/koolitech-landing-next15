@@ -1,4 +1,5 @@
 import { getLatestRelease } from "@/lib/ekell-release";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CtaBand from "./CtaBand";
@@ -74,6 +75,28 @@ const EkellDownload = async () => {
                 </Link>
                 .
               </p>
+              <Link
+                href="/ekell/kuidas-kasutada#paigaldus"
+                className="border-line bg-surface hover:border-primary-line mt-8 flex items-center justify-between gap-4 rounded-xl border p-5 transition"
+              >
+                <span>
+                  <span className="text-kicker block text-xs font-semibold tracking-widest uppercase">
+                    Mis edasi?
+                  </span>
+                  <span className="text-ink mt-1 block font-semibold">
+                    Kuidas kasutada: samm-sammult juhend
+                  </span>
+                  <span className="text-muted mt-0.5 block text-sm">
+                    Heliühendus, litsentsivõti, esimene plaan ja E-Kell Web.
+                  </span>
+                </span>
+                <ArrowRight
+                  size={20}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                  className="text-accent shrink-0"
+                />
+              </Link>
             </div>
           </section>
 
